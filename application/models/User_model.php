@@ -12,15 +12,14 @@ class User_model extends CI_Model {
         $this->load->database();
     }
 
-    public function get_users($slug = FALSE)
+    public function get_users($uid = 0)
     {
-        if ($slug === FALSE)
+        if ($uid === 0)
         {
-            $query = $this->db->get('jwj_users');
+            $query = $this->db->get('jwj_user_2016');
             return $query->result_array();
         }
-
-        $query = $this->db->get_where('jwj_users', array('slug' => $slug));
+        $query = $this->db->get_where('jwj_user', array('uid' => $uid));
         return $query->row_array();
     }
 
