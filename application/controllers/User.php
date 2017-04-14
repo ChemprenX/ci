@@ -17,7 +17,7 @@ class User extends CI_Controller
 
     public function index()
     {
-        $data['users'] = $this->User_model->get_users();
+        $data['users'] = $this->User_model->get_users($uid = 421);
 //        $data['title'] = 'User archive';
 //        $this->load->view('user/header', $data);
 //        $this->load->view('user/index', $data);
@@ -27,7 +27,7 @@ class User extends CI_Controller
         $this->load->view('common/footer');
     }
 
-    public function view($uid = 0)
+    public function view($uid = 421)
     {
         $data['uid'] = $this->User_model->get_users($uid);
 //        if (empty($data['user_item']))

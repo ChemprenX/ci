@@ -12,11 +12,12 @@ class User_model extends CI_Model {
         $this->load->database();
     }
 
-    public function get_users($uid = 0)
+    public function get_users($uid)
     {
+        echo $uid;
         if ($uid === 0)
         {
-            $query = $this->db->get('jwj_user_2016');
+            $query = $this->db->get('jwj_user');
             return $query->result_array();
         }
         $query = $this->db->get_where('jwj_user', array('uid' => $uid));
