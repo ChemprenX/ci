@@ -48,13 +48,9 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-//$db['default']['hostname'] = '10.10.10.75';
-//$db['default']['username'] = 'tmg75';
-//$db['default']['password'] = 'tmgzcb';
-//$db['default']['database'] = 'jinwangjiang';
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
-$db['default']['password'] = '';
+$db['default']['password'] = 'root';
 $db['default']['database'] = 'jwj2017';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
@@ -68,14 +64,11 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
-//$db['old']['hostname'] = 'localhost';
-//$db['old']['username'] = 'root';
-//$db['old']['password'] = 'TOBEJIKE';
-//$db['old']['database'] = 'admin';
-$db['old']['hostname'] = '10.10.10.57';
-$db['old']['username'] = 'tmg';
-$db['old']['password'] = 'tmgzcb!';
-$db['old']['database'] = 'jinwangjiang';
+
+$db['old']['hostname'] = 'localhost';
+$db['old']['username'] = 'root';
+$db['old']['password'] = 'root!';
+$db['old']['database'] = 'jwj2017';
 $db['old']['dbdriver'] = 'mysql';
 $db['old']['dbprefix'] = '';
 $db['old']['pconnect'] = TRUE;
