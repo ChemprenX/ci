@@ -64,6 +64,7 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
+//this is a lastest version for no-api
 
 $db['old']['hostname'] = 'localhost';
 $db['old']['username'] = 'root';
