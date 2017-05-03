@@ -1,0 +1,47 @@
+<{include file="../common/header_navigation.html"}>
+<style type="text/css" rel="stylesheet">
+
+</style>
+<div class="m">
+        <div class="regist mb50">
+                <form name="formReg" method="post" action="/index.php/api/user/findpwdact" onsubmit="return check();" style="margin-top: 150px; margin-bottom: 150px;">
+                    <div class=" mb20 f20" style="color:#0565a6;">找回密码</div>
+                    <div class="regdiv">
+                       <!-- <div class="divinput"><span class="spanreg">邮箱：</span><input type="text" name="email" id="email" class="text"><span id="emailPrompt" class="error"></span></div>-->
+                        <div class="input-group col-md-6">
+                            <span class="input-group-addon">邮箱：</span>
+                            <input type="text" name="email" id="email" class="form-control">
+                            <span id="emailPrompt" class="error"></span>
+                        </div>
+                   </div>
+                   <div class=" mb20 f14" style="color:#909090; line-height:24px;">请输入您注册的电子邮箱。您会收到一封包含<br />创建新密码的电子邮件。</div>
+                    <p class="submitp"><input type="submit" value="获取新密码"  class="register btn btn-info"></p>
+                </form>  
+        </div>
+        <!--<div class="weixin center">
+            偷偷告诉你 <a href="https://wx.qq.com/" target="_blank"><img src="images/wx_59-58.jpg" /></a> 可以直接登录
+        </div>-->
+</div>
+<{include file="../common/footer_navigation.html"}>
+<script type="text/javascript">
+        function check(){ 
+          //验证邮箱   
+        var emailName = document.getElementById("email"); 
+        var emailPrompt = document.getElementById("emailPrompt"); 
+        var pattern = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;   
+        if(emailName.value==0){ 
+          // alert("请输入您的邮箱！"); 
+           emailPrompt.innerHTML="请输入您的邮箱！"
+           emailName.focus(); 
+           return false; 
+        } 
+        if (!pattern.test(emailName.value)) {   
+           //alert("邮箱格式不正确，请重新输入!"); 
+           emailPrompt.innerHTML="邮箱格式不正确，请重新输入!"
+           emailName.value=""; 
+           emailName.focus(); 
+           return false;   
+          }
+        
+        }
+</script>

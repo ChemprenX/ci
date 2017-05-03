@@ -1,0 +1,168 @@
+
+<script type="text/javascript">
+function imgShow(outerdiv, innerdiv, bigimg, _this){
+        var src = _this.attr("src");//获取当前点击的pimg元素中的src属性
+        $(bigimg).attr("src", src);//设置#bigimg元素的src属性
+     
+            /*获取当前点击图片的真实大小，并显示弹出层及大图*/
+        $("<img/>").attr("src", src).load(function(){
+            var windowW = $(window).width();//获取当前窗口宽度
+            var windowH = $(window).height();//获取当前窗口高度
+            var realWidth = this.width;//获取图片真实宽度
+            var realHeight = this.height;//获取图片真实高度
+            var imgWidth, imgHeight;
+            var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放
+             
+            if(realHeight>windowH*scale) {//判断图片高度
+                imgHeight = windowH*scale;//如大于窗口高度，图片高度进行缩放
+                imgWidth = imgHeight/realHeight*realWidth;//等比例缩放宽度
+                if(imgWidth>windowW*scale) {//如宽度扔大于窗口宽度
+                    imgWidth = windowW*scale;//再对宽度进行缩放
+                }
+            } else if(realWidth>windowW*scale) {//如图片高度合适，判断图片宽度
+                imgWidth = windowW*scale;//如大于窗口宽度，图片宽度进行缩放
+                            imgHeight = imgWidth/realWidth*realHeight;//等比例缩放高度
+            } else {//如果图片真实高度和宽度都符合要求，高宽不变
+                imgWidth = realWidth;
+                imgHeight = realHeight;
+            }
+                    $(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放
+             
+            var w = (windowW-imgWidth)/2;//计算图片与窗口左边距
+            var h = (windowH-imgHeight)/2;//计算图片与窗口上边距
+            $(innerdiv).css({"top":h, "left":w});//设置#innerdiv的top和left属性
+            $(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg
+        });
+         
+        $(outerdiv).click(function(){//再次点击淡出消失弹出层
+            $(this).fadeOut("fast");
+    });
+}
+</script>
+
+<{include file="../common/header_navigation.html"}>
+
+
+
+<div class="main_zh clearfix fYaHei" style="margin-top:155px;">
+    <div class="B_left " style="margin:0 auto;">
+        <div>
+            <div class="l_tit t_tit">案例介绍</div>
+            <div class="r_con01 border04" style="PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 0px">
+                <table width="690" cellspacing="0" cellpadding="0" border="0" align="center">
+            <tbody>
+            
+            <tr>
+            <td rowspan="2" style="LINE-HEIGHT: 30px; BORDER-RIGHT: #ccc 1px solid"><strong class="col_03">&nbsp;&nbsp;广 告 主：</strong><{$case.advertiser}><strong class="col_03">&nbsp;&nbsp;</strong><br>
+            &nbsp;&nbsp;<strong class="col_03"></strong></td>
+            <td width="120" height="70" align="right"><strong class="col_03">广 告 
+            主LOGO&nbsp;&nbsp;</strong></td>
+            <td width="140"><img width="120" height="50" src="<{$case.advertiser_logo}>" class="border05"></td>
+            </tr>
+            <tr style="display:none;">
+            <td height="70" align="right"><strong class="col_03"></strong></td>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            </div>
+       </div>
+       
+    <div class="m_t10">
+        <div class="l_tit t_tit">案例详情</div>
+        <div class="r_con01 border04">
+            <div class="border01">
+                <h1 class="show_h1 col_03" style="FONT-SIZE: 20px">案例名称：<{$case.title}></h1>
+                <span style="TEXT-ALIGN: center; LINE-HEIGHT: 28px; MARGIN: 0px auto; WIDTH: 400px; DISPLAY: block">发布时间：<{$case.create_time|date_format:"%Y-%m-%d %H:%M:%S"}>&#12288;</span>
+            </div>
+            <div class="show">
+                <iframe width="690" height="590" src="http://view.officeapps.live.com/op/view.aspx?src=http://pingfen.imcc.org.cn<{$case.url}>"></iframe>
+    </div>
+       
+    <{if $suffix == 'swf' || $suffix == 'SWF'}>
+    <div class="f14 graydeep mb20">视频：</div>
+			<div class="m_t10">
+			        <div class="r_con01 border04">
+			            <div class="show" style="width:690px;height:590px;border:1px solid #666;margin:20px 0">
+			                
+			                    <a style="width:690px;height:590px;display:block;" id="viewerPlaceHolder">
+			                    <object width="100%" height="100%" type="application/x-shockwave-flash" data="http://pingfen.imcc.org.cn<{$case.video_url}>" name="_62331205710778979748" id="_62331205710778979748"><param value="true" name="allowfullscreen"><param value="always" name="allowscriptaccess"><param value="high" name="quality"><param value="transparent" name="wmode"><param value="SwfFile=http://newjinwangjiang<{$case.video_url}>&amp;Scale=1&amp;ZoomTransition=easeOut&amp;ZoomTime=0.5&amp;ZoomInterval=0.5&amp;FitPageOnLoad=true&amp;FitWidthOnLoad=true&amp;FullScreenAsMaxWindow=false&amp;ProgressiveLoading=true&amp;MinZoomSize=1&amp;MaxZoomSize=5&amp;SearchMatchAll=true&amp;BitmapBasedRendering=undefined&amp;PrintPaperAsBitmap=undefined&amp;AutoAdjustPrintSize=undefined&amp;ViewModeToolsVisible=true&amp;ZoomToolsVisible=true&amp;NavToolsVisible=true&amp;CursorToolsVisible=true&amp;SearchToolsVisible=true&amp;EncodeURI=undefined&amp;localeChain=zh_CN" name="flashvars"></object></a>
+			            </div>
+			    </div>
+			</div>
+    
+    <{else}>  
+       
+    <div class="m_t10">
+        <div class="B_left"> </div>
+        <div style="height:545px;overflow:hidden;"> 
+          <!-- 视频播放器 --> 
+          <script type="text/javascript"> 
+                (function(){ 
+                //视频地址  http://flashvod.yesky.com/chinabyte/ljvideo/cbhuoqingshou/huoqiangshou05.flv
+                //var FLV_URL = "http://enterprise.huawei.com/topic/2015Cebit_cn/flash/Join-us.mp4"; 
+                var FLV_URL = "http://pingfen.imcc.org.cn<{$case.video_url}>";
+                //宽度 
+                var FLV_WIDTH = 723; 
+                //高度 
+                var FLV_HEIGHT = 400; 
+                var typeId = 2;//推荐视频的分类 
+                var FLVPlayerHtml = ""; 
+                var isAutoPlay = "yes"; //是否自动播放 
+                var defaultImg = "http://www.chinabyte.com/w/dy/zt/ccc/video1.jpg";//初始图片 
+                FLVPlayerHtml += "<object classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0' width='"+FLV_WIDTH+"' height='"+FLV_HEIGHT+"' id='FLV_player' align='middle'>"; 
+                FLVPlayerHtml += " <param name='allowScriptAccess' value='always' />"; 
+                FLVPlayerHtml += " <param name='scale' value='NO_SCALE' />"; 
+                FLVPlayerHtml += " <param name='wmode' value='opaque' />"; 
+                FLVPlayerHtml += " <param name='allowFullScreen' value='true' />"; 
+                FLVPlayerHtml += " <param name='bgcolor' value='#000000' />"; 
+                FLVPlayerHtml += " <param name='FlashVars' value='videoPath="+FLV_URL+"&playerWidth="+FLV_WIDTH+"&playerHeight="+FLV_HEIGHT+"&isAutoPlay="+isAutoPlay+"&defaultImg="+defaultImg+"&typeId="+typeId+"' />"; 
+                FLVPlayerHtml += " <param name='movie' value='http://image.tianjimedia.com/TLimages2009/yesky/images/video2011/y_player_tuijian.swf' /><param name='quality' value='high' /><param name='scale' value='exactfit' /><param name='bgcolor' value='#000000' /> <embed FlashVars='videoPath="+FLV_URL+"&playerWidth="+FLV_WIDTH+"&playerHeight="+FLV_HEIGHT+"&isAutoPlay="+isAutoPlay+"&defaultImg="+defaultImg+"&typeId="+typeId+"' src='http://image.tianjimedia.com/TLimages2009/yesky/images/video2011/y_player_tuijian.swf' quality='high' scale='NO_SCALE' wmode='opaque' bgcolor='#000000' width='"+FLV_WIDTH+"' height='"+FLV_HEIGHT+"' name='FLV_player' align='middle' allowScriptAccess='always' allowFullScreen='true' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer' />"; 
+                FLVPlayerHtml += " </object> "; 
+                document.write(FLVPlayerHtml); 
+                })(); 
+            </script> 
+          <!--/ 视频播放器 --> 
+        </div>
+        </div>
+    </div>
+    
+    <{/if}>
+    
+    <!-- <div class="B_right fr">
+      <div>
+        <div id="A3" class="r_tit t_tit">案例提交：</div>
+        <div class="r_con01 border03">
+          <div style="MARGIN-BOTTOM:10px" class="gun_img"><a href="#"><img src="./images/tthj_03.jpg" width="201" height="56"></a> </div>
+        </div>
+      </div>
+      <div>
+        <div id="A3" class="r_tit t_tit">指导单位：</div>
+        <div class="r_con01 border03">
+          <div style="MARGIN-BOTTOM: 0px" class="gun_img"><img src="./images/hulianwang.jpg" width="159" height="64"> </div>
+        </div>
+      </div>
+      <div class="m_t10">
+        <div id="A3" class="r_tit t_tit">主办单位：</div>
+        <div class="r_con01 border03">
+          <div style="MARGIN-BOTTOM: 0px" class="gun_img"><img src="./images/wanglou.jpg" width="159" height="64"> </div>
+        </div>
+      </div>
+      <div class="m_t10">
+        <div id="A3" class="r_tit t_tit">承办单位：</div>
+        <div class="r_con01 border03">
+          <div style="MARGIN-BOTTOM: 0px" class="gun_img"><a href="http://www.chinabyte.com/"><img border="0" alt="" src="./images/gai_03.jpg" width="205" height="57"></a> </div>
+        </div>
+      </div>
+      <div class="m_t10">
+        <div class="r_tit t_tit">委员会微博</div>
+        <div class="">
+          <iframe width="100%" height="416" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=416&fansRow=1&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=2692294371&verifier=c3e5e072&dpc=1"></iframe>
+        </div>
+      </div> -->
+    
+    
+    
+    
+    
+</div>

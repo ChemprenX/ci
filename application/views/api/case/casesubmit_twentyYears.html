@@ -1,0 +1,162 @@
+<{include file="../common/header.html"}>
+<body class="twentyYears">
+<{include file="../common/header_navigation.html"}>
+<div class="part twpart1 wrap twpart">
+    <div class="title">
+        作品查询
+    </div>
+    <div class="content">
+        <p>
+            当参赛者提交作品后2个工作日内，在本届“金网奖”参赛作品展示平台将呈现提报作品的基础信息，如提报公司未看到作品的相关信息，请及时致电“金网奖”组委会，查询作品提交状况。
+        </p>
+        <h3 class="name">
+            联系人：王建利
+        </h3>
+        <h3>
+            联系电话：010-82657868-717
+        </h3>
+
+    </div>
+</div>
+<div class="part twpart2 wrap twpart">
+    <div class="title">
+        联系人信息
+    </div>
+    <form name="formUser" method="post" action="/index.php/api/user/update">
+
+        <ul class="infoUl">
+            <li>
+                <label><span class="red">*</span>公 司 名 称：</label>
+                <input type="hidden" name="uid" id="uid" value="<{get_cookie('uid')}>"/>
+                <input type="text" class="inputtext" id="company" name="company" value="<{$userinfo.company}>" <{if
+                $userinfo.company}> disabled="true" <{/if}>/>
+
+            </li>
+            <li>
+                <label><span class="red">*</span>公 司 介 绍：</label>
+                <input type="text" class="inputtext" id="profile" name="profile" value="<{$userinfo.profile}>" <{if
+                $userinfo.profile}> disabled="true" <{/if}>/>
+
+            </li>
+            <li>
+                <label><span class="red">*</span>联系人姓名：</label>
+                <input type="text" class="inputtext" id="contact" name="contact" value="<{$userinfo.contact}>" <{if
+                $userinfo.contact}> disabled="true" <{/if}>/>
+
+            </li>
+            <li>
+                <label><span class="red">*</span>联系人座机：</label>
+                <input type="text" class="inputtext" id="telephone" name="telephone" value="<{$userinfo.telephone}>"
+                <{if $userinfo.telephone}> disabled="true" <{/if}>/>
+
+            </li>
+            <li>
+                <label><span class="red">*</span>联系人邮箱：</label>
+                <input type="text" class="inputtext" id="email" name="email" value="<{$userinfo.email}>" <{if
+                $userinfo.email}> disabled="true" <{/if}>/>
+
+            </li>
+            <li>
+                <label><span class="red">*</span>联系人QQ：</label>
+                <input type="text" class="inputtext" name="qq" value="<{$userinfo.qq}>" <{if
+                $userinfo.qq}> disabled="true" <{/if}> />
+
+            </li>
+            <li>
+                <label><span class="red">*</span>联系人手机：</label>
+                <input type="text" class="inputtext" id="mobile" name="mobile" value="<{$userinfo.mobile}>" <{if
+                $userinfo.mobile}> disabled="true" <{/if}>/>
+
+            </li>
+            <li>
+                <label><span class="red">*</span>联系人职位：</label>
+                <input type="text" class="inputtext" id="position" name="position" value="<{$userinfo.position}>"
+                <{if $userinfo.position}> disabled="true" <{/if}>/>
+
+            </li>
+        </ul>
+
+        <{if !($userinfo.company && $userinfo.contact && $userinfo.telephone && $userinfo.email && $userinfo.mobile
+        && $userinfo.qq && $userinfo.position && $userinfo.profile)}>
+        <div class="twentySubmitWrap">
+            <input type="submit" value="提交" class="submitBtn twentySubmit">
+        </div>
+        <{/if}>
+
+    </form>
+    <div class="toptitle">
+        致敬网络营销20年TOP60人物榜 奖项提报
+    </div>
+    <div class="hr">
+        <div class="shortHr">
+
+        </div>
+
+    </div>
+    <form name="formCase" method="post" action="/index.php/api/cases/casesubmitact" enctype="multipart/form-data"
+          target="_self">
+        <input type="hidden" name="uid" id="uid" value="<{get_cookie('uid')}>"/>
+        <input type="hidden" name="award[]" id="award" value="20"/>
+        <ul class="ul3 pad ul2 mb zw_a infoUl twinfoUl">
+            <li>
+                <label class="step">step1:参评资料下载</label>
+                <a href="/static/top60.docx" target="_blank" class="download">
+                    立即下载
+                </a>
+            </li>
+            <li>
+                <label class="step">step2:填写申报资料</label>
+                <div id="nocase_detail" style="display: block;"></div>
+            </li>
+            <li><label><span class="red"
+                             style="font-size: 20px; vertical-align: bottom">*</span>报送公司：</label><input
+                    type="text" id="" name="no_case_advertiser" class="inputtext"></li>
+
+            <li><label>广告主LOGO：</label>
+                <input type="file"  id="no_case_file1" name="no_case_advertiser_logo" class="inputtext inputtext1">
+                <img class="preview_size_fake1">
+                <p class="mb5 f14 graydeep" style="padding-left:125px; padding-bottom:5px;">
+                    图片格式为jpg　尺寸(120*60)</p>
+            </li>
+            <li><label>人物照片：</label>
+                <input type="file"  id="no_case_file3" name="no_case_visual_url" class="inputtext  inputtext3"><img class="preview_size_fake3">
+
+                <p class="mb5 f14 graydeep" style="padding-left:125px; padding-bottom:5px;">
+                    图片格式为jpg　尺寸(大小不超过2M)</p>
+            </li>
+            <li style="height:50px;">
+                <label>
+                <span class="red" style="font-size: 20px; vertical-align: bottom">*</span>
+                上传申报资料：</label>
+
+                <input type="file" id="no_case_file4" name="no_case_url" class="inputtext">
+                <p class="mb5 f14 graydeep" style="padding-left:125px;">请将word保存成为微软97-2003版本的兼容格式文件</p>
+            </li>
+        </ul>
+        <div class="title">
+            支付方式
+        </div>
+        <div class="csjx_div paylabel">
+            <dl class="dllist cf on">
+                <dt>
+                    <label><input name="paytype" type="radio" value="1"/><span>支付宝支付</span></label>
+                    <label><input name="paytype" type="radio" value="2" checked="checked"/><span>线下支付</span></label>
+                </dt>
+            </dl>
+        </div>
+        <div class="zw_a none zw_a1"><img src="/static/api/images/erb.jpg" width="430" height="430"/></div>
+        <div class="zw_a none zw_a2"><img src="/static/api/images/erb.jpg" width="430" height="430"/></div>
+        <div class="zw_a none zw_a3"><img src="/static/api/images/erb.jpg" width="430" height="430"/></div>
+        <div class="zw_a none zw_a4"><img src="/static/api/images/erb.jpg" width="430" height="430"/></div>
+        <div class="zw_a none zw_a5"><img src="/static/api/images/erb.jpg" width="430" height="430"/></div>
+        <div class="twentySubmitWrap">
+            <input type="submit" value="提交" class="submitBtn twentySubmit">
+        </div>
+
+    </form>
+
+
+</div>
+<{include file="../common/footer_navigation.html"}>
+</body>
+</html>

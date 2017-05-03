@@ -1,0 +1,323 @@
+
+<script>
+  /*删除*/
+$(document).ready(function(){
+    $(".main_td .shanc").click(function(){
+        $(this).siblings(".xinz_fangq").show();
+    });
+    $(".xinz_fangq .qued").click(function(){
+        $(this).parents("tr").remove();
+    });
+    $(".xinz_fangq .qux").click(function(){
+        $(this).parents(".xinz_fangq").hide();
+    });     
+});
+    
+</script>
+<script type="text/javascript">
+    $(function(){
+        $(".dllist").hover(function(){
+            $(this).addClass("on").siblings().removeClass("on");
+        });
+    });
+</script>
+<script type="text/javascript">
+function imgShow(outerdiv, innerdiv, bigimg, _this){
+        var src = _this.attr("src");//获取当前点击的pimg元素中的src属性
+        $(bigimg).attr("src", src);//设置#bigimg元素的src属性
+     
+            /*获取当前点击图片的真实大小，并显示弹出层及大图*/
+        $("<img/>").attr("src", src).load(function(){
+            var windowW = $(window).width();//获取当前窗口宽度
+            var windowH = $(window).height();//获取当前窗口高度
+            var realWidth = this.width;//获取图片真实宽度
+            var realHeight = this.height;//获取图片真实高度
+            var imgWidth, imgHeight;
+            var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放
+             
+            if(realHeight>windowH*scale) {//判断图片高度
+                imgHeight = windowH*scale;//如大于窗口高度，图片高度进行缩放
+                imgWidth = imgHeight/realHeight*realWidth;//等比例缩放宽度
+                if(imgWidth>windowW*scale) {//如宽度扔大于窗口宽度
+                    imgWidth = windowW*scale;//再对宽度进行缩放
+                }
+            } else if(realWidth>windowW*scale) {//如图片高度合适，判断图片宽度
+                imgWidth = windowW*scale;//如大于窗口宽度，图片宽度进行缩放
+                            imgHeight = imgWidth/realWidth*realHeight;//等比例缩放高度
+            } else {//如果图片真实高度和宽度都符合要求，高宽不变
+                imgWidth = realWidth;
+                imgHeight = realHeight;
+            }
+                    $(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放
+             
+            var w = (windowW-imgWidth)/2;//计算图片与窗口左边距
+            var h = (windowH-imgHeight)/2;//计算图片与窗口上边距
+            $(innerdiv).css({"top":h, "left":w});//设置#innerdiv的top和left属性
+            $(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg
+        });
+         
+        $(outerdiv).click(function(){//再次点击淡出消失弹出层
+            $(this).fadeOut("fast");
+    });
+}
+</script>
+</head>
+<body>
+<{include file="../common/header_navigation.html"}>
+<div class="main  clearfix  fYaHei ">
+    <div class="case_man">
+        <div class="main_td mt15 fYaHei mb20 f14 graydeep">
+            <div class="main_tb fYaHei mb30">
+                <div class="f18 graydeep mb20">基本信息</div>
+                <div class="regdiv">
+                    <div class="divinput clearfix"><span class="spanreg">公司名称：</span><input value="<{$userinfo.company}>"  disabled="true" type="text"  class="text bgcfff"></div>
+                    <div class="divinput clearfix"><span class="spanreg">公司介绍：</span><input value="<{$userinfo.profile}>"  disabled="true" type="text"  class="text bgcfff"></div>
+                    <div class="divinput clearfix"><span class="spanreg">联系人姓名：</span><input value="<{$userinfo.contact}>"  disabled="true"type="text"  class="text bgcfff"></div>
+                    <div class="divinput clearfix clearfix"><span class="spanreg">联系人座机：</span><input value="<{$userinfo.telephone}>" disabled="true" type="text"  class="text bgcfff"></div>
+                    <div class="divinput clearfix"><span class="spanreg">联系人邮箱：</span><input value="<{$userinfo.email}>" disabled="true" type="text"  class="text bgcfff"></div>
+                    <div class="divinput clearfix"><span class="spanreg">联系人QQ：</span><input value="<{$userinfo.qq}>" disabled="true" type="text"  class="text bgcfff"></div>
+                    <div class="divinput clearfix"><span class="spanreg">联系人手机：</span><input value="<{$userinfo.mobile}>" disabled="true" type="text"  class="text bgcfff"></div>
+                    <div class="divinput clearfix"><span class="spanreg">联系人职位：</span><input value="<{$userinfo.position}>" disabled="true" type="text"  class="text bgcfff"></div>
+                    <div class="divinput clearfix mb15">
+                        <span class="spanreg  mr15">参赛奖项：</span><span class="spanreg ml20  mr15"><{$awardgroup.title}></span>　<span class="spanreg mr15"><{$award.title}></span>
+                        
+                    </div>
+                    <div class="csjx_div none">
+                        <dl class="dllist cf on">
+                            <dt><div class="csjx_title mb">A类：金网奖-行业类：</div></dt>
+                            <dd class="cf">
+                                <label>｜<span>时尚、美容产品类 </span></label>
+                                <label>｜<span>饮料-酒水类 </span></label>
+                                <label>｜<span>饮料-非酒水类</span> </label>
+                                <label>｜<span>食品、营养产品与服务类</span></label>
+                                <label>｜<span>餐饮、休闲产品及服务类</span></label>
+                                <label>｜<span>电子产品类</span></label>
+                                <label>｜<span>家用电器与家具类</span></label>
+                                <label>｜<span>日化用品类</span></label>
+                                <label>｜<span>网络、电信产品与软件服务类</span></label>
+                                <label>｜<span>金融、保险与服务类</span></label>
+                                <label>｜<span>文化、艺术、娱乐与运动类</span></label>
+                                <label>｜<span>零售商类</span></label>
+                                <label>｜<span>交通类</span></label>
+                                <label>｜<span>办公&amp;速递产品与服务类房地产类</span></label>
+                                <label>｜<span>其他类</span></label>
+                            </dd>
+                        </dl>
+                        <dl class="dllist cf">
+                            <dt><div class="csjx_title mb">B类：金网奖-平台营销类</div></dt>
+                            <dd class="cf">
+                                <label>｜<span>时尚、美容产品类 </span></label>
+                                <label>｜<span>饮料-酒水类 </span></label>
+                                <label>｜<span>饮料-非酒水类</span> </label>
+                                <label>｜<span>食品、营养产品与服务类</span></label>
+                                <label>｜<span>餐饮、休闲产品及服务类</span></label>
+                                <label>｜<span>电子产品类</span></label>
+                                <label>｜<span>家用电器与家具类</span></label>
+                                <label>｜<span>日化用品类</span></label>
+                                <label>｜<span>网络、电信产品与软件服务类</span></label>
+                                <label>｜<span>金融、保险与服务类</span></label>
+                                <label>｜<span>文化、艺术、娱乐与运动类</span></label>
+                                <label>｜<span>零售商类</span></label>
+                                <label>｜<span>交通类</span></label>
+                                <label>｜<span>办公&amp;速递产品与服务类房地产类</span></label>
+                                <label>｜<span>其他类</span></label>
+                            </dd>
+                        </dl>
+                        <dl class="dllist cf">
+                            <dt><div class="csjx_title mb">C类：金网奖-单一媒体营销类</div></dt>
+                            <dd class="cf">
+                                <label>｜<span>时尚、美容产品类 </span></label>
+                                <label>｜<span>饮料-酒水类 </span></label>
+                                <label>｜<span>饮料-非酒水类</span> </label>
+                                <label>｜<span>食品、营养产品与服务类</span></label>
+                                <label>｜<span>餐饮、休闲产品及服务类</span></label>
+                                <label>｜<span>电子产品类</span></label>
+                                <label>｜<span>家用电器与家具类</span></label>
+                                <label>｜<span>日化用品类</span></label>
+                                <label>｜<span>网络、电信产品与软件服务类</span></label>
+                                <label>｜<span>金融、保险与服务类</span></label>
+                                <label>｜<span>文化、艺术、娱乐与运动类</span></label>
+                                <label>｜<span>零售商类</span></label>
+                                <label>｜<span>交通类</span></label>
+                                <label>｜<span>办公&amp;速递产品与服务类房地产类</span></label>
+                                <label>｜<span>其他类</span></label>
+                            </dd>
+                        </dl>
+                        <dl class="dllist cf">
+                            <dt><div class="csjx_title mb">D类：金网奖-代理公司类</div></dt>
+                            <dd class="cf">
+                                <label>｜<span>时尚、美容产品类 </span></label>
+                                <label>｜<span>饮料-酒水类 </span></label>
+                                <label>｜<span>饮料-非酒水类</span> </label>
+                                <label>｜<span>食品、营养产品与服务类</span></label>
+                                <label>｜<span>餐饮、休闲产品及服务类</span></label>
+                                <label>｜<span>电子产品类</span></label>
+                                <label>｜<span>家用电器与家具类</span></label>
+                                <label>｜<span>日化用品类</span></label>
+                                <label>｜<span>网络、电信产品与软件服务类</span></label>
+                                <label>｜<span>金融、保险与服务类</span></label>
+                                <label>｜<span>文化、艺术、娱乐与运动类</span></label>
+                                <label>｜<span>零售商类</span></label>
+                                <label>｜<span>交通类</span></label>
+                                <label>｜<span>办公&amp;速递产品与服务类房地产类</span></label>
+                                <label>｜<span>其他类</span></label>
+                            </dd>
+                        </dl>
+                    </div>
+               </div>
+
+                <div class="f18 graydeep mb20">案例详情</div>
+                <div class="regdiv">
+                    <div class="divinput clearfix"><span class="spanreg">广告主名称：</span><input value="<{$case.advertiser}>"  disabled="true" type="text"  class="text bgcfff"></div>
+                    <div class="divinput clearfix mb15"><span class="spanreg">广告主logo：</span><div class="fl ml15"><img class="ml2" src="<{$case.advertiser_logo}>" width="120" height="60"></div></div>
+                    <div class="divinput clearfix"><span class="spanreg">代理公司名称：</span><input disabled="true" value="<{$case.agency_company}>" 　type="text"  class="text bgcfff"></div>
+                    <div class="divinput clearfix mb15"><span class="spanreg">代理公司logo：</span><div class="fl ml5"><img src="<{$case.agency_company_logo}>" width="120" height="60"></div></div>
+                    <div class="divinput none clearfix"><span class="spanreg">作品主视觉：</span><input value="111.jpg"  disabled="true" type="text"  class="text bgcfff"></div>
+                    <div class="divinput none clearfix"><span class="spanreg">参赛作品：</span><input value="111.ppt"  disabled="true" type="text"  class="text bgcfff"></div>
+                    <div class="divinput none clearfix"><span class="spanreg">参赛视频：</span><input value="111.avi"  disabled="true" type="text"  class="text bgcfff"></div>
+                    
+               </div>
+               <div class="f14 graydeep mb20">PPT1：</div>
+               <!-- <embed src="<{$case.swf_url}>"> 
+               <div class="show" style="display:none">-->
+               <div class="show">
+			   <script type="text/javascript" src="http://www.chinabyte.com/w/c/solution/js/flexpaper_flash.js"></script>
+                <script type="text/javascript"> 
+                        var fp = new FlexPaperViewer(   
+                             'http://docs1.solution.chinabyte.com/FlexPaperViewer',
+                             'viewerPlaceHolder', { config : {
+                             //SwfFile : encodeURI(domain+'/document/swf/201212/rcrc1tari1.swf'),
+                             //SwfFile : encodeURI(<{$case.swf_url}>),
+                             ZoomInterval : 0.5,
+                             MinZoomSize : 1,
+                             MaxZoomSize : 5,
+                             
+                             ZoomTime : 0.5,
+                             Scale : 1,
+                             ZoomTransition : 'easeOut',
+                             FitPageOnLoad : true,
+                             FitWidthOnLoad : true,
+                             FullScreenAsMaxWindow : false,
+                             ProgressiveLoading : true,
+                             SearchMatchAll : true,
+                             ViewModeToolsVisible : true,
+                             ZoomToolsVisible : true,
+                             NavToolsVisible : true,
+                             CursorToolsVisible : true,
+                             SearchToolsVisible : true,
+                            
+                         localeChain: 'zh_CN'
+                             }});
+                </script>
+                
+                    <a style="width:690px;height:590px;display:block;" id="viewerPlaceHolder">
+                    <object width="100%" height="100%" type="application/x-shockwave-flash" data="http://docs1.solution.chinabyte.com/FlexPaperViewer.swf" name="_62331205710778979748" id="_62331205710778979748"><param value="true" name="allowfullscreen"><param value="always" name="allowscriptaccess"><param value="high" name="quality"><param value="transparent" name="wmode"><param value="SwfFile=<{$case.swf_url}>&amp;Scale=1&amp;ZoomTransition=easeOut&amp;ZoomTime=0.5&amp;ZoomInterval=0.5&amp;FitPageOnLoad=true&amp;FitWidthOnLoad=true&amp;FullScreenAsMaxWindow=false&amp;ProgressiveLoading=true&amp;MinZoomSize=1&amp;MaxZoomSize=5&amp;SearchMatchAll=true&amp;BitmapBasedRendering=undefined&amp;PrintPaperAsBitmap=undefined&amp;AutoAdjustPrintSize=undefined&amp;ViewModeToolsVisible=true&amp;ZoomToolsVisible=true&amp;NavToolsVisible=true&amp;CursorToolsVisible=true&amp;SearchToolsVisible=true&amp;EncodeURI=undefined&amp;localeChain=zh_CN" name="flashvars"></object></a>
+            </div>
+            <!--  <a style="width:690px;height:590px;display:block;" id="viewerPlaceHolder">
+                    <object width="100%" height="100%" type="application/x-shockwave-flash" data="http://docs1.solution.chinabyte.com/FlexPaperViewer.swf" name="_62331205710778979748" id="_62331205710778979748"><param value="true" name="allowfullscreen"><param value="always" name="allowscriptaccess"><param value="high" name="quality"><param value="transparent" name="wmode"><param value="SwfFile=http://docs1.solution.chinabyte.com/document/swf/201212/rcrc1tari1.swf&amp;Scale=1&amp;ZoomTransition=easeOut&amp;ZoomTime=0.5&amp;ZoomInterval=0.5&amp;FitPageOnLoad=true&amp;FitWidthOnLoad=true&amp;FullScreenAsMaxWindow=false&amp;ProgressiveLoading=true&amp;MinZoomSize=1&amp;MaxZoomSize=5&amp;SearchMatchAll=true&amp;BitmapBasedRendering=undefined&amp;PrintPaperAsBitmap=undefined&amp;AutoAdjustPrintSize=undefined&amp;ViewModeToolsVisible=true&amp;ZoomToolsVisible=true&amp;NavToolsVisible=true&amp;CursorToolsVisible=true&amp;SearchToolsVisible=true&amp;EncodeURI=undefined&amp;localeChain=zh_CN" name="flashvars"></object></a> -->
+                
+                <{if $suffix == 'swf' || $suffix == 'SWF'}>
+			    <div class="f14 graydeep mb20">视频：</div>
+			    <div class="m_t10">
+			        <div class="r_con01 border04">
+			            <div class="show" style="width:690px;height:590px;border:1px solid #666;margin:20px 0">
+			                    <a style="width:690px;height:590px;display:block;" id="viewerPlaceHolder">
+			                    <object width="100%" height="100%" type="application/x-shockwave-flash" data="http://pingfen.imcc.org.cn<{$case.video_url}>" name="_62331205710778979748" id="_62331205710778979748"><param value="true" name="allowfullscreen"><param value="always" name="allowscriptaccess"><param value="high" name="quality"><param value="transparent" name="wmode"><param value="SwfFile=http://newjinwangjiang<{$case.video_url}>&amp;Scale=1&amp;ZoomTransition=easeOut&amp;ZoomTime=0.5&amp;ZoomInterval=0.5&amp;FitPageOnLoad=true&amp;FitWidthOnLoad=true&amp;FullScreenAsMaxWindow=false&amp;ProgressiveLoading=true&amp;MinZoomSize=1&amp;MaxZoomSize=5&amp;SearchMatchAll=true&amp;BitmapBasedRendering=undefined&amp;PrintPaperAsBitmap=undefined&amp;AutoAdjustPrintSize=undefined&amp;ViewModeToolsVisible=true&amp;ZoomToolsVisible=true&amp;NavToolsVisible=true&amp;CursorToolsVisible=true&amp;SearchToolsVisible=true&amp;EncodeURI=undefined&amp;localeChain=zh_CN" name="flashvars"></object></a>
+			            </div>
+			        </div>
+			    </div>
+			    
+			    <{elseif $case.video_url != 'Array'}>  
+                
+                
+                <div class="f14 graydeep mb20 mt20">视频：</div>
+                <!-- 视频播放器 --> 
+                      <script type="text/javascript"> 
+                            (function(){ 
+                            //视频地址  http://flashvod.yesky.com/chinabyte/ljvideo/cbhuoqingshou/huoqiangshou05.flv
+                            //var FLV_URL = "http://enterprise.huawei.com/topic/2015Cebit_cn/flash/Join-us.mp4"; 
+                            var FLV_URL = "http://pingfen.imcc.org.cn<{$case.video_url}>";
+                            //宽度 
+                            var FLV_WIDTH = 690; 
+                            //高度 
+                            var FLV_HEIGHT = 400; 
+                            var typeId = 2;//推荐视频的分类 
+                            var FLVPlayerHtml = ""; 
+                            var isAutoPlay = "yes"; //是否自动播放 
+                            var defaultImg = "http://ccetestsync.chinabyte.com/static/index.jpg";//初始图片 
+                            FLVPlayerHtml += "<object classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0' width='"+FLV_WIDTH+"' height='"+FLV_HEIGHT+"' id='FLV_player' align='middle'>"; 
+                            FLVPlayerHtml += " <param name='allowScriptAccess' value='always' />"; 
+                            FLVPlayerHtml += " <param name='scale' value='NO_SCALE' />"; 
+                            FLVPlayerHtml += " <param name='wmode' value='opaque' />"; 
+                            FLVPlayerHtml += " <param name='allowFullScreen' value='true' />"; 
+                            FLVPlayerHtml += " <param name='bgcolor' value='#000000' />"; 
+                            FLVPlayerHtml += " <param name='FlashVars' value='videoPath="+FLV_URL+"&playerWidth="+FLV_WIDTH+"&playerHeight="+FLV_HEIGHT+"&isAutoPlay="+isAutoPlay+"&defaultImg="+defaultImg+"&typeId="+typeId+"' />"; 
+                            FLVPlayerHtml += " <param name='movie' value='http://image.tianjimedia.com/TLimages2009/yesky/images/video2011/y_player_tuijian.swf' /><param name='quality' value='high' /><param name='scale' value='exactfit' /><param name='bgcolor' value='#000000' /> <embed FlashVars='videoPath="+FLV_URL+"&playerWidth="+FLV_WIDTH+"&playerHeight="+FLV_HEIGHT+"&isAutoPlay="+isAutoPlay+"&defaultImg="+defaultImg+"&typeId="+typeId+"' src='http://image.tianjimedia.com/TLimages2009/yesky/images/video2011/y_player_tuijian.swf' quality='high' scale='NO_SCALE' wmode='opaque' bgcolor='#000000' width='"+FLV_WIDTH+"' height='"+FLV_HEIGHT+"' name='FLV_player' align='middle' allowScriptAccess='always' allowFullScreen='true' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer' />"; 
+                            FLVPlayerHtml += " </object> "; 
+                            document.write(FLVPlayerHtml); 
+                            })(); 
+                        </script> 
+                      <!--/ 视频播放器 --> 
+               
+            </div>
+            <{else}> 
+            <div class="f14 graydeep mb20 mt20"></div>
+            </div>
+            <{/if}>
+            <div style="margin-left:220px; margin-bottom:50px;" class="clearfix main_tbqd">
+                <p class="submitp fl"><input type="reset" class="tc register f20" onclick="examine()" value="审核"></p>
+                <p class="submitp fl"><input type="reset" class="tc register f20" onclick="noexamine()" value="拒审"></p>
+                <p class="submitp fl"><input type="reset" class="tc register f20" onclick="returnlist()" value="返回"></p>
+             </div>
+        </div>
+    </div>
+    
+    
+    
+</div>
+<script type="text/javascript">
+function examine(){
+    var status = 2;
+    var chk_value =[];
+        chk_value.push(<{$case.cid}>);   
+    $.ajax({
+        url:"/index.php/manager/cases/changestatus",
+        type:"get",
+        data:{cids:chk_value,status:status},
+        dataType : "json",
+        success:function(data){
+            if(data){
+                alert('成功');
+                location.href='/index.php/manager/cases/caselist';
+            }else{
+                alert('失败');
+            }
+        }
+    });  
+}
+
+function noexamine(){
+    var status = 3;
+    var chk_value =[];
+        chk_value.push(<{$case.cid}>); 
+    $.ajax({
+        url:"/index.php/manager/cases/changestatus",
+        type:"get",
+        data:{cids:chk_value,status:status},
+        dataType : "json",
+        success:function(data){
+            if(data){
+                alert('成功');
+                location.href='/index.php/manager/cases/caselist';
+            }else{
+                alert('失败');
+            }
+        }
+    });  
+}
+
+function returnlist(){
+	location.href='/index.php/manager/cases/caselist';
+}
+
+</script>

@@ -1,0 +1,862 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>金网奖提案</title>
+<meta name="description" content="金网奖提案">
+<meta name="keywords" content="金网奖提案">
+<base target="_blank">
+<link type="text/css" href="/static/api/css/style_an.css" rel="stylesheet" />
+<link type="text/css" href="/static/api/css/index.css" rel="stylesheet" />
+<script src="/static/api/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<style>
+.preview_size_fake1{ /* 该对象只用来在IE下获得图片的原始尺寸，无其它用途 */
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+height: 1px;
+visibility:hidden;
+overflow: hidden;
+display: none;
+}
+.preview_size_fake2{ /* 该对象只用来在IE下获得图片的原始尺寸，无其它用途 */
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+height: 1px;
+visibility:hidden;
+overflow: hidden;
+display: none;
+}
+.preview_size_fake3{ /* 该对象只用来在IE下获得图片的原始尺寸，无其它用途 */
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+height: 1px;
+visibility:hidden;
+overflow: hidden;
+display: none;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+  /*$(".tijiao").click(function(){
+  	$(".jiazai").show();
+  });*/
+  $(".dllist input").click(function(){
+	  $(".zw_a").hide();
+	  $(".ul3").show();
+	  $("#tj1").show();
+  });
+  $(".za1").click(function(){  
+	  $(".zw_a").hide();
+	  $(".zw_a1").show();
+	  $("#tj1").hide();
+  });
+  $(".za2").click(function(){  
+	  $(".zw_a").hide();
+	  $(".zw_a2").show();
+	  $("#tj1").hide();
+  });
+  $(".za3").click(function(){  
+	  $(".zw_a").hide();
+	  $(".zw_a3").show();
+	  $("#tj1").hide();
+  });
+  $(".za4").click(function(){  
+	  $(".zw_a").hide();
+	  $(".zw_a4").show();
+	  $("#tj1").hide();
+  });
+  $(".za5").click(function(){  
+	  $(".zw_a").hide();
+	  $(".zw_a5").show();
+	  $("#tj1").hide();
+  });
+  
+});
+</script>
+<script type="text/javascript">
+//检测上传文件类型、上传文件大小
+var isIE = /msie/i.test(navigator.userAgent) && !window.opera;
+function fileChange4(target,id) {
+var fileSize = 0;
+var filetypes =[".ppt",".pptx",".pdf"];
+//var filetypes =[".jpg",".png",".rar",".txt",".zip",".doc",".ppt",".xls",".pdf",".docx",".xlsx"];
+var filepath = target.value;
+var filemaxsize = 1024*50;//50M
+if(filepath){
+var isnext = false;
+var fileend = filepath.substring(filepath.indexOf("."));
+if(filetypes && filetypes.length>0){
+for(var i =0; i<filetypes.length;i++){
+if(filetypes[i]==fileend){
+isnext = true;
+break;
+}
+}
+}
+if(!isnext){
+alert("ppt格式必须为ppt/pptx/pdf之一！");  //检测允许的上传文件类型
+target.value ="";
+var file4 = $("#file4")
+file4.after(file4.clone().val(""));
+file4.remove();
+return false;
+}
+}else{
+return false;
+}
+if (isIE && !target.files) {
+var filePath = target.value;
+var fileSystem = new ActiveXObject("Scripting.FileSystemObject");
+if(!fileSystem.FileExists(filePath)){
+alert("ppt不存在，请重新输入！");
+return false;
+}
+var file = fileSystem.GetFile (filePath);
+fileSize = file.Size;
+} else {
+fileSize = target.files[0].size;
+}
+
+var size = fileSize / 1024;
+if(size>filemaxsize){
+alert("ppt不能大于"+filemaxsize/1024+"M！");   //检测允许 的上传文件大小
+target.value ="";
+var file4 = $("#file4")
+file4.after(file4.clone().val(""));
+file4.remove();
+return false;
+}
+if(size<=0){
+alert("ppt大小不能为0M！");
+target.value ="";
+var file4 = $("#file4")
+file4.after(file4.clone().val(""));
+file4.remove();
+return false;
+}
+}
+</script><!--上传ppt-->
+<script type="text/javascript">
+//检测上传文件类型、上传文件大小
+var isIE = /msie/i.test(navigator.userAgent) && !window.opera;
+function fileChange5(target,id) {
+var fileSize = 0;
+var filetypes =[".rmvb",".flv",".swf",".mov",".avi",".mp4",".RMVB",".FLV",".SWF",".MOV",".AVI",".MP4"];
+//var filetypes =[".jpg",".png",".rar",".txt",".zip",".doc",".ppt",".xls",".pdf",".docx",".xlsx"];
+var filepath = target.value;
+var filemaxsize = 1024*50;//50M
+if(filepath){
+var isnext = false;
+var fileend = filepath.substring(filepath.indexOf("."));
+if(filetypes && filetypes.length>0){
+for(var i =0; i<filetypes.length;i++){
+if(filetypes[i]==fileend){
+isnext = true;
+break;
+}
+}
+}
+if(!isnext){
+alert("视频格式必须为rmvb/flv/swf/mov/avi/mp4之一！");  //检测允许的上传文件类型
+target.value ="";
+var file5 = $("#file5")
+file5.after(file5.clone().val(""));
+file5.remove();
+return false;
+}
+}else{
+return false;
+}
+if (isIE && !target.files) {
+var filePath = target.value;
+var fileSystem = new ActiveXObject("Scripting.FileSystemObject");
+if(!fileSystem.FileExists(filePath)){
+alert("视频不存在，请重新输入！");
+return false;
+}
+var file = fileSystem.GetFile (filePath);
+fileSize = file.Size;
+} else {
+fileSize = target.files[0].size;
+}
+
+var size = fileSize / 1024;
+if(size>filemaxsize){
+alert("视频不能大于"+filemaxsize/1024+"M！");   //检测允许 的上传文件大小
+target.value ="";
+var file5 = $("#file5")
+file5.after(file5.clone().val(""));
+file5.remove();
+return false;
+}
+if(size<=0){
+alert("视频大小不能为0M！");
+target.value ="";
+var file5 = $("#file5")
+file5.after(file5.clone().val(""));
+file5.remove();
+return false;
+}
+}
+</script><!--上传视频-->
+<script src="/static/api/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    /* $(function(){
+        $(".dllist").hover(function(){
+            $(this).addClass("on").siblings().removeClass("on");
+        });
+        
+    });
+    $(document).ready(function(){
+    	  $(".tijiao").click(function(){
+    	    $(".jiazai").show();
+    	  });
+    }); */
+</script>
+</head>
+<body>
+<div class="content">
+    <{include file="../common/header_navigation.html"}>
+    <div class="m mian">
+        <div class="title mb">
+            <h2 class="f18 f">下载</h2>
+        </div>
+        <ul class="ul1 pad mb">
+            <li><a href="" target="_blank">点击这里下载"2015金网奖案例提交模版"</a></li>
+            <li><a href="" target="_blank">点击这里下载"2015年第七届金网奖授权书"</a></li>
+        </ul>
+        <div class="title mb">
+            <h2 class="f18 f">提报作品</h2>
+        </div>
+        <div class="tbzp pad mb">
+            <p>金网奖活动的网络营销案例，通往网上“案例提交”入口提报，</p>
+            <p>如遇服务器故障等原因，可利用组委会特别设置的电子邮件地址递交作品</p>
+            <p class="cf mb p1">
+               
+                <span class="l">电子邮件：wangjl@imcc.org.cn</span>
+            </p>
+            <p class="cf">
+              
+                <span class="l">联系人：王建利</span>
+            </p>
+            <p class="cf">
+               
+                <span class="l">联系电话：010-82657868-717</span>
+            </p>
+        </div>
+        <div class="title mb">
+            <h2 class="f18 f">作品查询</h2>
+        </div>
+        <div class="zpcx h24 pad">
+            <p>当参赛者提交作品后2个工作日内，在本届“金网奖”参赛作品展示平台将呈现提报作品的基础信息，如提报公司未看到作品的相关信息，请及时致电“金网奖”组委会，查询作品提交状况。</p>
+            <p>联系人：王建利，联系电话：010-82657868-717</p>
+        </div>
+        <form name="formUser" method="post" action="/index.php/api/user/update" > 
+        <div class="title mb">
+            <h2 class="f18 f">联系人信息</h2>
+        </div>
+        <ul class="ul2 cf pad">
+            <li>
+                <label><span class="red">*</span>公 司 名 称：</label>
+                <input type="hidden" name="uid" id="uid" value="<{get_cookie('uid')}>"/>
+                <input type="text" class="inputtext" id="company" name="company" value="<{$userinfo.company}>" <{if $userinfo.company}> disabled="true" <{/if}>/>
+                
+            </li>
+            <li>
+                <label><span class="red">*</span>公 司 介 绍：</label>
+                <input type="text"  class="inputtext"  id="profile" name="profile" value="<{$userinfo.profile}>" <{if $userinfo.profile}> disabled="true" <{/if}>/>
+                
+            </li>
+            <li>
+                <label><span class="red">*</span>联系人姓名：</label>
+                <input type="text" class="inputtext" id="contact"  name="contact" value="<{$userinfo.contact}>" <{if $userinfo.contact}> disabled="true" <{/if}>/>
+                
+            </li>
+            <li>
+                <label><span class="red">*</span>联系人座机：</label>
+                <input type="text" class="inputtext" id="telephone"  name="telephone" value="<{$userinfo.telephone}>" <{if $userinfo.telephone}> disabled="true" <{/if}>/>
+                
+            </li>
+            <li>
+                <label><span class="red">*</span>联系人邮箱：</label>
+                <input type="text" class="inputtext" id="email"  name="email" value="<{$userinfo.email}>" <{if $userinfo.email}> disabled="true" <{/if}>/>
+                
+            </li>
+            <li>
+                <label><span class="red">*</span>联系人QQ：</label>
+                <input type="text" class="inputtext" name="qq" onBlur="/^\d{5,10}$/.test(this.value)?'':alert('请输入正确的QQ号')" value="<{$userinfo.qq}>" <{if $userinfo.qq}> disabled="true" <{/if}> />
+                
+            </li>
+            <li>
+                <label><span class="red">*</span>联系人手机：</label>
+                <input type="text" class="inputtext" id="mobile" name="mobile" value="<{$userinfo.mobile}>" <{if $userinfo.mobile}> disabled="true" <{/if}>/>
+                
+            </li>
+            <li>
+                <label><span class="red">*</span>联系人职位：</label>
+                <input type="text" class="inputtext" id="position" name="position" value="<{$userinfo.position}>" <{if $userinfo.position}> disabled="true" <{/if}>/>
+                
+            </li>
+        </ul>
+        <{if !($userinfo.company && $userinfo.contact && $userinfo.telephone && $userinfo.email)}>
+        <div class="tj1 mb">
+            <input type="submit" class="sub" value="确定">
+        </div>
+        <{/if}>
+        </form>
+        <div class="title mb">
+            <h2 class="f18 f">参赛奖项</h2>
+        </div>
+        <form name="formCase" method="post" action="/index.php/api/cases/updatecaseact" enctype="multipart/form-data" target="_self"> 
+        <input type="hidden" name="uid" id="uid" value="<{get_cookie('uid')}>"/>
+        <input type="hidden" name="cid" id="cid" value="<{$case.cid}>"/>
+        <div class="csjx pad mb">
+             <div class="csjx_div">
+                <div class="csjx_title ftitle">案例类奖项</div>
+                <div class="nocase">
+                <dl class="dllist cf on">
+                    <dt><div class="csjx_title">电商及O2O类 </div></dt>
+                    <dd class="cf on">
+                        <label><input name="award[]" type="checkbox" value="1"/><span>电商及O2O类营销大奖</span></label>
+                        <label><input name="award[]" type="checkbox" value="2"/><span>场景营销类</span></label>
+                        <label><input name="award[]" type="checkbox" value="3"/><span>移动营销类</span></label>
+                        <label><input name="award[]" type="checkbox" value="4"/><span>电商O2O类 </span></label>
+                    </dd>
+                </dl>
+                <dl class="dllist cf on">
+                    <dt><div class="csjx_title">技术类 </div></dt>
+                    <dd class="cf">
+                        <label><input name="award[]" type="checkbox" value="5"/><span>技术类营销大奖 </span></label>
+                        <label><input name="award[]" type="checkbox" value="6"/><span>大数据营销类</span></label>
+                        <label><input name="award[]" type="checkbox" value="7"/><span>技术创新类</span> </label>
+                        <label><input name="award[]" type="checkbox" value="19"/><span>H5营销类</span> </label>
+                    </dd>
+                </dl>
+                <dl class="dllist cf on">
+                    <dt><div class="csjx_title">原生类</div></dt>
+                    <dd class="cf">
+                        <label><input name="award[]" type="checkbox" value="8"/><span>原生营销大奖</span></label>
+                        <label><input name="award[]" type="checkbox" value="9"/><span>情感营销类</span></label>
+                        <label><input name="award[]" type="checkbox" value="10"/><span>娱乐营销类</span> </label>
+                        <label><input name="award[]" type="checkbox" value="11"/><span>社会化营销类</span></label>
+                    </dd>
+                </dl>
+                <dl class="dllist cf on">
+                    <dt><div class="csjx_title">公益类</div></dt>
+                    <dd class="cf">
+                        <label><input name="award[]" type="checkbox" value="12"/><span>公益营销单项奖 </span></label>
+
+                    </dd>
+                </dl>
+                <dl class="dllist cf on">
+                    <dt><div class="csjx_title">体育类</div></dt>
+                    <dd class="cf">
+                        <label><input name="award[]" type="checkbox" value="13"/><span>体育营销单项奖 </span></label>
+
+                    </dd>
+                </dl>
+                </div>
+                <dl class="dllist cf on ">
+                    <dt><div class="csjx_title ftitle">非案例类奖项</div></dt>
+                    <dd class="cf nocase">
+                        <div class="csjx_sub_title">人物类</div>
+                        <label><input name="award[]" type="checkbox" value="14"/><span>2016年度网络营销领军人物 </span></label>
+                        <label><input name="award[]" type="checkbox" value="15"/><span>2016年度网络营销新锐人物  </span></label>
+                        <div class="csjx_sub_title">品牌类</div>
+                        <label><input name="award[]" type="checkbox" value="16"/><span>2016年度网络营销最佳数字代理机构  </span></label>
+                        <label><input name="award[]" type="checkbox" value="17"/><span>2016年度网络营销最佳品牌主  </span></label>
+                        <div class="csjx_sub_title">产品类 </div>
+                        <label><input name="award[]" type="checkbox" value="18"/><span>2016年度网络营销年度网络营销优秀产品及工具</span></label>
+
+                    </dd>
+                </dl>
+
+
+            </div>
+        </div>
+        <div class="title mb">
+            <h2 class="f18 f">填写案例详情</h2>
+        </div>
+        <ul class="ul3 pad ul2 mb zw_a">
+            <li><label>广告主名称：</label><input type="text" id="" name="advertiser" class="inputtext" value="<{$case.advertiser}>"></li>
+            <li><label>广告主LOGO：</label><input type="file" onChange="CheckExt1(this)" id="file1" name="advertiser_logo" class="inputtext inputtext1"><img class="preview_size_fake1" />
+            <p class="mb5 f14 graydeep" style="padding-left:125px; padding-bottom:5px;">图片格式为jpg　尺寸(120*60,72dpi)</p>
+            </li>
+            <li><label>代理公司名称：</label><input type="text" id="" name="agency_company" class="inputtext" value="<{$case.agency_company}>"></li>
+            <li><label>代理公司LOGO：</label><input type="file" onChange="CheckExt2(this)" id="file2" name="agency_company_logo" class="inputtext inputtext2"><img class="preview_size_fake2" />
+            <p class="mb5 f14 graydeep" style="padding-left:125px; padding-bottom:5px;">图片格式为jpg　尺寸(120*60,72dpi)</p>
+            </li>
+            <li><label>案例名称：</label><input type="text" id="" name="title" class="inputtext" value="<{$case.title}>"></li>
+            <li><label>作品主视觉：</label><input type="file" onChange="CheckExt3(this)" id="file3" name="visual_url" class="inputtext  inputtext3"><img class="preview_size_fake3" />
+            <p class="mb5 f14 graydeep" style="padding-left:125px; padding-bottom:5px;">图片格式为jpg　尺寸(500*355,72dpi)</p>
+            </li>
+            <li style="height:50px;"><label>上传参赛作品：</label><input type="file" id="file4" onChange="fileChange4(this);" name="url" class="inputtext">
+            <p class="mb5 f14 graydeep" style="padding-left:125px;">请将案例PPT保存成为微软97-2003版本的兼容格式文件</p>
+			<p class="mb5 f14 graydeep" style="padding-left:125px; margin-top:-3px;">如果提交作品特殊表格无法显示，组委会会帮助转换，请放心上传。</p>
+            </li>
+            <li><label>上传视频：</label><input type="file" id="file5" onChange="fileChange5(this);" name="video_url" class="inputtext">
+            <p class="mb5 f14 graydeep" style="padding-left:125px; padding-bottom:5px;">视频容量限制：50M；</p>
+            </li>
+        </ul>
+      <div class="zw_a none zw_a1"><img src="/static/api/images/erb.jpg" width="430" height="430" /></div>
+      <div class="zw_a none zw_a2"><img src="/static/api/images/erb.jpg" width="430" height="430" /></div>
+      <div class="zw_a none zw_a3"><img src="/static/api/images/erb.jpg" width="430" height="430" /></div>
+      <div class="zw_a none zw_a4"><img src="/static/api/images/erb.jpg" width="430" height="430" /></div>
+      <div class="zw_a none zw_a5"><img src="/static/api/images/erb.jpg" width="430" height="430" /></div> 
+        <div class="tj1 mb" id="tj1">
+            <input type="submit" value="提交" class="sub tijiao">
+        </div>
+        </form>
+    </div>
+</div>
+<div style="position:fixed; right:50px; top:103px;"><img src="/static/api/images/erb.jpg" width="130" height="130" /></div>
+<div class="jiazai" style="position:fixed; display:none; left:0px; top:0px; width:100%; height:100%; background:#000; opacity:0.7;filter:alpha(opacity=0.7); z-index:999;"><div style="color:#fff; font-size:34px; text-align:center; line-height:600px; font-weight:bold;">上传中请稍等...</div></div>
+<script type="text/javascript">
+    $(function(){
+            $("[name=formUser]").submit(function(){
+                if($("[name=company]").val()== ""){
+                    alert('请输入公司名称！');
+                    return false;
+                }
+                if($("[name=contact]").val()== ""){
+                    alert('请输入联系人姓名！');
+                    return false;
+                }
+	            if($("[name=profile]").val()== ""){
+                    alert('请输入公司简介！');
+                    return false;
+                }
+                if($("[name=email]").val()== ""){
+                    alert('请输入联系人邮箱！');
+                    return false;
+                }
+	            var telephone = $("[name=telephone]").val(); 
+	            if(!(/^((0[0-9]{2,3})-)([0-9]{7,8})(-([0-9]{3,}))?$/.test(telephone))){ 
+	                alert("请输入正确的座机号"); 
+	                return false; 
+	            } 
+	            var sMobile = $("[name=mobile]").val();
+	            if(!(/^1\d{10}$/.test(sMobile))){ 
+	                alert("请输入正确的手机号"); 
+	                //document.mobileform.mobile.focus(); 
+	                return false; 
+	            } 
+	            if($("[name=position]").val()== ""){
+                    alert('请输入联系人职位！');
+                    return false;
+                }
+	        });
+            $("input[name='award'][value=<{$case.aid}>]").attr("checked",true); 
+           $("[name=formCase]").submit(function(){
+                if($('input:radio[name=award]:checked').length < 1){
+                    alert('请选择参赛奖项！');
+                    return false;
+                }
+                if($("[name=advertiser]").val()== ""){
+                    alert('请输入广告主名称！');
+                    return false;
+                }
+                /* if($("[name=advertiser_logo]").val()== ""){
+                    alert('请选择广告主logo！');
+                    return false;
+                } */
+                if($("[name=agency_company]").val()== ""){
+                    alert('请输入代理公司名称！');
+                    return false;
+                }
+                /* if($("[name=agency_company_logo]").val()== ""){
+                    alert('请选择代理公司logo！');
+                    return false;
+                } */
+                if($("[name=title]").val()== ""){
+                    alert('请输入案例名称！');
+                    return false;
+                }
+                /* if($("[name=visual_url]").val()== ""){
+                    alert('请选择作品主视觉！');
+                    return false;
+                }
+                if($("[name=url]").val()== ""){
+                    alert('请选择参赛作品！');
+                    return false;
+                }
+                if($("[name=video_url]").val()== ""){
+                    alert('请选择视频！');
+                    return false;
+                } */
+                $(".jiazai").show();
+            });
+    });
+</script>
+<script language="JavaScript" type="text/javascript">
+if ((navigator.userAgent.indexOf('MSIE') >= 0) 
+    && (navigator.userAgent.indexOf('Opera') < 0)){
+    var ImgObj=new Image();
+var AllImgExt1=".jpg|.JPG|"
+var FileObj1,ImgFileSize,ImgWidth1,ImgHeight1,FileExt,ErrMsg,FileMsg,HasCheked,IsImg
+var AllowExt1=".jpg|.JPG|"
+var AllowImgWidth1=120; 
+var AllowImgHeight1=60; 
+HasChecked=false; 
+function CheckProperty1(obj) 
+{ 
+FileObj1=obj; 
+if(ErrMsg!="") 
+{ 
+ShowMsg(ErrMsg,false); 
+return false;
+} 
+if(ImgObj.readyState!="complete") 
+{ 
+setTimeout("CheckProperty1(FileObj1)",500); 
+return false; 
+} 
+ImgFileSize=Math.round(ImgObj.fileSize/1024*100)/100;
+ImgWidth1=ImgObj.width //取得宽度 
+ImgHeight1=ImgObj.height; //取得高度 
+if(ErrMsg!="") 
+ShowMsg(ErrMsg,false); 
+else 
+ShowMsg(FileMsg,true); 
+} 
+ImgObj.onerror=function()
+{
+    //ErrMsg=alert('请上传图片尺寸等于120*60的图片2!');
+    } 
+function ShowMsg(msg,tf) 
+{ 
+msg=msg.replace("\n","<li>"); 
+msg=msg.replace(/\n/gi,"<li>"); 
+if(!tf) 
+{ 
+FileObj1.outerHTML=FileObj1.outerHTML; 
+MsgList.innerHTML=msg; 
+HasChecked=false; 
+} 
+else 
+{ 
+HasChecked=true; 
+} 
+} 
+function CheckExt1(obj) 
+{ 
+ErrMsg=""; 
+FileMsg=""; 
+FileObj1=obj; 
+IsImg=false; 
+HasChecked=false; 
+if(obj.value=="")return false; 
+FileExt=obj.value.substr(obj.value.lastIndexOf(".")).toLowerCase(); 
+if(AllowExt1!=0&&AllowExt1.indexOf(FileExt+"|")==-1)
+{ 
+alert('图片格式必须为jpg图片！') 
+var file1 = $(".inputtext1")
+        file1.after(file1.clone().val(""));
+        file1.remove(); 
+} 
+if(AllImgExt1.indexOf(FileExt+"|")!=-1)
+{ 
+IsImg=true; 
+ImgObj.src=obj.value; 
+CheckProperty1(obj); 
+return false; 
+} 
+
+} 
+}else{
+    function fn1(){
+$(".inputtext1").change(function() {
+var val = $(this).val();
+if(!val.match( /.jpg/i ) ){
+//if(!val.match( /.jpg|.gif|.png|.bmp/i ) ){ 
+imgtype = false;
+alert("图片格式必须为jpg图片！");  
+ var file1 = $(".inputtext1")
+        file1.after(file1.clone().val(""));
+        file1.remove(); 
+        fn1();
+}else{
+if (FileReader) {
+var reader = new FileReader(),
+file = this.files[0];
+reader.onload = function(e) {
+var image = new Image();
+image.src = e.target.result;
+}
+}
+};
+reader.readAsDataURL(file);
+
+}
+});
+    }
+fn1();
+}
+</script>
+
+<script language="JavaScript" type="text/javascript">
+if ((navigator.userAgent.indexOf('MSIE') >= 0) 
+    && (navigator.userAgent.indexOf('Opera') < 0)){
+    var ImgObj=new Image();
+var AllImgExt2=".jpg|.JPG|"
+var FileObj2,ImgFileSize,ImgWidth2,ImgHeight2,FileExt,ErrMsg,FileMsg,HasCheked,IsImg
+var AllowExt2=".jpg|.JPG|"
+var AllowImgWidth2=120; 
+var AllowImgHeight2=60; 
+HasChecked=false; 
+function CheckProperty2(obj) 
+{ 
+FileObj2=obj; 
+if(ErrMsg!="") 
+{ 
+ShowMsg(ErrMsg,false); 
+return false;
+} 
+if(ImgObj.readyState!="complete") 
+{ 
+setTimeout("CheckProperty2(FileObj2)",500); 
+return false; 
+} 
+ImgFileSize=Math.round(ImgObj.fileSize/1024*100)/100;
+ImgWidth2=ImgObj.width //取得宽度 
+ImgHeight2=ImgObj.height; //取得高度 
+if(ErrMsg!="") 
+ShowMsg(ErrMsg,false); 
+else 
+ShowMsg(FileMsg,true); 
+} 
+ImgObj.onerror=function()
+{
+    //ErrMsg=alert('请上传图片尺寸等于120*60的图片2!');
+    } 
+function ShowMsg(msg,tf) 
+{ 
+msg=msg.replace("\n","<li>"); 
+msg=msg.replace(/\n/gi,"<li>"); 
+if(!tf) 
+{ 
+FileObj2.outerHTML=FileObj2.outerHTML; 
+MsgList.innerHTML=msg; 
+HasChecked=false; 
+} 
+else 
+{ 
+HasChecked=true; 
+} 
+} 
+function CheckExt2(obj) 
+{ 
+ErrMsg=""; 
+FileMsg=""; 
+FileObj2=obj; 
+IsImg=false; 
+HasChecked=false; 
+if(obj.value=="")return false; 
+FileExt=obj.value.substr(obj.value.lastIndexOf(".")).toLowerCase(); 
+if(AllowExt2!=0&&AllowExt2.indexOf(FileExt+"|")==-1)
+{ 
+alert('图片格式必须为jpg图片！') 
+var file2 = $(".inputtext2")
+        file2.after(file2.clone().val(""));
+        file2.remove(); 
+} 
+if(AllImgExt2.indexOf(FileExt+"|")!=-1)
+{ 
+IsImg=true; 
+ImgObj.src=obj.value; 
+CheckProperty2(obj); 
+return false; 
+} 
+
+} 
+}else{
+    function fn2(){
+$(".inputtext2").change(function() {
+var val = $(this).val();
+if(!val.match( /.jpg/i ) ){
+//if(!val.match( /.jpg|.gif|.png|.bmp/i ) ){ 
+imgtype = false;
+alert("图片格式必须为jpg图片！");  
+ var file2 = $(".inputtext2")
+        file2.after(file2.clone().val(""));
+        file2.remove(); 
+        fn2();
+}else{
+if (FileReader) {
+var reader = new FileReader(),
+file = this.files[0];
+reader.onload = function(e) {
+var image = new Image();
+image.src = e.target.result;
+}
+}
+};
+reader.readAsDataURL(file);
+
+}
+});
+    }
+fn2();
+}
+</script>
+
+
+
+<script language="JavaScript" type="text/javascript">
+if ((navigator.userAgent.indexOf('MSIE') >= 0) 
+    && (navigator.userAgent.indexOf('Opera') < 0)){
+    var ImgObj=new Image();
+var AllImgExt3=".jpg|.JPG|"
+var FileObj3,ImgFileSize,ImgWidth3,ImgHeight3,FileExt,ErrMsg,FileMsg,HasCheked,IsImg
+var AllowExt3=".jpg|.JPG|" 
+var AllowImgWidth3=500; 
+var AllowImgHeight3=355; 
+HasChecked=false; 
+function CheckProperty3(obj) 
+{ 
+FileObj3=obj; 
+if(ErrMsg!="") 
+{ 
+ShowMsg(ErrMsg,false); 
+return false;
+} 
+if(ImgObj.readyState!="complete") 
+{ 
+setTimeout("CheckProperty3(FileObj3)",500); 
+return false; 
+} 
+ImgFileSize=Math.round(ImgObj.fileSize/1024*100)/100;
+ImgWidth3=ImgObj.width //取得宽度 
+ImgHeight3=ImgObj.height; //取得高度 
+if(AllowImgWidth3!= 0 &&AllowImgWidth3<ImgWidth3||AllowImgHeight3!= 0 &&AllowImgHeight3<ImgHeight3) 
+    {
+    alert("请上传图片尺寸等于500*355的图片!")
+    var file3 = $(".inputtext3")
+        file3.after(file3.clone().val(""));
+        file3.remove(); 
+    }else if(AllowImgWidth3!= 0 &&AllowImgWidth3>ImgWidth3||AllowImgHeight3!= 0 &&AllowImgHeight3>ImgHeight3) 
+    {
+    alert("请上传图片尺寸等于500*355的图片!")
+    var file3 = $(".inputtext3")
+        file3.after(file3.clone().val(""));
+        file3.remove(); 
+    }
+
+if(ErrMsg!="") 
+ShowMsg(ErrMsg,false); 
+else 
+ShowMsg(FileMsg,true); 
+} 
+ImgObj.onerror=function()
+{
+    //ErrMsg=alert('请上传图片尺寸等于120*60的图片2!');
+    } 
+function ShowMsg(msg,tf) 
+{ 
+msg=msg.replace("\n","<li>"); 
+msg=msg.replace(/\n/gi,"<li>"); 
+if(!tf) 
+{ 
+FileObj3.outerHTML=FileObj3.outerHTML; 
+MsgList.innerHTML=msg; 
+HasChecked=false; 
+} 
+else 
+{ 
+HasChecked=true; 
+} 
+} 
+function CheckExt3(obj) 
+{ 
+ErrMsg=""; 
+FileMsg=""; 
+FileObj3=obj; 
+IsImg=false; 
+HasChecked=false; 
+if(obj.value=="")return false; 
+FileExt=obj.value.substr(obj.value.lastIndexOf(".")).toLowerCase(); 
+if(AllowExt3!=0&&AllowExt3.indexOf(FileExt+"|")==-1)
+{ 
+alert('图片格式必须为jpg图片！') 
+var file3 = $(".inputtext3")
+        file3.after(file3.clone().val(""));
+        file3.remove(); 
+} 
+if(AllImgExt3.indexOf(FileExt+"|")!=-1)
+{ 
+IsImg=true; 
+ImgObj.src=obj.value; 
+CheckProperty3(obj); 
+return false; 
+} 
+
+} 
+}else{
+    function fn3(){
+$(".inputtext3").change(function() {
+var val = $(this).val();
+if(!val.match( /.jpg/i ) ){
+//if(!val.match( /.jpg|.gif|.png|.bmp/i ) ){ 
+imgtype = false;
+alert("图片格式必须为jpg图片！");  
+ var file3 = $(".inputtext3")
+        file3.after(file3.clone().val(""));
+        file3.remove(); 
+        fn3();
+}else{
+if (FileReader) {
+var reader = new FileReader(),
+file = this.files[0];
+reader.onload = function(e) {
+var image = new Image();
+image.src = e.target.result;
+image.onload=function(){
+    if(image.width > 500 || image.height > 355){
+    fill = true;
+    //alert("图片尺寸必须是500x355");
+//var file3 = $(".inputtext3")
+//        file3.after(file3.clone());
+ //       file3.remove();
+ //       fn3();
+    }else if(image.width < 500 || image.height < 355){
+    fill = true;
+//var file3 = $(".inputtext3")
+//        file3.after(file3.clone());
+ //       file3.remove();
+ //       fn3();
+    //alert("图片尺寸必须是500x355");
+    }else if(image.width == 500 || image.height == 355){
+    fill = true;
+    //alert("上传成功");
+    }
+}
+}
+};
+reader.readAsDataURL(file);
+
+}
+});
+    }
+fn3();
+}
+</script>
+<script type="text/javascript">
+    function check(){ 
+      //验证手机
+     
+        var sMobile = document.formReg.mobile.value 
+        if(!(/^1[3|5][0-9]\d{4,8}$/.test(sMobile))){ 
+            alert("请输入正确的手机号"); 
+            document.mobileform.mobile.focus(); 
+            return false; 
+        } 
+         //验证联系人职位
+      var username = document.getElementById("position"); 
+      if(username.value.length==0){ 
+        alert("联系人职位不能为空！"); 
+         //pinPrompt.innerHTML="联系人姓名不能为空！"
+         username.focus(); 
+         return false; 
+      }     
+    }
+</script>
+
+</body>
+</html>

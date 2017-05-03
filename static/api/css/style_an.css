@@ -1,0 +1,468 @@
+
+html {
+    color: #000;
+    background: #fff;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset, img {
+    border: 0
+}
+
+address, caption, cite, code, dfn, em, th, var {
+    font-style: normal;
+    font-weight: normal
+}
+
+ol, ul {
+    list-style: none
+}
+
+caption, th {
+    text-align: left
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 12px;
+}
+
+q:before, q:after {
+    content: ''
+}
+
+abbr, acronym {
+    border: 0;
+    font-variant: normal
+}
+
+sup {
+    vertical-align: text-top
+}
+
+sub {
+    vertical-align: text-bottom
+}
+
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit
+}
+
+input, textarea, select {
+    *font-size: 100%
+}
+
+legend {
+    color: #525252;
+}
+
+a {
+    color: #000;
+    text-decoration: none
+}
+
+a:hover {
+    color: #c4a006;
+    text-decoration: underline
+}
+
+a:focus {
+    outline: none
+}
+
+body {
+    font: normal 14px/140% arial, "Microsoft YaHei";
+}
+
+.cf {
+    display: inline-block;
+}
+
+* html .cf {
+    height: 1%;
+}
+
+.cf {
+    display: block;
+}
+
+.cf:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.l, .r {
+    display: inline;
+}
+
+.l {
+    float: left;
+}
+
+.r {
+    float: right;
+}
+
+.m {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.mb25 {
+    margin-bottom: 25px;
+}
+
+.mb17 {
+    margin-bottom: 17px;
+}
+
+.head {
+    cursor: pointer;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+.f {
+    color: #fff;
+}
+
+.mb {
+    margin-bottom: 10px;
+}
+
+.h24 {
+    line-height: 24px;
+}
+
+.red {
+    color: #e71f19;
+}
+
+/* header */
+.header {
+    background: url(../images/img_1260-42.jpg) no-repeat scroll center 0;
+    height: 42px;
+    line-height: 42px;
+    margin: 42px 0 50px 0;
+}
+
+.header_nav {
+    position: relative;
+}
+
+.header_nav .logo {
+    position: absolute;
+    left: 0;
+    top: -42px;
+}
+
+.header_nav li {
+    float: left;
+    padding: 0 25px;
+}
+
+.header_nav li a {
+    color: #fff;
+    display: block;
+}
+
+.header_nav li.on a {
+    color: #b4920e;
+}
+
+.header_nav ul {
+    padding: 0 0 0 125px;
+}
+
+.mian {
+    width: 860px;
+    padding: 0 20px 0 120px;
+}
+
+.stitle {
+    background-color: #c4a006;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 10px;
+}
+
+.stitle h2 {
+    font-weight: 500;
+    padding: 0 20px 0 20px;
+}
+
+.stitle_short {
+    display: inline-block;
+    background: #77c47a;
+}
+
+.stitle_short h2 {
+    font-size: 14px;
+    padding: 0 10px 0 10px;
+}
+
+.ul1 li {
+    line-height: 24px;
+}
+
+.ul1 li a {
+    text-decoration: underline;
+}
+
+.tbzp p {
+    line-height: 24px;
+}
+
+.tbzp p span {
+    width: 300px;
+}
+
+.tbzp p.p1 span {
+    font-weight: bold;
+    color: #c4a006;
+    text-decoration: underline;
+}
+
+.zpcx {
+    margin: 0 0 30px;
+}
+
+.inputtext {
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #dcdcdc;
+    width: 520px;
+}
+
+.ul2 li label {
+    display: inline-block;
+    width: 95px;
+}
+
+.ul2 li .dui {
+    padding: 0 0 0 10px;
+}
+
+.ul2 li {
+    margin: 0 0 15px;
+}
+
+.tj1 .sub {
+    background-color: #c4a006;
+    border: 0 none;
+    color: #fff;
+    width: 90px;
+    height: 42px;
+    border-radius: 10px;
+}
+
+.tj1 {
+    text-align: right;
+    padding: 0 205px 0 0;
+}
+
+.csjx_title {
+    font-weight: bold;
+    line-height: 24px;
+    background: #ffb623;
+    color: #fff;
+    text-align: center;
+}
+
+.dllist dd {
+    line-height: 30px;
+}
+
+.dllist dd label {
+    padding: 0 10px 0 0;
+    display: block;
+}
+
+.dllist li p {
+    margin-bottom: 0px;
+}
+
+.csjx_div .on dd {
+    display: block;
+}
+
+.ul3 li label {
+    display: inline-block;
+    width: 125px;
+    font-weight: 600;
+}
+
+.csjx_sub_title {
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.ftitle {
+    color: #de7c10;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.dllistWrap dl {
+    float: left;
+    width: 180px;
+    height: 190px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.dllistWrap dl.last {
+    margin-right: 0px;
+}
+
+.nocaseDllistWrap dl {
+    float: left;
+    width: 240px;
+    height: 100px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.awardWrap .awardLi {
+    display: none;
+}
+
+.awardWrap .awardLi.on {
+    display: block;
+}
+
+.right-icon {
+    display: none;
+}
+/* .case_detail{ display: none;} */
+
+/*edit login register*/
+.main_bi li {
+    border-bottom: 1px dashed #dcdcdc;
+    color: #2b3b3f;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+}
+
+.main_biw {
+    background: #efefef;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    width: 135px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    margin-left: 568px;
+    margin-top: 20px;
+}
+
+.g-numaa select {
+    color: #333;
+    width: 150px;
+}
+
+.g-numaa select option {
+    font-size: 12px;
+    color: #666;
+    border: none;
+    border-bottom: 1px solid #CCCCCC;
+    height: 20px;
+    line-height: 20px;
+    padding-top: 2px;
+}
+
+.g-numaa select option:hover {
+    background: #f4f4f4;
+}
+
+.none {
+    display: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.graydeep {
+    color: #666;
+}
+
+.graydeep a {
+    color: #666;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.pt5 {
+    padding-top: 5px;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.input-group-addon {
+    min-width: 150px;
+    text-align: left;
+}
+
+.caseSuccess a {
+    color: #000;
+}
+
+.caseSuccess a:hover {
+    color: #de9540;
+    text-decoration: none;
+}
+
+#tw h4{
+    font-size:20px;
+}
+#tw table{
+    margin-top:20px;
+}

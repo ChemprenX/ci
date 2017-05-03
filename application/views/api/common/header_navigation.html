@@ -1,0 +1,60 @@
+<div class="g-numaa clearfix">
+    <div class="b1">
+        <div class="wrap clearfix">
+            <{if !get_cookie('username')}>
+            <div class="f14 fr mt10 graydeep"><a href="/index.php/api/user/login">登录</a> | <a
+                    href="/index.php/api/user/register">注册</a></div>
+            <{else}>
+
+            <select class="fr mt10 mb10 form-control" onchange="window.location=this.value">
+                <option value=""><{get_cookie('username')}></option>
+                <!--<option value="/index.php/api/user/mycase">我的作品</option>
+                <option value="/index.php/api/user/userinfo">账号信息</option>
+                <option value="/index.php/api/user/logout">退出</option>-->
+                <!--上面5个，邮箱名，个人信息，提交案例，我的作品，退出-->
+                <option value="/index.php/api/user/userinfo">个人信息</option>
+                <option value="/index.php/api/cases/casesubmit">提交案例</option>
+                <option value="/index.php/api/user/mycase">我的作品</option>
+                <option value="/index.php/api/user/logout">退出</option>
+            </select>
+            <div class="fr graydeep f14 mt10 mr10 pt5">欢迎</div>
+            <{/if}>
+        </div>
+    </div>
+</div>
+<div class="nav">
+    <div class="wrap clearfix">
+        <div class="logo fl">
+            <img src="/static/api/new/images/logo_02.png" alt=""/>
+        </div>
+        <ul class="clearfix fr navUl">
+
+            <li class="homeli">
+                <a href="/index.php/api/user/static_home">
+                    首页
+                </a>
+            </li>
+            <li class="peakli forumli">
+                <a href="/index.php/api/user/static_peak">
+                    专家团队
+                </a>
+            </li>
+            <!--<li class="twentyYearsli">
+                <a href="/index.php/api/user/static_twentyYears">
+                    致敬中国网络营销20年
+                </a>
+            </li>-->
+            <li class="casecollctionli">
+                <a href="/index.php/api/user/static_caseCollection">
+                    案例征集
+                </a>
+            </li>
+            <li class="last partnerli">
+                <a href="/index.php/api/user/static_partner">
+                    合作伙伴
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>

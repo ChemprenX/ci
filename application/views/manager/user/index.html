@@ -1,0 +1,67 @@
+<script type="text/javascript" src="/static/swfobject.js"></script> 
+<script type="text/javascript"> 
+var flashvars = {"data-file":"/index.php/manager/user/indeximg"}; //这里是数据源  
+var params = {menu: "false",scale: "noScale",wmode:"opaque"};  
+swfobject.embedSWF("/static/open-flash-chart.swf", "chart", "430px", "330px", 
+ "9.0.0","/static/expressInstall.swf", flashvars,params);
+</script> 
+
+<{include file="../common/header_navigation.html"}>
+<div class="main main_index clearfix  fYaHei">
+    <!--第一部分-->
+    <div class=" clearfix index_list">
+        <div class="list_a pr fYaHei fl">
+            <div class="shz pa bgz"></div>
+            <div class="list_an">
+                <div class="tc mb15"><img src="/static/manager/images/s1_03.png" width="42" height="35"></div>
+                <div class="f16 graydeep">用户总数：<{$usersum}></div>
+            </div>
+        </div>
+        <div class="list_a pr fYaHei fl">
+            <div class="shz pa bglv"></div>
+            <div class="list_an">
+                <div class="tc mb15"><img src="/static/manager/images/s2_03.png" width="28" height="34"></div>
+                <div class="f16 graydeep">案例总数：<{$sums}></div>
+            </div>
+        </div>
+        <div class="list_a pr fYaHei fl">
+            <div class="shz pa bglv"></div>
+            <div class="list_an">
+                <div class="tc mb15"><img src="/static/manager/images/s2_03.png" width="28" height="34"></div>
+                <div class="f16 graydeep">评委总数：<{$pingweiNum}></div>
+            </div>
+        </div>
+    </div>
+    <!--第二部分-->
+    <div>
+        <form name="formCase" id="formCase" method="get" action="/index.php/manager/user/index">
+            <select id="commitY" name="commitY">
+                <option value="2017" <{if $search.commitY == 2017}> selected="selected"<{/if}>>2017</option>
+                <option value="2016" <{if $search.commitY == 2016}> selected="selected"<{/if}>>2016</option>
+                <option value="2015" <{if $search.commitY == 2015}> selected="selected"<{/if}>>2015</option>
+            </select>
+            <input type='submit' class="btn btn-success" value="确定" type="button">
+        </form>
+    </div>
+    <!--第三部分-->
+    <div class="data_sheet fYaHei">
+        <div class="f18 graydeep mb10">案例概览</div>
+        <div class="clearfix">
+            <div class="fl clearfix mt30">
+                <div class="fl mt10 mr10">
+                    <img src="/static/manager/images/ss_03.png" width="15" height="108"> 
+                </div>
+                <div class="fl graydeep mt2 f14 lh220">
+                <P>全部案例数量：<{$sums}></P>
+                <P>待审核案例数量：<{$casesum.1}></P> 
+                <P>已审核案例数量：<{$casesum.2}></P> 
+                <P>未通过审核案例数量：<{$casesum.3}></P>
+                </div>
+            </div>
+            <div class="fr mr30">
+            <div id="chart"></div>  
+           <!--  <img src="/static/manager/images/hl_03.png" width="189" height="189"> --> 
+           </div>
+        </div>
+    </div>
+</div>

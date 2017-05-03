@@ -1,0 +1,94 @@
+
+<{include file="../common/header_navigation.html"}>
+<div class="add_admin clearfix  fYaHei">
+    <div class="add_admin_list fl">
+            <div class="add_gl">添加管理员</div>
+        <form name="formReg" method="post" action="/index.php/manager/user/addadminact" onsubmit="return check();"> 
+            <div class="regdiv">
+                <div class="divinput"><span class="spanreg">用户名：</span><input type="text" name="name" id="pin" class="text"><span id="pinPrompt" class="error"></span></div>
+           </div>
+           <div class="regdiv mb15">
+                <div class="divinput"><span class="spanreg">用户角色：</span>
+                    <select id="type" name="type">
+                        <option value="0">选择角色</option>
+                        <{foreach from=$type item=item key=key}>
+                        <option value="<{$key}>"><{$item}></option>
+                        <{/foreach}>
+                    </select>
+                    <span id="typePrompt" class="uerror"></span>
+                </div>
+           </div>
+           <div class="regdiv">
+                <div class="divinput"><span class="spanreg">密&nbsp;&nbsp;&nbsp;码：</span><input type="password" name="password" id="password" class="text"><span id="passwrodPrompt" class="error"></span></div>
+          </div>
+          <div class="regdiv">
+                <div class="divinput"><span class="spanreg">确定密码：</span><input type="password" name="password" id="passwordsure" class="text"><span id="surepasswrod" class="error"></span></div>
+          </div>
+          <div class="clearfix pl80">
+            <p class="submitp fl"><input type="submit" value="确定" class="tc register f20"></p>
+            <p class="submitp fl"><input type="reset" value="重置" class="tc chongz register f20"></p>
+            <p class="submitp fl"><input type="reset" value="返回" class="tc register f20"></p>
+           </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+
+        function check(){ 
+             //验证用户名 
+          var username = document.getElementById("pin"); 
+          var pinPrompt = document.getElementById("pinPrompt"); 
+          if(username.value.length==0){ 
+            // alert("用户名不能为空！"); 
+             pinPrompt.innerHTML="用户名不能为空！"
+             username.focus(); 
+             return false; 
+          } 
+          if(username.value.length<3){ 
+          // alert("用户名长度不能低于6位！"); 
+           pinPrompt.innerHTML="用户名长度不能低于3位！"
+           username.value = ""; 
+           username.focus(); 
+             return false; 
+          } 
+           var type = $("#type").val();
+           if(type < 1){
+        	   typePrompt.innerHTML="请选择角色！"
+        	   //type.focus(); 
+               return false; 
+           }
+        //验证密码，确认密码 
+           var pass = document.getElementById("password"); 
+           var passwordsure = document.getElementById("passwordsure"); 
+           var passwrodPrompt = document.getElementById("passwrodPrompt"); 
+           var surepasswrod = document.getElementById("surepasswrod"); 
+           if(pass.value.length==0){ 
+              //alert("密码不能为空！"); 
+              passwrodPrompt.innerHTML="密码不能为空！"
+              pass.focus(); 
+              return false; 
+            } 
+            if(pass.value.length<6||pass.value.length>15){ 
+                // alert("密码的长度为6-15位！"); 
+                 passwrodPrompt.innerHTML="密码的长度为6-15位！"
+                 pass.value = ""; 
+                 pass.focus(); 
+                 return false; 
+            }else if(pass.value!=passwordsure.value){ 
+             //alert("两次密码输入不一致！"); 
+             surepasswrod.innerHTML="两次密码输入不一致！"
+             passwordsure.value = ""; 
+             passwordsure.focus(); 
+              return false; 
+            } 
+            //验证
+            var code = document.getElementById("code");
+            var codePrompt = document.getElementById("codePrompt");
+            if(code.value.length==0){
+                codePrompt.innerHTML="验证不能为空！"
+                code.value = "";
+                code.focus();
+                return false; 
+            }
+        }
+    </script>

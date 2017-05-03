@@ -1,0 +1,849 @@
+/* 
+头部样式
+.header{ width:100%; height:165px;height:40px; background:#8293b9;}
+.header_nav{ width:1000px; margin:0 auto;}
+.header_nav .lib{ width:600px; margin:0px 20px;}
+.header_nav .lib li{ float:left; line-height:40px; color:#fff; font-size:16px; text-align:center; padding:0px 30px; cursor:pointer;}
+.header_nav .lib .center{ background:#6379ab;}
+.header_nav .lic{ width:180px;line-height:40px; color:#fff; font-size:16px; text-align:center;}
+.header_nav .lic .wel_tc{ background:#6379ab; font-size:12px; width:50px; height:25px; line-height:25px; margin-top:8px; margin-left:8px;}
+
+
+登入样式
+.main_login{ width:340px; border-bottom:2px solid #e5e5e5; margin:20px auto; border-radius:3px;}
+.main_login_a{ border:1px solid #e6e9ee;border-bottom:none; padding:40px 20px; background:#fff;}
+img{ display:block;}
+.main_login .spanreg{font-size:16px;color:#666;   width:55px;display:inline-block;}
+.main_login .text{height:40px;line-height:40px;padding:0 5px;border:1px solid #e1e1e1;width:230px;color:#666; font-size:14px;}
+.main_login .submitp{ text-align:center; background:#8293b9; border-radius:3px;}
+.main_login .register{height:40px;width:230px;background:#8293b9;color:#fff;border:0 none;border:0 none;}
+.main_login .submitp input{cursor:pointer; }
+#loginErrMsg{ color:#FF0000;font-size:14px;margin-left:5px;}
+#passwordMsg{color:#FF0000; font-size:14px;margin-left:5px;}
+
+
+编辑管理员
+.add_admin{width:1000px; margin:170px auto 0px;}
+.add_gl{ font-size:18px; color:#666; margin-bottom:20px;}
+.add_admin_list{}
+.add_admin .spanreg{font-size:16px;color:#666;   width:80px;display:inline-block; text-align:right;}
+.add_admin .text{height:40px;line-height:40px;padding:0 5px;border:1px solid #e1e1e1;width:280px; margin-bottom:15px;color:#666; font-size:14px;}
+.add_admin .submitp{ text-align:center; background:#8293b9; border-radius:3px; width:90px; height:27px; margin-right:12px;}
+.add_admin .register{ width:90px; height:27px; margin-right:12px; font-size:16px;background:#8293b9;color:#fff;border:0 none;border:0 none;border-radius:3px;}
+.add_admin .submitp input{cursor:pointer; }
+#pinPrompt{color:#FF0000; font-size:14px; margin-left:5px;}
+#emailPrompt{color:#FF0000; font-size:14px; margin-left:5px;}
+#passwrodPrompt{color:#FF0000; font-size:14px; margin-left:5px;}
+#surepasswrod{color:#FF0000; font-size:14px; margin-left:5px;}
+.uerror{color:#FF0000; font-size:14px; margin-left:5px;}
+.add_admin_list select{border: 1px solid #e1e1e1; height:40px; line-height:40px; width:150px; color:#666; font-size:14px; margin-left:-3px;}
+
+
+案例管理
+.case_man{ margin-top:190px;}
+.case_man select{background: none repeat scroll 0 0 #fff; padding-left:10px;border: 1px solid #d8d8d8;color: #666;font-size: 14px;height: 30px;line-height: 30px;}
+.case_man select option{ padding-left:10px;}
+.case_man .main_tl .cz {border: 1px solid #d8d8d8;font-size: 14px;height: 28px;line-height: 28px;width: 240px;}
+.case_man .main_tl .aka {color: #fff;font-size: 16px;height:30px;line-height:30px;padding: 0px 25px;text-align: center; background:#7f90b7; border-radius:3px;}
+.case_man .main_td .bianj{ background:#7f90b7; padding:4px 20px; border-radius:3px; white-space:nowrap;}
+.case_man .main_td .shanc{ background:#f97272; padding:4px 20px; border-radius:3px;}
+.case_man .main_td .zhih{background:#999999;; padding:4px 20px; border-radius:3px;}
+
+通用样式
+.main{ margin:0 auto; width:1000px;}
+body{ background:#f7f9fb;}
+input, textarea, select {font-family: inherit;font-size: inherit;font-weight: inherit;}
+table{ background:#fff;}
+table td{ border:1px solid #cacaca; color:#616161; font-size:14px;}
+table td a{color:#015793;}
+table .lbg td{ font-size:18px; color:#7f90b7;}
+table tr:hover{ background:#fafbfc;}
+
+
+
+分页
+.page{font-size:14px; color:#000; margin-top:15px;}
+.page .sr{ width:20px; height:15px; border:1px solid #9FF; padding:5px; column-count:#666; text-align:center; }
+.page .go{color:#666; background:#fff; padding:5px 20px;cursor:pointer; border:1px solid #eeeeee; border-right:none;}
+.page .page_bg{ background:#7f90b7; color:#fff;}
+.page .go:hover{ background:#a5daff; color:#fff;}
+
+
+弹窗
+.xinz_fangq{ width:220px; height:120px;border:1px solid #e6e9ee; border-bottom:2px solid #e6e9ee; color:#2b2a2a; padding:30px 80px; position:fixed; left:50%; margin-left:-200px; top:40%; background:#fff; }
+.xinz_fangq .qued,.qux{ background:#7f90b7; cursor:pointer; color:#fff; font-size:16px; padding:2px 25px;border-radius:3px;}
+
+首页
+.index_list{ margin-top:170px; margin-bottom:80px;}
+.index_list .shz{ right:0px; top:0px;border-radius:100%; color:#fff;  width:35px; height:35px; line-height:35px; text-align:center; z-index:1;}
+.bgz{ background:#c29eff; }.bglv{ background:#2fc8a6; }.bglan{ background:#8293b9; }
+.index_list .list_a{ width:230px; height:140px; margin-right:10px;}
+
+.index_list .list_an{ width:210px; height:70px;position:absolute; left:0px; bottom:0px; border:1px solid #e6e9ee; background:#fff; padding:30px 0px 20px; text-align:center;}
+.index_list .list_an img{margin:0 auto;}
+.data_sheet{ width:650px;  border:1px solid #e6e9ee; padding:20px; background:#fff;}
+#chart {
+    height: 330px;
+    position: relative;
+    top: -10px;
+    visibility: hidden;
+    width: 430px;
+}
+提报作品
+.main_tb{ width:650px; width:680px; border:1px solid #e6e9ee; background:#fff; padding:20px 20px 30px;}
+.main_tb .text{ vertical-align:middle;height:35px;line-height:35px;padding:0 5px;border:1px solid #e1e1e1;width:565px; margin-bottom:15px;color:#666; font-size:14px; float:right;}
+.main_tb .spanreg{ float:left; margin-top:5px;}
+
+.main_tbqd .register{ cursor:pointer; width:90px; height:27px; margin-right:12px; font-size:16px;background:#8293b9;color:#fff;border:0 none;border:0 none;border-radius:3px;}
+.csjx_title{font-weight:bold;line-height:24px;}
+.dllist dd{line-height:50px;display:none;}
+.dllist dd label{padding:0 10px 0 0; }
+.csjx_div .on dd{display:block;}
+.ul3 li label{display:inline-block;width:125px;font-weight:600;}
+#bordnone{ border:none;}
+.bgcfff{ background:#fff;} */
+@charset "GB2312";
+
+/*头部样式*/
+.header {
+    width: 100%;
+    height: 165px;
+    height: 40px;
+    background: #8293b9;
+}
+
+.header_nav {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.header_nav .lib {
+    width: 600px;
+    margin: 0px 20px;
+}
+
+.header_nav .lib li {
+    float: left;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+.header_nav .lib .center {
+    background: #6379ab;
+}
+
+.header_nav .lic {
+    width: 180px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+
+.header_nav .lic .wel_tc {
+    background: #6379ab;
+    font-size: 12px;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+/*登入样式*/
+.main_login {
+    width: 340px;
+    border-bottom: 2px solid #e5e5e5;
+    margin: 20px auto;
+    border-radius: 3px;
+}
+
+.main_login_a {
+    border: 1px solid #e6e9ee;
+    border-bottom: none;
+    padding: 40px 20px;
+    background: #fff;
+}
+
+img {
+    display: block;
+}
+
+.main_login .spanreg {
+    font-size: 16px;
+    color: #666;
+    width: 55px;
+    display: inline-block;
+}
+
+.main_login .text {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px;
+    border: 1px solid #e1e1e1;
+    width: 230px;
+    color: #666;
+    font-size: 14px;
+}
+
+.main_login .submitp {
+    text-align: center;
+    background: #8293b9;
+    border-radius: 3px;
+}
+
+.main_login .register {
+    height: 40px;
+    width: 230px;
+    background: #8293b9;
+    color: #fff;
+    border: 0 none;
+    border: 0 none;
+}
+
+.main_login .submitp input {
+    cursor: pointer;
+}
+
+#loginErrMsg {
+    color: #FF0000;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+#passwordMsg {
+    color: #FF0000;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.selectwrap {
+    width: 150px;
+}
+
+.scoretype {
+    height: 30px;
+    line-height: 30px;
+    color: #7f90b7;
+    margin-left: 50px;
+}
+
+/*编辑管理员*/
+.add_admin {
+    width: 1000px;
+    margin: 170px auto 0px;
+}
+
+.add_gl {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.add_admin_list {
+}
+
+.add_admin .spanreg {
+    font-size: 16px;
+    color: #666;
+    width: 80px;
+    display: inline-block;
+    text-align: right;
+}
+
+.add_admin .text {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px;
+    border: 1px solid #e1e1e1;
+    width: 280px;
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.add_admin .submitp {
+    text-align: center;
+    background: #8293b9;
+    border-radius: 3px;
+    width: 90px;
+    height: 27px;
+    margin-right: 12px;
+}
+
+.add_admin .register {
+    width: 90px;
+    height: 27px;
+    margin-right: 12px;
+    font-size: 16px;
+    background: #8293b9;
+    color: #fff;
+    border: 0 none;
+    border: 0 none;
+    border-radius: 3px;
+}
+
+.add_admin .submitp input {
+    cursor: pointer;
+}
+
+#pinPrompt {
+    color: #FF0000;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+#emailPrompt {
+    color: #FF0000;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+#passwrodPrompt {
+    color: #FF0000;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+#surepasswrod {
+    color: #FF0000;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.uerror {
+    color: #FF0000;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.add_admin_list select {
+    border: 1px solid #e1e1e1;
+    height: 40px;
+    line-height: 40px;
+    width: 150px;
+    color: #666;
+    font-size: 14px;
+    margin-left: -3px;
+}
+
+/*案例管理*/
+.case_man {
+    margin-top: 190px;
+}
+
+.case_man select {
+    background: none repeat scroll 0 0 #fff;
+    padding-left: 10px;
+    border: 1px solid #d8d8d8;
+    color: #666;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.case_man select option {
+    padding-left: 10px;
+}
+
+.case_man .main_tl .cz {
+    border: 1px solid #d8d8d8;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    width: 240px;
+}
+
+.case_man .main_tl .aka {
+    color: #fff;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 25px;
+    text-align: center;
+    background: #7f90b7;
+    border-radius: 3px;
+}
+
+.case_man .main_td .bianj {
+    background: #7f90b7;
+    padding: 4px 20px;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.case_man .main_td .shanc {
+    background: #f97272;
+    padding: 4px 20px;
+    border-radius: 3px;
+}
+
+.case_man .main_td .zhih {
+    background: #999999;;
+    padding: 4px 20px;
+    border-radius: 3px;
+}
+
+/*通用样式*/
+.main {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+body {
+    background: #f7f9fb;
+}
+
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+table {
+    background: #fff;
+}
+
+table td {
+    border: 1px solid #cacaca;
+    color: #616161;
+    font-size: 14px;
+}
+
+table td a {
+    color: #015793;
+}
+
+table .lbg td {
+    font-size: 18px;
+    color: #7f90b7;
+}
+
+table tr:hover {
+    background: #fafbfc;
+}
+
+/*分页*/
+.page {
+    font-size: 14px;
+    color: #000;
+    margin-top: 15px;
+}
+
+.page .sr {
+    width: 20px;
+    height: 15px;
+    border: 1px solid #9FF;
+    padding: 5px;
+    text-align: center;
+}
+
+.page .go {
+    color: #666;
+    background: #fff;
+    padding: 5px 20px;
+    cursor: pointer;
+    border: 1px solid #eeeeee;
+    border-right: none;
+}
+
+.page .page_bg {
+    background: #7f90b7;
+    color: #fff;
+}
+
+.page .go:hover {
+    background: #a5daff;
+    color: #fff;
+}
+
+/*弹窗*/
+.xinz_fangq {
+    width: 220px;
+    height: 120px;
+    border: 1px solid #e6e9ee;
+    border-bottom: 2px solid #e6e9ee;
+    color: #2b2a2a;
+    padding: 30px 80px;
+    position: fixed;
+    left: 50%;
+    margin-left: -200px;
+    top: 40%;
+    background: #fff;
+}
+
+.xinz_fangq .qued, .qux {
+    background: #7f90b7;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    padding: 2px 25px;
+    border-radius: 3px;
+}
+
+/*首页*/
+.index_list {
+    margin-top: 170px;
+    margin-bottom: 80px;
+}
+
+.index_list .shz {
+    right: 0px;
+    top: 0px;
+    border-radius: 100%;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    z-index: 1;
+}
+
+.bgz {
+    background: #c29eff;
+}
+
+.bglv {
+    background: #2fc8a6;
+}
+
+.bglan {
+    background: #8293b9;
+}
+
+.index_list .list_a {
+    width: 230px;
+    height: 140px;
+    margin-right: 10px;
+}
+
+.index_list .list_an {
+    width: 210px;
+    height: 70px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border: 1px solid #e6e9ee;
+    background: #fff;
+    padding: 30px 0px 20px;
+    text-align: center;
+}
+
+.index_list .list_an img {
+    margin: 0 auto;
+}
+
+.data_sheet {
+    width: 650px;
+    border: 1px solid #e6e9ee;
+    padding: 20px;
+    background: #fff;
+}
+
+#chart {
+    height: 330px;
+    position: relative;
+    top: -10px;
+    visibility: hidden;
+    width: 430px;
+}
+
+/*提报作品*/
+.main_tb {
+    width: 650px;
+    width: 680px;
+    border: 1px solid #e6e9ee;
+    background: #fff;
+    padding: 20px 20px 30px;
+}
+
+.main_tb .text {
+    vertical-align: middle;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 5px;
+    border: 1px solid #e1e1e1;
+    width: 565px;
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 14px;
+    float: right;
+}
+
+.main_tb .spanreg {
+    float: left;
+    margin-top: 5px;
+}
+
+.main_tbqd .register {
+    cursor: pointer;
+    width: 90px;
+    height: 27px;
+    margin-right: 12px;
+    font-size: 16px;
+    background: #8293b9;
+    color: #fff;
+    border: 0 none;
+    border: 0 none;
+    border-radius: 3px;
+}
+
+.csjx_title {
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.dllist dd {
+    line-height: 50px;
+    display: none;
+}
+
+.dllist dd label {
+    padding: 0 10px 0 0;
+}
+
+.csjx_div .on dd {
+    display: block;
+}
+
+.ul3 li label {
+    display: inline-block;
+    width: 125px;
+    font-weight: 600;
+}
+
+#bordnone {
+    border: none;
+}
+
+.bgcfff {
+    background: #fff;
+}
+
+/*获奖作品*/
+.ulmin {
+    display: none;
+    background: none repeat scroll 0 0 #ddd;
+    left: 200px;
+    margin-left: -200px;
+    overflow: auto;
+    position: relative;
+    width: 200px;
+}
+
+ul.ulmin li {
+    margin-left: 0;
+    padding: 0 15px !important;
+}
+
+/*评委管理*/
+.main_td .tag {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #FF0000;
+    color: #fff;
+    margin-right: 5px
+}
+
+.chanel-name {
+    color: #7f90b7;
+}
+
+.main_td .red {
+    color: #FF0000;
+    padding-right: 10px;
+}
+
+.main_td .intname {
+    width: 100px;
+    padding-left: 10px;
+    color: #7f90b7;
+}
+
+.main_td .intinput {
+    width: 300px;
+}
+
+.main_td .intinput input {
+    width: 90%;
+    border-color: #eee;
+}
+
+.main_td .intinput input[type="radio"] {
+    display: inline-block;
+    width: 30px;
+}
+
+.setjudges_table table td {
+    border: 0;
+    line-height: 50px;
+    height: 40px;
+}
+
+.setjudges_table table {
+    background-color: #f7f9fb
+}
+
+.setjudges_table .click_pwd {
+    width: 100px;
+}
+
+.setjudges_table .click_pwd input {
+    width: 100%;
+}
+
+.setjudges_table .show_pwd span {
+    margin-left: 20px;
+}
+
+.quanxian {
+    line-height: 40px;
+}
+
+.quanxian dt {
+    background: #7f90b7;
+    color: #fff;
+    padding-left: 10px;
+    line-height: 30px;
+}
+
+.quanxian li {
+    float: left;
+    padding-left: 10px;
+}
+
+.setjudges .btn {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.setjudges .btn input {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    text-align: center;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.pfCompetence {
+    width: 500px;
+}
+
+.pfCompetence li {
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    color: #7f90b7;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.pfCompetence li input {
+    margin-right: 5px;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+.black {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5); /*标准浏览器 只需这句*/
+    background-color: #000 \9; /*IE 系列*/
+    filter: alpha(opacity=50);
+    z-index: 10;
+    display: none
+}
+
+.black .black-inner {
+    width: 300px;
+    height: 150px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    top: 50%;
+    margin-top: -75px;
+    text-align: center;
+}
+
+.black-inner .x {
+    position: absolute;
+    right: 1px;
+    margin-top: -55px;
+    cursor: pointer;
+}
+
+.black-inner .success {
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.black-inner .click {
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.zf {
+    display: none;
+}
+
+/** 新案例提交 **/
+.container{
+    width: 1200px;
+    margin-top: 190px;
+}
+
+#caseListPage table{
+    margin-top:40px;
+}
+#caseListPage {
+    margin-bottom:50px;
+}
+
+/** 新案例详情 **/
+.case-title .title{
+    font-size:18px;
+    display: inline-block;
+}
+.case-title{
+    margin-bottom: 15px;
+}
+.input-group {
+    margin-bottom: 10px;
+}
+.case-title .sub-title {
+    font-size:16px;
+    margin-top:10px;
+}
+.check-status p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.case-case-info .input-group img{
+    display: inline-block;
+}
+.check-status textarea{
+    display: block;
+    margin-top:20px;
+}
+.submit-wrap {
+    text-align: center;
+    margin-bottom: 40px;
+}

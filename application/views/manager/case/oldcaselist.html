@@ -1,0 +1,112 @@
+
+<script type="text/javascript">
+$(function() {
+    $("#checkAll").click(function() {
+        $('input[name="subBox"]').attr("checked",this.checked); 
+    });
+    var $subBox = $("input[name='subBox']");
+    $subBox.click(function(){
+        $("#checkAll").attr("checked",$subBox.length == $("input[name='subBox']:checked").length ? true : false);
+    }); 
+});
+
+</script>
+<{include file="../common/header_navigation.html"}>
+<div class="main clearfix  fYaHei">
+    <div class="case_man">
+        <div class="main_tl main_jiaoy mb20">
+            <form name="formSearch" id="formSearch" method="get" action="/index.php/manager/cases/oldcaselist"> 
+            <input type="hidden" name="page" id="page" value="<{$page}>">
+            <div class="clearfix">
+                <span class="fl mr10 fenl">
+                    <select name="sort">
+                        <option value='0' <{if $search.sort == 0}> selected="selected"<{/if}>>报名时间↓</option>
+                        <option value='1' <{if $search.sort == 1}> selected="selected"<{/if}>>报名时间↑</option>
+                    </select>
+                </span>
+                <div class="clearfix fl">
+                    <div class="fl f14 mr10 graydeep"><input placeholder="想要找..." value="<{$search.title}>" id="title" name="title" class="ml5 cz pl10 w200"></div>
+                    <div class="fl"><input type="submit" value="查询" class="aka fl mr5 cx white"></div>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="main_td mt15 fYaHei mb20">
+            <table width="100%" border="1" cellspacing="0" cellpadding="0">
+                <tr align="center" class="lbg">
+                    <td width="50" height="50"><input id="checkAll"  type="checkbox" /></td>
+                    <td>案例名称</td>
+                    <td>上传公司</td>
+                    <td>报名时间</td>
+                    <td>得票</td>
+                    <td>报名人员</td>
+                    <td>操作</td>
+                </tr>
+                <{foreach from=$cases item=case}>
+                <tr align="center" height="50">
+                    <td><input name="subBox" type="checkbox" value="<{$case.cid}>"/></td>
+                    <td><{$case.title}></td>
+                    <td><{$case.company}></td>
+                    <td><{$case.submit_time}></td>
+                    <td><{$case.poll}></td>
+                    <td><{$case.contact}></td>
+                    <td>
+                        <span class="bianj white mr5"><a href="<{$case.work}>">下载作品</a></span>
+                    </td>
+                </tr>
+                <{/foreach}>
+                
+                
+            </table>
+        </div>
+        <div class="page clearfix">
+            <div class="fr">
+                <div class="fr">
+                    <div class="fl go " onclick="indexpage()">首页</div>
+                    <div class="fl go " onclick="uppage()">上一页</div>
+                    <div class="fl go  page_bg"><{$page}></div>
+                    <div class="fl go " onclick="downpage()">下一页</div>
+                    <div class="fl go " onclick="lastpage()" style=" border-right:1px solid #eeeeee;">尾页</div>
+                </div>
+            </div>
+        <!--弹出修改 删除 none 可显示隐藏div-->      
+    </div>
+</div>
+<script type="text/javascript">
+
+
+
+
+function uppage(){
+    var page = $("#page").val();
+    var newpage = parseInt(page)-1;
+    if(newpage<1){
+        alert("前面没有了！");
+    }else{
+        $("#page").val(newpage);
+        $("#formSearch").submit();
+    }
+    
+}
+
+function downpage(){
+    var page = $("#page").val();
+    if(page >= <{$sumpage}>){
+        alert("后面没有了！");
+    }else{
+        var newpage = parseInt(page)+1;
+        $("#page").val(newpage);
+        $("#formSearch").submit();
+    }
+}
+
+function indexpage(){
+    $("#page").val(1);
+    $("#formSearch").submit();
+}
+
+function lastpage(){
+    $("#page").val(<{$sumpage}>);
+    $("#formSearch").submit();
+}
+</script>

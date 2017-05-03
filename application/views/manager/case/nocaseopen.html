@@ -1,0 +1,392 @@
+<script type="text/javascript">
+    $(function () {
+
+        function getCookie(c_name){
+            if (document.cookie.length>0){
+                c_start=document.cookie.indexOf(c_name + "=")
+                if (c_start!=-1){
+                    c_start=c_start + c_name.length+1
+                    c_end=document.cookie.indexOf(";",c_start)
+                    if (c_end==-1) c_end=document.cookie.length
+                    return unescape(document.cookie.substring(c_start,c_end))
+                }
+            }
+            return ""
+        }
+        //通过
+        $('#passCheck').on('click', function (e) {
+            var status = 2;
+            var caseId = $("#caseId").val();
+            var remark = $("#caseRemark").val();
+            var checkName = getCookie('admin_username');
+            $.ajax({
+                url: "/index.php/manager/cases/changeStatusRemark",
+                type: "get",
+                data: {CaseID: caseId, Status: status, Remark: remark,checkName: checkName},
+                dataType: "json",
+                success: function (data) {
+                    if (data) {
+                        alert('成功');
+                        location.reload();
+                    } else {
+                        alert('失败');
+                    }
+                }
+            });
+        });
+        //拒审
+        $('#disPassCheck').on('click', function () {
+            var status = 3;
+            var caseId = $("#caseId").val();
+            var remark = $("#caseRemark").val();
+            var checkName = getCookie('admin_username');
+            if(remark.length == 0){
+                alert('审核不通过请备注原因');
+            } else {
+                $.ajax({
+                    url: "/index.php/manager/cases/changeStatusRemark",
+                    type: "get",
+                    data: {CaseID: caseId, Status: status, Remark: remark,checkName: checkName},
+                    dataType: "json",
+                    success: function (data) {
+                        if (data) {
+                            alert('操作成功');
+                            location.reload();
+                        } else {
+                            alert('操作失败');
+                        }
+                    }
+                });
+            }
+        });
+        //备注用户信息
+        $('#userRemark').on('click', function () {
+            var remark = $("#remark_user").val();
+            var userId = $("#userId").val();
+            $.ajax({
+                url: "/index.php/manager/cases/changeRemark",
+                type: "get",
+                data: {Uid: userId, remark: remark},
+                dataType: "json",
+                success: function (data) {
+                    if (data) {
+                        alert('修改备注成功');
+                        location.reload();
+                    } else {
+                        alert('修改备注失败');
+                    }
+                }
+            });
+        });
+    });
+</script>
+<{include file="../common/header_navigation.html"}>
+<div class="container" style="display: none;">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="case-title">
+                <h2 class="title">案例详情111：</h2>
+                <span>参评奖项:
+                    <{foreach from=$awards item=award key=key}>
+                    <{if in_array($key,explode(',', $case.aid))}>
+                    <{$award}>,
+                    <{/if}>
+                    <{/foreach}>
+                </span>
+            </div>
+            <div class="case-case-info clearfix">
+                <div class="input-group">
+                    <span class="input-group-addon">报送公司</span>
+                    <input type="text" class="form-control" placeholder="Username" disabled="true"
+                           aria-describedby="searchLabel" value="<{$case.advertiser}>">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">广告主logo</span>
+                    <img src="<{$case.advertiser_logo}>" alt="" width="100" height="100">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon">人物照片</span>
+                    <img src="<{$case.visual_url}>" alt="" width="100" height="100">
+                </div>
+                <!--<input type="button" class="btn btn-warning pull-right" value="修改">-->
+            </div>
+            <div class="hr"></div>
+            <div class="case-user-info clearfix">
+                <div class="case-title">
+                    <h2 class="title">用户信息（提报人信息）</h2>
+                </div>
+                <input type="hidden" id="userId" value="<{$userinfo.uid}>"/>
+                <table class="table table-striped">
+                    <tbody>
+                    <tr>
+                        <td>姓名：</td>
+                        <td><{$userinfo.contact}></td>
+                        <td>公司名称：</td>
+                        <td><{$userinfo.company}></td>
+                    </tr>
+                    <tr>
+                        <td>联系手机：</td>
+                        <td><{$userinfo.mobile}></td>
+                        <td>公司介绍：</td>
+                        <td><{$userinfo.profile}></td>
+                    </tr>
+                    <tr>
+                        <td>联系座机：</td>
+                        <td><{$userinfo.telephone}></td>
+                        <td>个人职位：</td>
+                        <td><{$userinfo.position}></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">联系人qq：</td>
+                        <td colspan="2"><{$userinfo.qq}></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">注册邮箱</td>
+                        <td colspan="2"><{$userinfo.email}></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <span>备注</span>
+                            <textarea class="form-control" id="remark_user" rows="3"><{$userinfo.remark}></textarea>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <input type="button" class="btn btn-warning pull-right" value="修改" id="userRemark">
+            </div>
+            <div class="hr">
+
+            </div>
+            <div class="score-info">
+                <div class="case-title">
+                    <h2 class="title">
+                        评分信息
+                    </h2>
+                </div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>评委姓名</th>
+                        <th>评分时间</th>
+                        <th>评分（总分）</th>
+                        <th>整合度</th>
+                        <th>传播影响</th>
+                        <th>转化率</th>
+                        <th>互动性</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--right-->
+        <div class="col-md-6">
+            <div class="case-title">
+                <h2 class="title">案例资料</h2>
+                <h3 class="sub-title">ppt</h3>
+            </div>
+            <iframe width="490" height="390"
+                    src="http://view.officeapps.live.com/op/view.aspx?src=http://pingfen.imcc.org.cn<{$case.url}>">
+            </iframe>
+            <{if !empty($case.video_url)}>
+                <div class="case-title">
+                    <h3 class="sub-title">视频</h3>
+                </div>
+
+                <video controls="" height="290" width="490">
+                    <source src="http://pingfen.imcc.org.cn<{$case.video_url}>" type="video/mp4">
+                    您的浏览器版本过低，请升级后观看视频！
+                </video>
+            <{/if}>
+
+            <div class="check-status">
+                <input type="hidden" id="caseId" value="<{$case.cid}>"/>
+                <p>参评奖项：<span><{foreach from=$awards item=award key=key}>
+                    <{if in_array($key,explode(',', $case.aid))}>
+                    <{$award}>,
+                    <{/if}>
+                    <{/foreach}></span></p>
+                <{if $case.status =='1'}><p>当前状态：等待审核</span></p><{/if}>
+                <{if $case.status =='2'}><p>当前状态：审核通过</span><{/if}>
+                <{if $case.status =='3'}><p>当前状态：审核未通过</span><{/if}>
+                <input type="button" value="通过审核" class="btn btn-success" id="passCheck">
+                <input type="button" value="审核不通过" class="btn btn-danger" id="disPassCheck">
+                <textarea class="form-control" rows="3" placeholder="注明原因：尽可能短小精悍" id="caseRemark"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row submit-wrap">
+        <!--<{if $nextCid != $lastCid}>-->
+        <!--<a href="/index.php/manager/cases/caseopen?cid=<{$nextCid}>">保存并查看下一条</a>-->
+        <!--<{/if}>-->
+        <input type="botton" value="返回" class="btn btn-primary" onclick="history.back();"
+        >
+    </div>
+</div>
+<div class="container" style="display: block;">
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="case-title">
+                <h2 class="title">案例详情：</h2>
+                <span>参评奖项:
+                    <{foreach from=$awards item=award key=key}>
+                    <{if in_array($key,explode(',', $case.aid))}>
+                    <{$award}>,
+                    <{/if}>
+                    <{/foreach}>
+                </span>
+            </div>
+            <div class="case-case-info clearfix">
+                <div class="input-group">
+                    <span class="input-group-addon">报送公司</span>
+                    <input type="text" class="form-control" placeholder="Username" disabled="true"
+                           aria-describedby="searchLabel" value="<{$case.advertiser}>">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">广告主logo</span>
+                    <img src="<{$case.advertiser_logo}>" alt="" width="100" height="100">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon">人物照片</span>
+                    <img src="<{$case.visual_url}>" alt="" width="100" height="100">
+                </div>
+                <!--<input type="button" class="btn btn-warning pull-right" value="修改">-->
+            </div>
+            <div class="hr"></div>
+            <div class="case-user-info clearfix">
+                <div class="case-title">
+                    <h2 class="title">用户信息（提报人信息）</h2>
+                </div>
+                <input type="hidden" id="userId" value="<{$userinfo.uid}>"/>
+                <table class="table table-striped">
+                    <tbody>
+                    <tr>
+                        <td>姓名：</td>
+                        <td><{$userinfo.contact}></td>
+                        <td>公司名称：</td>
+                        <td><{$userinfo.company}></td>
+                    </tr>
+                    <tr>
+                        <td>联系手机：</td>
+                        <td><{$userinfo.mobile}></td>
+                        <td>公司介绍：</td>
+                        <td><{$userinfo.profile}></td>
+                    </tr>
+                    <tr>
+                        <td>联系座机：</td>
+                        <td><{$userinfo.telephone}></td>
+                        <td>个人职位：</td>
+                        <td><{$userinfo.position}></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">联系人qq：</td>
+                        <td colspan="2"><{$userinfo.qq}></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">注册邮箱</td>
+                        <td colspan="2"><{$userinfo.email}></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <span>备注</span>
+                            <textarea class="form-control" id="remark_user" rows="3"><{$userinfo.remark}></textarea>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <input type="button" class="btn btn-warning pull-right" value="修改" id="userRemark">
+            </div>
+            <div class="hr">
+
+            </div>
+            <div class="score-info">
+                <div class="case-title">
+                    <h2 class="title">
+                        评分信息
+                    </h2>
+                </div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>评委姓名</th>
+                        <th>评分时间</th>
+                        <th>评分（总分）</th>
+                        <th>整合度</th>
+                        <th>传播影响</th>
+                        <th>转化率</th>
+                        <th>互动性</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--right-->
+        <div class="col-md-6">
+            <div class="case-title">
+                <h2 class="title">案例资料</h2>
+                <h3 class="sub-title">ppt</h3>
+            </div>
+            <iframe width="490" height="390"
+                    src="http://view.officeapps.live.com/op/view.aspx?src=http://pingfen.imcc.org.cn<{$case.url}>">
+            </iframe>
+            <{if !empty($case.video_url)}>
+            <div class="case-title">
+                <h3 class="sub-title">视频</h3>
+            </div>
+
+            <video controls="" height="290" width="490">
+                <source src="http://pingfen.imcc.org.cn<{$case.video_url}>" type="video/mp4">
+                您的浏览器版本过低，请升级后观看视频！
+            </video>
+            <{/if}>
+
+            <div class="check-status">
+                <input type="hidden" id="caseId" value="<{$case.cid}>"/>
+                <p>参评奖项：<span><{foreach from=$awards item=award key=key}>
+                    <{if in_array($key,explode(',', $case.aid))}>
+                    <{$award}>,
+                    <{/if}>
+                    <{/foreach}></span></p>
+                <{if $case.status =='1'}><p>当前状态：等待审核</span></p><{/if}>
+                <{if $case.status =='2'}><p>当前状态：审核通过</span><{/if}>
+                <{if $case.status =='3'}><p>当前状态：审核未通过</span><{/if}>
+                <input type="button" value="通过审核" class="btn btn-success" id="passCheck">
+                <input type="button" value="审核不通过" class="btn btn-danger" id="disPassCheck">
+                <textarea class="form-control" rows="3" placeholder="注明原因：尽可能短小精悍" id="caseRemark"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row submit-wrap">
+        <!--<{if $nextCid != $lastCid}>-->
+        <!--<a href="/index.php/manager/cases/caseopen?cid=<{$nextCid}>">保存并查看下一条</a>-->
+        <!--<{/if}>-->
+        <input type="botton" value="返回" class="btn btn-primary" onclick="history.back();"
+        >
+    </div>
+
+</div>
+

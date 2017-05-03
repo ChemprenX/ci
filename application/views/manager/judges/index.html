@@ -1,0 +1,138 @@
+<{include file="../common/header_navigation.html"}>
+
+<div class="main clearfix  fYaHei">
+    <div class="case_man">
+        <div class="main_tl main_jiaoy mb20">
+            <form name="formSearch" id="formSearch" method="get" action="/index.php/manager/cases/oldcaselist">
+                <input type="hidden" name="page" id="page" value="1">
+
+                <div class="clearfix">
+                <span class="fl mr10 fenl">
+
+
+                </span>
+
+                    <div class="clearfix fl">
+                        <div class="fl f14 mr10 graydeep"><input placeholder="想要找..." value="" id="title" name="title"
+                                                                 class="ml5 cz pl10 w200"></div>
+                        <div class="fl"><input type="submit" value="查询" class="aka fl mr5 cx white"></div>
+                    </div>
+                    <div class="fr">
+                        <input type="button" value="新增" class="aka fl mr5 cx white">
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="main_td mt15 fYaHei mb20">
+            <table width="100%" border="1" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr align="center" class="lbg">
+                    <td width="50" height="50">序号</td>
+                    <td>评委姓名</td>
+                    <td>登录名</td>
+                    <td>所属公司</td>
+                    <td>评审类别</td>
+                    <td width="120">已评案例数</td>
+                    <td>操作</td>
+                </tr>
+                <tr align="center" height="50">
+                    <td>1</td>
+                    <td><span class="tag">监</span>胡丹丹</td>
+                    <td>hudd</td>
+                    <td>xxxxxx</td>
+                    <td>机动车和交通类、公益类</td>
+                    <td><a href="scored.html"> 5</a></td>
+                    <td>
+                        <span><a href="#">设置</a></span>&nbsp;|&nbsp;<span><a class="dela" href="#">删除</a></span>
+                    </td>
+                </tr>
+                <tr align="center" height="50">
+                    <td>2</td>
+                    <td><span class="tag">主</span>阿尔法</td>
+                    <td>alpha</td>
+                    <td>xxxxxx</td>
+                    <td>机动车和交通类、公益类</td>
+                    <td><a href="scored.html">5</a></td>
+                    <td>
+                        <span><a href="#">设置</a></span>&nbsp;|&nbsp;<span><a class="dela" href="#">删除</a></span>
+                    </td>
+                </tr>
+                <tr align="center" height="50">
+                    <td>3</td>
+                    <td>高浮雕</td>
+                    <td>gfd</td>
+                    <td>xxxxxx</td>
+                    <td>机动车和交通类、公益类</td>
+                    <td><a href="scored.html">5</a></td>
+                    <td>
+                        <span><a href="#">设置</a></span>&nbsp;|&nbsp;<span><a class="dela" href="#">删除</a></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="page clearfix">
+            <div class="fr">
+                <div class="fr">
+                    <div class="fl go " onclick="indexpage()">首页</div>
+                    <div class="fl go " onclick="uppage()">上一页</div>
+                    <div class="fl go  page_bg"><{$page}></div>
+                    <div class="fl go " onclick="downpage()">下一页</div>
+                    <div class="fl go " onclick="lastpage()" style=" border-right:1px solid #eeeeee;">尾页</div>
+                </div>
+            </div>
+            <!--弹出修改 删除 none 可显示隐藏div-->
+        </div>
+    </div>
+    <div class="black">
+        <div class="black-inner">
+            <p class="success"><span class="zf delpv">是否删除该评委</span></p><span class="x">X</span>
+            <input type="button" class="click" value="确定"></p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function uppage() {
+            var page = $("#page").val();
+            var newpage = parseInt(page) - 1;
+            if (newpage < 1) {
+                alert("前面没有了！");
+            } else {
+                $("#page").val(newpage);
+                $("#formSearch").submit();
+            }
+        }
+        function downpage() {
+            var page = $("#page").val();
+            if (page >= <{$sumpage}>) {
+                alert("后面没有了！");
+            } else {
+                var newpage = parseInt(page) + 1;
+                $("#page").val(newpage);
+                $("#formSearch").submit();
+            }
+        }
+        function indexpage() {
+            $("#page").val(1);
+            $("#formSearch").submit();
+        }
+        function lastpage() {
+            $("#page").val(<{$sumpage}>);
+            $("#formSearch").submit();
+        }
+    </script>
+    <script type="text/javascript">
+        /*-----显示子菜单-----*/
+        function display(li) {
+            var subNav = li.getElementsByTagName("ul")[0];
+            subNav.style.display = "block";
+        }
+
+        /*-----隐藏子菜单-----*/
+        function hide(li) {
+            var subNav = li.getElementsByTagName("ul")[0];
+            subNav.style.display = "none";
+        }
+
+    </script>
+</div>

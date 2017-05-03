@@ -1,0 +1,90 @@
+<!-- <div class="g-numaa clearfix">
+            <div class="b1"></div>
+            <div class="pr jw_dw">
+                <div class="jw_log"><img src="/static/api/images/lgo_02.png" width="100" height="130" /></div>
+                <ul class="clearfix pr g-numa1">
+                    <li class="g-numa on">首页</li>
+                    <li class="g-numa"  style="position:absolute; left:550px; top:0px;">关于金网奖</li>
+                    <li class="g-numa" id="hto" style="position:absolute; left:140px; top:0px;">案例征集</li>
+                    <li class="g-numa" style="position:absolute; left:250px; top:0px;">重磅嘉宾</li>
+                    <li class="g-numa" style="position:absolute; left:350px; top:0px;">合作伙伴</li>
+                    <li class="g-numa" style="position:absolute; left:450px; top:0px;">获奖风云</li>
+                </ul>
+                <span class="wail f14" style="position:absolute;left:680px;top:0px; width: 100px; display:none; "><a style="color: #bcbcbc;" href="#">金网汇</a></span>
+                <span class="wail f14 fyhei" style=" width:100px; height:30px; line-height:30px; text-align:center; margin-top:6px; background:#f8cf21; border-radius:5px;position:absolute;left:700px;top:0px;"><a style="color: #534301;" href="#">案例提交</a></span>
+                
+            </div>
+</div> -->
+<div class="g-numaa clearfix">
+    <div class="b1">
+        <div class="main clearfix">
+            <{if !get_cookie('username')}>
+            <div class="f14 fr mt10 graydeep"><a href="/index.php/api/user/login">登录</a> | <a href="/index.php/api/user/register">注册</a></div>
+            <{else}>
+            <select class="fr mt10 graydeep f14" onchange="window.location=this.value">
+                <option><{get_cookie('username')}></option>
+                <option value="/index.php/api/user/mycase">我的作品</option>
+                <option value="/index.php/api/user/userinfo">账号信息</option>
+                <option value="/index.php/api/user/logout">退出</option>
+            </select>
+            <div class="fr graydeep f14 mt10 mr10 pt5">欢迎</div>
+            <{/if}>
+            
+        </div>
+    </div>
+    <!--nav2016-->
+<!--<div class="pr jw_dw">
+        <div class="jw_log"><img src="/static/api/images/lgo_02.png" width="100" height="130" /></div>
+        <ul class="clearfix pr g-numa1">
+            <li class="g-numa on">首页</li>
+            <li class="g-numa"  style="position:absolute; left:620px; top:0px;">关于金网奖</li>
+            <li class="g-numa" id="hto" style="position:absolute; left:210px; top:0px;">案例征集</li>
+            <li class="g-numa" style="position:absolute; left:320px; top:0px;">重磅嘉宾</li>
+            <li class="g-numa" style="position:absolute; left:420px; top:0px;">合作伙伴</li>
+            <li class="g-numa" style="position:absolute; left:520px; top:0px;">获奖风云</li>
+        </ul>
+        <span class="wail f14" style="position:absolute;left:680px;top:0px; width: 100px; display:none; "><a style="color: #bcbcbc;" href="#">金网汇</a></span>
+        <span class="wail f14 fyhei" style=" width:100px; height:30px; line-height:30px; text-align:center; margin-top:6px; background:#f8cf21; border-radius:5px;position:absolute;left:750px;top:0px;"><a style="color: #534301;" href="/index.php/api/cases/casesubmit">案例提交</a></span>
+    </div>-->
+    <div class="pr jw_dw">
+        <div class="nav">
+            <div class="wrap clearfix">
+                <div class="logo fl"> <img src="/static/api/images/2016/logo_03.png"> </div>
+                <ul id="menu" class="clearfix fl">
+                    <li data-menuanchor="firstPage"><a href="http://www.imcc.org.cn/zj/jwj2016/#firstPage">首页</a></li>
+                    <li data-menuanchor="secondPage"><a href="http://www.imcc.org.cn/zj/jwj2016/#secondPage">案例征集</a></li>
+                    <li data-menuanchor="3rdPage"><a href="http://www.imcc.org.cn/zj/jwj2016/#3rdPage">金网资讯</a></li>
+                    <li data-menuanchor="4thpage"><a href="http://www.imcc.org.cn/zj/jwj2016/#4thpage">重磅嘉宾</a></li>
+                    <li data-menuanchor="5thpage"><a href="http://www.imcc.org.cn/zj/jwj2016/#5thpage">合作伙伴</a></li>
+                    <li data-menuanchor="lastPage"  class="active"><a href="/index.php/api/cases/casesubmit">案例提交</a></li>
+                </ul>
+                <div class="regdiv fr" style="display: none">
+                    <div class="reg">
+                        <a href="#" target="_blank">登录</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" target="_blank">注册</a>
+                    </div>
+                    <div class="logined clearfix"  style="display: none">
+                        <div class="fl headerImg">
+                            <img src="images/loginHeader_03.jpg">
+                        </div>
+                        <div class="fr">
+                    <span class="name">
+                        gw
+                    </span>
+                            <br/>
+                    <span class="nameClick clearfix">
+                        个人信息
+                        <i class="fr loginArrow">
+                            <a href="javascript:void (0)">
+                                <img src="images/loginArr_06.png">
+                            </a>
+                        </i>
+                    </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
