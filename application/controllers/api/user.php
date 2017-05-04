@@ -105,13 +105,7 @@ class user extends MY_Controller{
         $this->display('api/common/header.html');
         $this->display('api/user/mycase.html');
     }
-    public function test_mycase(){
-        $uid = "424";
-        $status = "";
-        $cases = $this->case_service->get_case_by_uid_test($uid,$status);
-        echo json_encode($cases);
-        exit;
-    }
+
     public function checkemail(){
         echo $this->user_service->checkemail();;
         exit();
@@ -165,5 +159,9 @@ class user extends MY_Controller{
     }
     public function static_twentyYears(){
         $this->display('api/static/time.html');
+    }
+    public function upload(){
+        $result = $this->case_service->upload();
+        echo json_encode($result);
     }
 }

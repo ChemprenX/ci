@@ -143,6 +143,20 @@ class cases extends MY_Controller{
         $this->assign('userinfo', $userinfo);
         $this->display('api/case/casesubmit_twentyYears.html');
     }
+    
+    /*线上支付*/
+    public function payment() {
+        $result = $this->case_service->payment();
+        echo json_encode($result);
+        exit();
+    }
+    
+    public function paymentresult(){
+        $result = $this->case_service->payment_result();
+        echo json_encode($result);
+        exit();
+    }
+    
 	public function test(){
 		$this->case_service->test();
 	}

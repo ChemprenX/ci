@@ -98,20 +98,28 @@ class case_service extends MY_Service{
         $agency_company = $this->input->post('agency_company');
         $title = $this->input->post('title');
         $paytype = $this->input->post('paytype');
-        $advertiser_logo = $files['advertiser_logo'];
-        $agency_company_logo = $files['agency_company_logo'];
-        $visual_url = $files['visual_url'];
-        $url = $files['url'];
-        $video_url = $files['video_url'];
+        //$advertiser_logo = $files['advertiser_logo'];
+        $advertiser_logo = $this->input->post('advertiser_logo');
+        //$agency_company_logo = $files['agency_company_logo'];
+        $agency_company_logo = $this->input->post('agency_company_logo');
+        //$visual_url = $files['visual_url'];
+        $visual_url = $this->input->post('visual_url');
+        //$url = $files['url'];
+        $url = $this->input->post('url');
+        //$video_url = $files['video_url'];
+        $video_url = $this->input->post('video_url');
         $no_case_advertiser = $this->input->post('no_case_advertiser');
-        $no_case_advertiser_logo = $files['no_case_advertiser_logo'];
-        $no_case_visual_url = $files['no_case_visual_url'];
-        $no_case_url = $files['no_case_url'];
+        //$no_case_advertiser_logo = $files['no_case_advertiser_logo'];
+        $no_case_advertiser_logo = $this->input->post('no_case_advertiser_logo');
+        //$no_case_visual_url = $files['no_case_visual_url'];
+        $no_case_visual_url = $this->input->post('no_case_visual_url');
+        //$no_case_url = $files['no_case_url'];
+        $no_case_url = $this->input->post('no_case_url');
         $is_case = $this->_is_case($award);
         $out_trade_no = '';
         $response = '';
         $total_amount = 0;
-        if($paytype == case_model::ALI_PAY){
+        /* if($paytype == case_model::ALI_PAY){
             require_once dirname(dirname(__FILE__)).'/alipaydemo/f2fpay/F2fpay.php';
             //$case_count = count($award);
             $total_amount = $this->_count_money($award);
@@ -126,7 +134,7 @@ class case_service extends MY_Service{
                 $pay['subject'] = $subject;
                 $this->pay_model->add($pay);
             }
-        }
+        } */
         $award = implode(',', $award);
         $case = array();
         $case['uid'] = $uid;
@@ -139,14 +147,14 @@ class case_service extends MY_Service{
         $case['out_trade_no'] = $out_trade_no;
         $case['no_case_advertiser'] = $no_case_advertiser;
         if (!empty($is_case['case'])){
-            $advertiser_logo = $this->image_service->save_image($advertiser_logo,'advertiser');
-            $agency_company_logo = $this->image_service->save_image($agency_company_logo,'agency_company');
-            $visual_url = $this->image_service->save_image($visual_url,'visual');
-            if ($video_url['size']>0){
+            //$advertiser_logo = $this->image_service->save_image($advertiser_logo,'advertiser');
+            //$agency_company_logo = $this->image_service->save_image($agency_company_logo,'agency_company');
+            //$visual_url = $this->image_service->save_image($visual_url,'visual');
+            /* if ($video_url['size']>0){
                 $video_url = $this->image_service->save_video($video_url,'video');
                 $case['video_url'] = $video_url;
-            }
-            $url = $this->image_service->save_ppt($url,'ppt');
+            } */
+            //$url = $this->image_service->save_ppt($url,'ppt');
             //$swf_url = $this->image_service->save_swf($url,'pdf');
             $case['advertiser_logo'] = $advertiser_logo;
             $case['agency_company_logo'] = $agency_company_logo;
@@ -155,9 +163,9 @@ class case_service extends MY_Service{
             //$case['swf_url'] = $swf_url;
         }
         if (!empty($is_case['no_case'])){
-            $no_case_advertiser_logo = $this->image_service->save_image($no_case_advertiser_logo,'no_case_advertiser');
-            $no_case_visual_url = $this->image_service->save_image($no_case_visual_url,'no_case_visual');
-            $no_case_url = $this->image_service->save_word($no_case_url,'word');
+            //$no_case_advertiser_logo = $this->image_service->save_image($no_case_advertiser_logo,'no_case_advertiser');
+            //$no_case_visual_url = $this->image_service->save_image($no_case_visual_url,'no_case_visual');
+            //$no_case_url = $this->image_service->save_word($no_case_url,'word');
             $case['no_case_advertiser_logo'] = $no_case_advertiser_logo;
             $case['no_case_visual_url'] = $no_case_visual_url;
             $case['no_case_url'] = $no_case_url;
@@ -622,9 +630,39 @@ class case_service extends MY_Service{
         $payinfo['sign'] = $this->input->post('sign');
         //$payinfo['point_amount'] = $this->input->post('point_amount');
         $payinfo['fund_bill_list'] = $this->input->post('fund_bill_list');
-        
+        //out_trade_no
         $res = $this->pay_model->update_by_out_trade_no($out_trade_no,$payinfo);
+        $case = array('pay_info'=>2);
+        $this->case_model->update_by_no($out_trade_no,$case);
     }
+    
+    public function payment() {
+        require_once dirname(dirname(__FILE__)).'/alipaydemo/f2fpay/F2fpay.php';
+        $award = $this->input->post('award');
+        $total_amount = $this->_count_money($award);
+        $pay = new F2fpay();
+        $out_trade_no = $this->_make_out_trade_no();
+        $subject = case_model::SUBJECT;
+        $response = $pay->qrpay($out_trade_no, $total_amount, $subject);
+        if (!empty($response) && $response->alipay_trade_precreate_response->code == '10000'){
+            $pay = array();
+            $pay['out_trade_no'] = $out_trade_no;
+            $pay['total_amount'] = $total_amount;
+            $pay['subject'] = $subject;
+            $this->pay_model->add($pay);
+            $url = $response->alipay_trade_precreate_response->qr_code;
+            $img = $this->image_service->qrcode($url,'code');
+            return array('code' => pay_model::REQUEST_SUCCESS,'data'=>array('img'=>$img,'cost'=>$total_amount,'out_trade_no'=>$out_trade_no));
+        }
+        return array('code' => pay_model::PAYMENT_FAIL,'data'=>'');
+    }
+    
+    public function payment_result(){
+        $out_trade_no = $this->input->post('out_trade_no');
+        $payinfo = $this->pay_model->get_pay_info_by_out_trade_no($out_trade_no);
+        return array('code' => pay_model::REQUEST_SUCCESS,'data'=>array('out_trade_no'=>$out_trade_no));
+    }
+    
     public function update_case_pdf(){
         //$files = $this->ReadFolder('http://pingfen.imcc.org.cn/pdf2');
 		$files = $this->ReadFolder('/home/75/jinwangjiang/pdf2');
@@ -761,6 +799,32 @@ class case_service extends MY_Service{
     /**判断输入是否为文件*/
     function isFile($file) {
         return $file ? is_file($file) : false;
+    }
+    public function upload($type,$filename){
+        $file = $_FILES['file'];
+        if ($file['size'] > 0){
+            switch ($type){
+                case image:
+                    $file_url = $this -> image_service->save_image($file,$filename);
+                    break;
+                case video:
+                    $file_url = $this -> image_service->save_video($file,$filename);
+                    break;
+                case ppt:
+                    $file_url = $this -> image_service->save_ppt($file,$filename);
+                    break;
+                case word:
+                    $file_url = $this -> image_service->save_word($file,$filename);
+                    break;
+                default:
+                    break;
+            }
+            if (!empty($file_url)){
+                return array('file_url'=>$file_url);
+            }
+            return false;
+        }
+        return false;
     }
 	public function test(){
 		require_once dirname(dirname(__FILE__)).'/alipaydemo/f2fpay/F2fpay.php';

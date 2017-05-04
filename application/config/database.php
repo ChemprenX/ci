@@ -48,10 +48,11 @@
 $active_group = 'default';
 $active_record = TRUE;
 
+
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = 'root';
-$db['default']['database'] = 'jwj2017';
+$db['default']['database'] = 'jinwangjiang2017';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
@@ -64,12 +65,11 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
-//this is a last version for no-api
 
 $db['old']['hostname'] = 'localhost';
 $db['old']['username'] = 'root';
-$db['old']['password'] = 'root!';
-$db['old']['database'] = 'jwj2017';
+$db['old']['password'] = 'root';
+$db['old']['database'] = 'jinwangjiang';
 $db['old']['dbdriver'] = 'mysql';
 $db['old']['dbprefix'] = '';
 $db['old']['pconnect'] = TRUE;

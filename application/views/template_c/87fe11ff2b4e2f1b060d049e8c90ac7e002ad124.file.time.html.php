@@ -1,0 +1,217 @@
+<?php /* Smarty version Smarty-3.1.18, created on 2017-03-30 03:48:11
+         compiled from "application/views/api/static/time.html" */ ?>
+<?php /*%%SmartyHeaderCode:18094056958dc0f7b9751b6-03095336%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '87fe11ff2b4e2f1b060d049e8c90ac7e002ad124' => 
+    array (
+      0 => 'application/views/api/static/time.html',
+      1 => 1488250928,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '18094056958dc0f7b9751b6-03095336',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_58dc0f7b9b35c0_58512669',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_58dc0f7b9b35c0_58512669')) {function content_58dc0f7b9b35c0_58512669($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("../common/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<body class="twentyYears">
+<?php echo $_smarty_tpl->getSubTemplate ("../common/header_navigation.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<div class="time partner_time">
+    <div class="wrap partner_time1">
+        <div class="title">闪耀20年</div>
+        <p class="first">20年来，网络营销发生了哪些变化？</p>
+        <p>1、营销进入用户主权时代，一切不以人为中心的营销都收效甚微</p>
+        <p> 2、场景化、生活化成为营销的发展趋势</p>
+        <p>3、VR、大数据、H5等交互、洞察技术在营销中的广泛应用</p>
+        <p> 4、营销已不再是广告圈的事，而是一场跨界、融合的盛宴</p>
+        <p>………</p>
+        <a href="/index.php/api/cases/twentyCasesubmit">参与提名</a>
+    </div>
+</div>
+<div class="time wrap">
+    <div class="title">时空长廊</div>
+    <div><img src="/static/api/new/images/time_ry_03.png" alt=""/></div>
+
+    <ul class="ul_nav">
+        <li style="margin-left: 0">
+            <p class="p_time p_time1">1996年</p>
+            <p class="p_time p_time2">2000年</p>
+            <p class="bt">萌芽期</p>
+            <p class="p_zw">1996年5月- <span>起点</span>，农产品上互联网</p>
+            <p class="p_zw">1997年- <span>中国第一支网络广告</span></p>
+            <p class="p_zw" style="margin-top: 10px; margin-bottom: 15px;"><img src="/static/api/new/images/time_j_03.jpg" alt=""/></p>
+            <p class="p_zw">1998年-门户网站<span>Banner广告</span></p>
+            <p class="p_zw">1999年-网络营销规模增长但不可衡量</p>
+            <p class="p_zw">2000年-<span>网络广告、邮件营销</span>增势迅猛。新浪、网易、搜狐上市</p>
+            <p class="p_zw" style="margin-top: 10px; margin-bottom: 15px;"><img src="/static/api/new/images/time_j_10.jpg" alt=""/></p>
+
+        </li>
+        <li>
+            <p class="p_time p_time1">2001年</p>
+            <p class="p_time p_time2">2005年</p>
+            <p class="bt">蓬勃发展期</p>
+            <p class="p_zw">2001年-<span>搜索营销萌芽</span>，企业建站盛行</p>
+            <p class="p_zw">2002年-网络广告表现形式多样化，<span>竞价排名与关键词广告</span>开始兴起，中国电子商务萌芽</p>
+            <p class="p_zw" style="margin-top: 10px; margin-bottom: 15px;"><img src="/static/api/new/images/time_j_18.jpg" alt=""/></p>
+            <p class="p_zw">2003年-论坛、博客、QQ等<span>社交1.0</span>时代开启</p>
+            <p class="p_zw">2004年-网路营销从单向的Web1.0走向<span>双向交互时代</span>，互动数字营销兴起</p>
+            <p class="p_zw" style="margin-top: 10px; margin-bottom: 15px;"><img src="/static/api/new/images/time_j_22.jpg" alt=""/></p>
+            <p class="p_zw">2005年-<span>搜索营销产业化</span>趋势初步形成，专业代理公司涌现。</p>
+        </li>
+        <li>
+            <p class="p_time p_time1">2006年</p>
+            <p class="p_time p_time2">2010年</p>
+            <p class="bt">高速增长期</p>
+            <p class="p_zw">2006年-<span>web2.0</span>时代开启</p>
+            <p class="p_zw">2007年-<span>视频等富媒体营销</span>形式受青睐</p>
+            <p class="p_zw" style="margin-top: 10px; margin-bottom: 15px;"><img src="/static/api/new/images/time_j_05.jpg" alt=""/></p>
+            <p class="p_zw">2008年-<span>社会化营销</span>受到认可，王老吉汶川地震的公益捐赠，一炮蹿红</p>
+            <p class="p_zw" style="margin-top: 10px; margin-bottom: 15px;"><img src="/static/api/new/images/time_j_16.jpg" alt=""/></p>
+            <p class="p_zw">2009年-<span>移动WAP</span>时代开启，移动广告渐渐兴起，搜索营销彻底爆发。</p>
+            <p class="p_zw">2010年-网络营销全面爆发，<span>成就网红</span></p>\
+            <p class="p_zw" style="margin-top: 10px; margin-bottom: 15px;"><img src="/static/api/new/images/time_j_24.jpg" alt=""/></p>
+        </li>
+        <li>
+            <p class="p_time p_time1">2011年</p>
+            <p class="p_time p_time2">2016年</p>
+            <p class="bt">爆发期</p>
+            <p class="p_zw">2011年-视频营销受认可，<span>电商营销</span>兴起，效果付费也成为新的衡量方法。</p>
+            <p class="p_zw" style="margin-top: 10px; margin-bottom: 15px;"><img src="/static/api/new/images/time_j_07.jpg" alt=""/></p>
+            <p class="p_zw">2012年- <span>病毒营销、口碑营销</span>雄起，小米饥渴营销成为全民典范</p>
+            <p class="p_zw">2013年-视频营销走红，<span>移动广告</span>渐入主流</p>
+            <p class="p_zw">2014年-程序化广告平台崛起，利用<span>RTB、DSP、DMP</span>来投放广告。</p>
+            <p class="p_zw">2015年-移动互联网和O2O大爆炸，<span>移动广告</span>全面爆发</p>
+            <p class="p_zw">2016年-移动广告、程序化平台、社会化营销、视频、众筹、直播、网红，<span>营销无处不在</span>。</p>
+        </li>
+    </ul>
+</div>
+<div class="time time_flrw">
+    <div class="wrap">
+        <div class="title">风流人物</div>
+        <p class="p1">网络营销20年TOP60人物榜</p>
+        <p class="p2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在中国网络营销20周年的发展历程中的每一个关键时期，不仅涌现了标杆性的产品，更离不开优秀的营销人物的推波助澜，他们推动了网络营销模式、方法的进化，讲述着品牌与用户间的故事，也带来了更创新、更具实效的网络营销实践。</p>
+        <p class="p2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国互联网协会、中国互联网协会网络营销工作委员会联合发起“中国网络营销20周年TOP60人物榜”，针对推动中国网络营销进步的优秀营销人物进行嘉奖，同时将走上10月19日的“网络营销20周年之夜”的红毯，共话网络营销的过去、现在与未来。</p>
+        <ul class="time_vip clearfix">
+            <!--<li style="margin-left: 0"><img src="/static/api/new/images/liu.jpg" alt=""/></li>
+            <li><img src="/static/api/new/images/dong.jpg" alt=""/></li>
+            <li><img src="/static/api/new/images/qing.jpg" alt=""/></li>
+            <li style="margin-left: 0"><img src="/static/api/new/images/madong.jpg" alt=""/></li>
+            <li><img src="/static/api/new/images/jia.jpg" alt=""/></li>
+            <li><img src="/static/api/new/images/zhang.jpg" alt=""/></li>-->
+            <li class="first"><img src="/static/api/new/images/liu.jpg" alt=""/><h3>刘强东<br>京东集团 创始人</br></h3></li>
+            <li><img src="/static/api/new/images/dong.jpg" alt=""/><h3>董明珠<br>格力电器 总裁</br></h3></li>
+            <li><img src="/static/api/new/images/qing.jpg" alt=""/><h3>柳青<br>滴滴出行 总裁</br></h3></li>
+            <li class="first"><img src="/static/api/new/images/jia.jpg" alt=""/><h3>贾跃亭<br>乐视视频 总裁</br></h3></li>
+            <li><img src="/static/api/new/images/madong.jpg" alt=""/><h3>马东<br>奇葩说 创始人</br></h3></li>
+            <li><img src="/static/api/new/images/zhangxl.jpg" alt=""/><h3>张小龙<br>腾讯集团 微信创始人</br></h3></li>
+            <li class="first"><img src="/static/api/new/images/wangsc.jpg" alt=""/><h3>王思聪<br>万达集团 董事</br></h3></li>
+            <li><img src="/static/api/new/images/xianghl.jpg" alt=""/><h3>向海龙<br>百度搜索公司 总裁</br></h3></li>
+            <li><img src="/static/api/new/images/qixd.jpg" alt=""/><h3>齐向东<br>360 总裁</br></h3></li>
+            <li class="first"><img src="/static/api/new/images/zhangym.jpg" alt=""/><h3>张一鸣<br>今日头条 创始人兼CEO</br></h3></li>
+            <li><img src="/static/api/new/images/liwq.jpg" alt=""/><h3>黎万强<br>小米科技 联合创始人</br></h3></li>
+            <li><img src="/static/api/new/images/papi.jpg" alt=""/><h3>Papi酱<br>网络红人</br></h3></li>
+            <li class="first"><img src="/static/api/new/images/time_fgs.jpg" alt=""/><h3>奉佑生<br>映客 创始人</br></h3></li>
+            <li><img src="/static/api/new/images/fengxin.jpg" alt=""/><h3>冯鑫<br>暴风影音 首席执行官</br></h3></li>
+            <li><img src="/static/api/new/images/luoyonghao.jpg" alt=""/><h3>罗永浩<br>锤子科技 创始人</br></h3></li>
+            <li class="first"><img src="/static/api/new/images/wangshuai.jpg" alt=""/><h3>王帅<br>阿里巴巴 CMO</br></h3></li>
+            <li><img src="/static/api/new/images/liuzhen.jpg" alt=""/><h3>柳甄<br>中国优步 高级副总裁</br></h3></li>
+            <li><img src="/static/api/new/images/wangxj.jpg" alt=""/><h3>王湘君<br>爱奇艺 CMO</br></h3></li>
+            <li class="first"><img src="/static/api/new/images/yucd.jpg" alt=""/><h3>余承东<br>华为终端 总裁</br></h3></li>
+            <li><img src="/static/api/new/images/chenmy.jpg" alt=""/><h3>陈明永<br>OPPO 总裁</br></h3></li>
+            <li><img src="/static/api/new/images/AsmitaDubey.jpg" alt=""/><h3>AsmitaDubey<br>欧莱雅 中国区CMO</br></h3></li>
+        </ul>
+    </div>
+</div>
+<div class="time">
+    <div class="wrap">
+        <div class="title">主题活动</div>
+        <div class="banner_zj">
+            <div class="zj_header"></div>
+            <p class="zj_p"><span class="zj_span1">3D互动</span> <span class="zj_span2">内容策划：</span>主人公进入3D博物馆，共分为四大馆，进入到不同场馆，表现出不同发展时期的特点。</p>
+            <table>
+                <tr>
+                    <td rowspan="4" style="width: 60px;"><img src="/static/api/new/images/time_xl.png" alt=""/></td>
+                    <td><img src="/static/api/new/images/time_xl_pic1.jpg" alt=""/></td>
+                    <td>
+                        <p class="xl_p">红铜时代</p>
+                        <p>从1996--2000年，印刷广告一统天下的时代，随着互联网的出现被打破。网络营销开始萌芽，传统广告开始向网络广告过度，门户网站Banner广告、邮件营销等初期的网络营销方式出现在大众视线里。</p>
+                        <p>关键节点:</p>
+                        <p>（1）1997年，中国第一支来自于知名品牌IBM的网络广告在比特网投放。（植入比特）</p>
+                        <p>（2）门户广告Banner广告（新浪、网易、搜狐）</p></td>
+                </tr>
+                <tr>
+
+                    <td><img src="/static/api/new/images/time_xl_pic2.jpg" alt=""/></td>
+                    <td>
+                        <p class="xl_p">青铜时代</p>
+                        <p>2001--2005年，步入新世纪，伴随互联网的高速发展，营销人开始探索各种新的网络营销方式。网络广告表现形式多样化，搜索营销萌芽并初步长成“小巨人”，社交时代开启。在这个蓬勃发展的时代，孕育着生机和一切可能。</p>
+                        <p>关键节点：</p>
+                        <p>（1）百度搜索营销（植入百度）</p>
+                        <p>（2）社交时代开启，Facebook、开心网、人人网火爆</p></td>
+                </tr>
+                <tr>
+
+                    <td><img src="/static/api/new/images/time_xl_pic3.jpg" alt=""/></td>
+                    <td>
+                        <p class="xl_p">黄金时代</p>
+                        <p>2006--2010年，网络广告进入高速发展的轨道，视频广告等各种花样百出的富媒体形式让人们的眼球眼花缭乱、传统的展示型广告开始更加注重人的参与和互动体验，社会化媒体蓬勃发展开启了新的营销时代、社会化营销受到认可和广泛关注。这是一个任营销海阔天空畅游的黄金时代。</p>
+                        <p>关键节点：</p>
+                        <p>（1）社会化营销案例</p>
+                        <p>（2）富媒体营销形式</p>
+                        <p>（3）与芙蓉姐姐、奶茶妹妹、凤姐等网络红人逐一跳出屏幕互动</p></td>
+                </tr>
+                <tr>
+
+                    <td><img src="/static/api/new/images/time_xl_pic4.jpg" alt=""/></td>
+                    <td>
+                        <p class="xl_p">白金时代</p>
+                        <p>2011至今，迎来了一个更加炫目的白金时代，用户行为转向移动互联网，移动广告全面爆发，电商营销兴起，O2O大爆炸，程序化广告崛起，社会化营销走红。新技术和创意无时无刻不在出现，网络营销全面爆发。</p>
+                        <p>关键节点：</p>
+                        <p>（1）电商营销</p>
+                        <p>（2）程序化平台</p>
+                        <p>（3）移动广告</p></td>
+                </tr>
+            </table>
+        </div>
+        <div class="banner_ar">
+            <div class="ar_header"></div>
+
+            <p>致敬网络营销20年——AR交互墙：通过引入更具趣味性、交互性的AR增强现实的技术，现场观众用手机拍照或扫描墙体位置，即可调起AR场景插件，在手机上观看到致敬网络营销20年中的关键场景的动画或视频片。AR交互墙融合了图像识别、3D视觉、AR增强现实等核心技术，以更鲜活、好玩的场景再现方式，让观众得到了更新奇的体验，观众还可以拍照、分享朋友圈。 </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <ul>
+                <li>
+                    <a href="#">
+                    <img src="/static/api/new/images/time_ar_pic_03.png" alt="" border="0"/>
+                    </a>
+                </li>
+                <li style="margin-left: 20px;">
+                    <a href="#">
+                    <img src="/static/api/new/images/time_ar_pic_05.jpg" alt="" border="0"/>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="banner_zjwl">
+            <div class="zjwl_header"></div>
+            <ul>
+                <li style="margin-left: 0;"><img src="/static/api/new/images/time_zjwl_03.png" alt=""/></li>
+                <li><img src="/static/api/new/images/time_zjwl_05.png" alt=""/></li>
+                <li><img src="/static/api/new/images/time_zjwl_07.jpg" alt=""/></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("../common/footer_navigation.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+</body>
+</html><?php }} ?>

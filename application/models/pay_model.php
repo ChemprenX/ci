@@ -2,6 +2,8 @@
 
 class pay_model extends CI_Model{
     
+    const REQUEST_SUCCESS = 1000;//请求成功
+    const PAYMENT_FAIL = 5001;//支付二维码生成失败
     private $_table = 'jwj_pay_info';
     
     function __construct(){

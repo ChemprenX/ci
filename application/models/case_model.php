@@ -87,6 +87,16 @@ class case_model extends CI_Model{
         $sql .= " WHERE cid = '$cid'";
         return $this->db->query($sql);
     }
+    
+    public function update_by_no($no, $case){
+        $sql = "UPDATE " . $this->_table . " SET ";
+        foreach ($case as $key => $value){
+            $sql .= "`".$key."`" . "='".$value."',";
+        }
+        $sql = trim($sql,',');
+        $sql .= " WHERE out_trade_no = '$no'";
+        return $this->db->query($sql);
+    }
     /*** 修改案例--测试*/
     public function update_test($cid, $case){
         if($cid <500){
@@ -194,6 +204,7 @@ class case_model extends CI_Model{
         SELECT ja.title,ja.aid FROM jwj_award_2017 ja ) jwja ON jwja.aid = jc.aid";
         //$sql = "SELECT * FROM " . $this->_table;
         $sql_sort = " ORDER BY jc.create_time DESC"; 
+        //$sql .= ' WHERE jc.uid > 0 AND jc.status != 4';
         if (!empty($search)){
             $sql .= ' WHERE jc.uid > 0 ';
             if (!empty($search['status'])){
@@ -248,8 +259,9 @@ class case_model extends CI_Model{
         SELECT ja.title,ja.aid FROM jwj_award ja ) jwja ON jwja.aid = jc.aid";
         };
         $sql_sort = " ORDER BY jc.create_time DESC";
+        $sql .= ' WHERE jc.uid > 0 AND jc.status !=4';
         if (!empty($search)){
-            $sql .= ' WHERE jc.uid > 0 ';
+            //$sql .= ' WHERE jc.uid > 0 ';
             //提交时间
             if (!empty($search['commitTime'])){
                 $sql .= ' AND jc.create_time >= ' .$search['commitTime'];

@@ -1,0 +1,673 @@
+2016-01-29 10:24:25  POST: array (
+)
+2016-01-29 10:24:25  GET: array (
+)
+2016-01-29 10:25:04  response: false
+2016-02-01 02:42:42  POST: array (
+)
+2016-02-01 02:42:42  GET: array (
+)
+2016-02-02 04:27:44  POST: array (
+)
+2016-02-02 04:27:44  GET: array (
+)
+2016-02-02 04:28:49  response: false
+2016-02-02 04:31:53  POST: array (
+)
+2016-02-02 04:31:53  GET: array (
+)
+2016-02-02 04:32:01  POST: array (
+)
+2016-02-02 04:32:01  GET: array (
+  'param' => 'qr',
+)
+2016-02-02 04:32:03  response: false
+2016-02-02 04:32:20  response: false
+2016-02-02 04:37:57  response: false
+2016-02-02 04:41:02  response: stdClass::__set_state(array(
+   'alipay_trade_pay_response' => 
+  stdClass::__set_state(array(
+     'code' => '10003',
+     'msg' => 'order fail',
+     'buyer_logon_id' => 'me***@wangjinghui.cn',
+     'buyer_pay_amount' => '0.00',
+     'buyer_user_id' => '2088002013890627',
+     'invoice_amount' => '0.00',
+     'open_id' => '20881031981183090182561733016162',
+     'point_amount' => '0.00',
+     'receipt_amount' => '0.00',
+     'total_amount' => '1.00',
+     'trade_no' => '201602021139128941',
+  )),
+))
+2016-02-02 09:25:35  response: stdClass::__set_state(array(
+   'alipay_trade_query_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'buyer_logon_id' => 'me***@wangjinghui.cn',
+     'buyer_pay_amount' => '0.50',
+     'fund_bill_list' => 
+    array (
+      0 => 
+      stdClass::__set_state(array(
+         'amount' => '0.35',
+         'fund_channel' => 'DISCOUNT',
+      )),
+      1 => 
+      stdClass::__set_state(array(
+         'amount' => '0.15',
+         'fund_channel' => 'MDISCOUNT',
+      )),
+      2 => 
+      stdClass::__set_state(array(
+         'amount' => '0.50',
+         'fund_channel' => 'ALIPAYACCOUNT',
+      )),
+    ),
+     'invoice_amount' => '0.50',
+     'open_id' => '20881029410217908490008041916183',
+     'point_amount' => '0.35',
+     'receipt_amount' => '0.85',
+     'send_pay_date' => '2016-02-02 16:23:45',
+     'total_amount' => '1.00',
+     'trade_no' => '201602021623458055',
+     'trade_status' => 'TRADE_SUCCESS',
+  )),
+))
+2016-02-02 10:20:17  POST: array (
+)
+2016-02-02 10:20:17  GET: array (
+  'param' => 'qr',
+)
+2016-02-02 10:20:19  response: false
+2016-02-02 10:20:32  response: false
+2016-02-16 08:06:40  POST: array (
+)
+2016-02-16 08:06:40  GET: array (
+)
+2016-02-16 08:11:33  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1223333',
+     'qr_code' => 'https://qr.alipay.com/bax04951cl2jgfwlhxeu6022',
+  )),
+   'sign' => 'MpnzlPnwtlQPSXlL0JdnzRx7Akyj0HdjFpheRTjQlsaopZerMEKnKruR9eQ1p3a7VA71flqAsdJa2/J1mTkj4Y/TOInhTEb4crxhwo9rpjROXNr/VU+EgG7qb1W1AUJsXzwTlJYLn2myitzqLzJB8c/cw8pdZRlXsmrl3tIrASI=',
+))
+2016-02-16 08:12:19  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1223333',
+     'qr_code' => 'https://qr.alipay.com/bax02270xwzoiyn9fnf260da',
+  )),
+   'sign' => 'uZhGEbbwzagA4wPSa+ZXDbA6D8BkQ8OgoHAFSlv/JF7fi0Dd/e5AJ8bmish3f4ipIQfli9dI2MX+M/XFrU3XwwGRWR79nTfYMMGn/VfwhoIzBZqVASiVxllKO1C1co3OnuosfGRs52DOKn2f+jykj2AoLt5dDq0KcFpAWxsLdbk=',
+))
+2016-02-16 08:15:48  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1223333',
+     'qr_code' => 'https://qr.alipay.com/bax02940ykqrkos1yvno60d5',
+  )),
+   'sign' => 'fFPhYE+SFQrWQBDUoh8fDrGOBu8Rl7rI9g/aJpuYMXeZpbalHC3Vpjem3f0YblsEFkqwYhuuh8wxGVI13yEK5A1kN3NIVWqXqTGajnDEDvom/Jgw07AaMWg/1wTFgz9BGcmh1M7rY0iix6mTd528hmv6nILs9KCbJsOCggi+RLw=',
+))
+2016-02-16 08:18:12  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1223333',
+     'qr_code' => 'https://qr.alipay.com/bax09600tiu6l1q9bfie602a',
+  )),
+   'sign' => 'OG0PA7/lEo4frgC3nOrxe/XgSP4An2w6krud1NtuV4j7yKYBmV4MWKWjmF8Ls+JA9b7Xwo/9neiPBlWe3UxqZMl67s8odw6QmPFagrUa76jlvghq4Wk618SRrSjvBmkTKmq650+6xZCkEmLF/PD5qYmW7M2NZLjQChHZHVYs148=',
+))
+2016-02-16 08:18:46  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1223333',
+     'qr_code' => 'https://qr.alipay.com/bax02665hc1t9zbx5dk6605e',
+  )),
+   'sign' => 'G7/0aGYHm0Q3HmfK0IbXCrVq9NciG0a3lbU6nzbGcswWRrG0rD8edLvo/P/AOGqK4u7YrOYwrKwNMR+hjXN+8inD5F1/ueoMrzxThibsldI+5q4vJ6j56ct/oXdnpmoaJ2tIkTVp4hWNR6jbt54yprRI4CpJFbycq3+3vBUz1+4=',
+))
+2016-02-16 09:17:31  response: false
+2016-02-16 09:18:18  response: false
+2016-02-16 09:20:05  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1223333',
+     'qr_code' => 'https://qr.alipay.com/bax071317x1xcfuqcsvs6044',
+  )),
+   'sign' => 'WZ0lTfTjWFLjskojUU2rWJWlEfMkeEzlxLYnyb1fKoxLwXiE+ZdiC21vtcvF52iDK08OFntufWS1y6nCbDEwqqWgcEsP6AeIrNaUTyd+th+6DYbrQZQutRlRT/GLVTcJZvRyinYR4kJwtKXhKq8N3EBkXqtcslqgjhw1fw+AtGU=',
+))
+2016-02-16 09:28:01  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '40004',
+     'msg' => 'Business Failed',
+     'sub_code' => 'ACQ.TRADE_HAS_SUCCESS',
+     'sub_msg' => '交易已经支付',
+  )),
+   'sign' => 'M2B6FqaIevcM/sFhoKKMlP/kk9YpG+NVu0iLiaQ/1Qq06aJEOKdBzHznA9qPwyfsQZzPN2d145W2haxnN3JtnoGxgEStPhcqfwZZWsB8g1W530YkQaVwtKXRWrjlrR11jDQO21c6GxzksERmd6WxAdSfrIgmDaxs/u0QvSSX4CU=',
+))
+2016-02-16 09:28:24  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '40004',
+     'msg' => 'Business Failed',
+     'sub_code' => 'ACQ.CONTEXT_INCONSISTENT',
+     'sub_msg' => '交易信息被篡改',
+  )),
+   'sign' => 'oXGkZMoI1wCXuiK/zFZafJzxxwki85g5+ygHGq0KVNldHTem1Zm7Cp0JxkznCsJx6AHugU+8eUVkVaouzIVM1/Dc0GDTuSmGQwdD+rVNilvmBxZRxGYpEZcaPWiQkjsWfodnaiXhPMBw8rXEHYUUftOcZEIw24vBEZfQsDVyEMU=',
+))
+2016-02-16 09:28:48  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '40004',
+     'msg' => 'Business Failed',
+     'sub_code' => 'ACQ.CONTEXT_INCONSISTENT',
+     'sub_msg' => '交易信息被篡改',
+  )),
+   'sign' => 'oXGkZMoI1wCXuiK/zFZafJzxxwki85g5+ygHGq0KVNldHTem1Zm7Cp0JxkznCsJx6AHugU+8eUVkVaouzIVM1/Dc0GDTuSmGQwdD+rVNilvmBxZRxGYpEZcaPWiQkjsWfodnaiXhPMBw8rXEHYUUftOcZEIw24vBEZfQsDVyEMU=',
+))
+2016-02-16 09:29:17  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '40004',
+     'msg' => 'Business Failed',
+     'sub_code' => 'ACQ.CONTEXT_INCONSISTENT',
+     'sub_msg' => '交易信息被篡改',
+  )),
+   'sign' => 'oXGkZMoI1wCXuiK/zFZafJzxxwki85g5+ygHGq0KVNldHTem1Zm7Cp0JxkznCsJx6AHugU+8eUVkVaouzIVM1/Dc0GDTuSmGQwdD+rVNilvmBxZRxGYpEZcaPWiQkjsWfodnaiXhPMBw8rXEHYUUftOcZEIw24vBEZfQsDVyEMU=',
+))
+2016-02-16 09:29:41  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '40004',
+     'msg' => 'Business Failed',
+     'sub_code' => 'ACQ.CONTEXT_INCONSISTENT',
+     'sub_msg' => '交易信息被篡改',
+  )),
+   'sign' => 'oXGkZMoI1wCXuiK/zFZafJzxxwki85g5+ygHGq0KVNldHTem1Zm7Cp0JxkznCsJx6AHugU+8eUVkVaouzIVM1/Dc0GDTuSmGQwdD+rVNilvmBxZRxGYpEZcaPWiQkjsWfodnaiXhPMBw8rXEHYUUftOcZEIw24vBEZfQsDVyEMU=',
+))
+2016-02-16 09:29:50  POST: array (
+)
+2016-02-16 09:29:50  GET: array (
+)
+2016-02-16 09:30:09  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1223332',
+     'qr_code' => 'https://qr.alipay.com/bax05432rgwmsphoww2j60b6',
+  )),
+   'sign' => 'Jw1lnqbwd3a5yPIz/uej6+Hf3nB/x4Th8aU7TNrc1iFNxYf4ySj+EqTHyn///+X7SCGir8zwk7tA53XMhzgaOlHzVJB0sRLqTbrv0WNBAvnl9Lvd7T+0LvOKAqixKa91j21oMUl6T4UCLdIyiOzKRIK43J0ThGepNEnmvRYF7pM=',
+))
+2016-02-16 09:30:27  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1223332',
+     'qr_code' => 'https://qr.alipay.com/bax00572yfhj0jtuoxrs6042',
+  )),
+   'sign' => 'a3dmV5EOFr0UpNwsV77HgnP2YML8e5uOOWZWcdZElhu5m0HbsMLKSWSwqzPImJwzdjj40bYb3rZ5X40p/GGB/NNLUuvjoynOsMrcM93yh3GgrEs1pQxNmarcQ7RB7+LgKiUMX0DLU9SUBaRyo5GEK062/cixkWGbgyHlLmrXaaM=',
+))
+2016-02-16 09:31:09  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1223332',
+     'qr_code' => 'https://qr.alipay.com/bax01173oeulrq8hwpqd6094',
+  )),
+   'sign' => 'YcP6ZMObbWgC8LaOftseegG6WPThyWeGTTF9zeBlsetyVZ+mghJ3WgHzYj3fPYTrlbdQ7P3gTR49yusZpiftWK593WS27JdkTkTCOuLhZYyfE99KWtjbEgj0hqE2mLA6/DiwU8pem3lseVpaUiGh5WanowK2vQegCfeMGykfmQY=',
+))
+2016-02-16 09:33:05  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1223332',
+     'qr_code' => 'https://qr.alipay.com/bax04070wiq2bnhgvjoi60c2',
+  )),
+   'sign' => 'Cw6v2ndLPVxYjEqdCiwS6kuPWD/gxECjSeW1jCTXlAM5IR5SFOsOv53tlzHtTMb6dFoAIUEbH0mnYgHc/ktdfH2tuuq1Unp8+AvZPGwuO7xtiAUzOeBRhhjC6+X7hkhBMa9UNxazLrOV5iB5Wl5VyvoeYOH+VDcxa1Fm12sdmNA=',
+))
+2016-02-16 09:34:08  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1223332',
+     'qr_code' => 'https://qr.alipay.com/bax05813ziepuf4ca0ev6043',
+  )),
+   'sign' => 'fiv1N84owGzhNJ1uqQ3YekUJ1yZoY3a9V8upLn669qqUYsNI0v6F0SDvLfpDIiqkdPV+yzW2AVw7C7C5U452LfRN1Q07UJ8Cm4BPv1juch0G5x7rhg73wC5emvfu0vm+iCMgWqbG6MT5gcadisvvyYHxhZGUL7yZYx8poBzNiO4=',
+))
+2016-02-16 09:34:31  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1223332',
+     'qr_code' => 'https://qr.alipay.com/bax01039kikvvrgfbyou60b2',
+  )),
+   'sign' => 'I69YuHYn2ZikhCUvUttI4zGWuA9Gu9uMFuja/61X69E2/ulT7XUf4toiMpEC/wAYs5MmdWiSqbMKXZpOTfOz5PF2XHF2KlzQRcdLRQC1xEb4HO0Qg28boMWFz0yuDYqpqpezjYQHL7gIfXjP1GdLOy/iEtnkhIwfaZBzATCOOEo=',
+))
+2016-02-16 09:35:30  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1223332',
+     'qr_code' => 'https://qr.alipay.com/bax08881kzpersjleyo3609d',
+  )),
+   'sign' => 'KxBcYYpsciZf25hRmamNIMUPnxK1O9ad2Nwp64BWx7HkL1ZnEpDrmzcrYONJu+GiCsKYrn55bnqrVdrqjBKR7PGnIGbnjM8KZ749PQyZit7DdiyeEyMqrBiETd66vDcOQM9Y/GzyBzT73mUwB/12okSsdxNbuI3pdOtCPTTZ6uc=',
+))
+2016-02-17 08:02:47  POST: array (
+)
+2016-02-17 08:02:47  GET: array (
+)
+2016-02-17 08:21:54  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '12233331',
+     'qr_code' => 'https://qr.alipay.com/bax05067orff6r2kr7a26043',
+  )),
+   'sign' => 'BB23Zn7aRssCcLaybxJuVFZRA3tUNWg2gAZAsFN/8i6bCHgOqUB25oY55xtDqmxQunGdT9R6x/vdE89Zq5kDKoie+V+drqOr8DMCl1lJIXIFG0OreboOif3d0JXGrQZZHVEeBX5wNuKbDf5Abfpsis1KLC7MIiHmqZta/FwYUH4=',
+))
+2016-02-17 08:33:05  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '12233332',
+     'qr_code' => 'https://qr.alipay.com/bax05812iicpsuazqfhm6066',
+  )),
+   'sign' => 'PWpj2K6ZRnITaDyCq77s4/C6jvTCwX117Loj+K1sVua7lZCTi5l4kEQYw5L1GlYGQNlAG7CFcrnWFbPUJkvBCpTlfAPtKLJqAgzt47rIMvmYdNdNV3mVtzMuWFxKjsn+u7rZYLblaahJtXSVd5dXs7N1i3r5diIDhzUnGPxf8qk=',
+))
+2016-02-17 10:01:50  response: false
+2016-02-17 10:02:25  response: false
+2016-02-17 10:04:40  response: false
+2016-02-17 10:07:57  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '12233334',
+     'qr_code' => 'https://qr.alipay.com/bax02942qsu8oayg69wq60a8',
+  )),
+   'sign' => 'JJgKtIiti9hRw5ZAjrbt+oG0KLChGpTMSHFamjfKFZegZLRpEVTikcVnvfkH4KcCv5X1W8FHplLn2vDk7FakOoNabObSOebUsPNkreheI0K6w5e2RQN1rDkJrm9kkgwNsDLnW5L81ChEigL2cobTZse9FQVE5qzoo85fOX3f15c=',
+))
+2016-02-17 10:09:26  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '12233334',
+     'qr_code' => 'https://qr.alipay.com/bax032535peztnjybgzk6059',
+  )),
+   'sign' => 'YMtaPnmhfURJJ/TFXCXkjBP+KRv7ewAu1Z/q3OGztca/LTo5kAKLzTObE7E8ptSZeGaQwgZ7WYxElB9o1ZHA86ZqVWNXEx9h9DNknYcdqBCE1+AyPrG+Fgv4xLkhh7CY2UWj0bKumj8QdP+R2vPXFmR6x+ZVQDk/Ti/X2xISLSs=',
+))
+2016-02-17 10:10:46  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '12233334',
+     'qr_code' => 'https://qr.alipay.com/bax04716qny4gpxxfqwr60c1',
+  )),
+   'sign' => 'f9wMQBmNVr7TlvShWaq7G26QHRKn6YptmGTY8EMR529NsP2BYkisgiSapKkLLOnl6iFKFoEnp+oCzZQhO3sgrItkm8y2gsmsZg1lW/8zLo7N3VFgFJxpT4iH8kPNA/rYTkD1gtmc2WWA/BJmf3u7xdsJL3g9qunHeF47taGnA6Q=',
+))
+2016-02-19 09:57:02  response: false
+2016-02-19 10:00:50  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax03626v2vw0f1egsmc00a4',
+  )),
+   'sign' => 'mS76ixfB5/zbJbNnMqhPYOPAUQbfBTANXG+DHHQwCKtwTzTmw54N3KVBQNd9nhxw6ZLqC5+rZnL7i/tfa4QVqjpsgr4B6ia5zOWKbO/lisGD7PqHSwZOQkYmmHgKqOgBjgGe4EHl6FjXR4lDLWD9Apj9ub/K+9t5tKbg74T1U68=',
+))
+2016-02-19 10:04:06  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax030813tab91vwc3ri003b',
+  )),
+   'sign' => 'Tk/OiT4GHmxTLqK+ZjhlkYc76trVVMOYspDklwvVhaWH1dHpSBfxMGgP+hTdWR0HsyzJrco96L5wvbNpqLhSr9KO7YJeREm70rlR/BWp4+2X4EA8pkAGi0KhrCkb+H284TnB6C9CKDHO307FlsJH6MGLVmm3Gxw3TxoEcplnK24=',
+))
+2016-02-19 10:27:49  response: false
+2016-02-19 10:29:11  response: false
+2016-02-19 10:29:52  response: false
+2016-02-19 10:30:35  response: false
+2016-02-19 10:31:42  response: false
+2016-02-19 10:31:56  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax06414ouogekwxxz3h00b6',
+  )),
+   'sign' => 'WcRbFdV4hs0cQONqv71FL5u3FUsahJG+FWZqaxY4wevxCF/G0o9nqL0/qLe6MxxxLVF1GPvBQokLfTsP8mZMgeZgeUqLQYFfLg6+eVrwNrTpychgqypqiaKicxkTT3ZVX89ygS0i846H5DpoaSPi8NT3lkfW/wthe8sm6U/Bhy4=',
+))
+2016-02-19 10:32:15  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax03286h6va050x8kos0080',
+  )),
+   'sign' => 'uRg1wxX8FD8QI9UkGhlQwLW5aQ7TBsGG3l9VPujZaqLKR/xfkjLAH+p9glP5uuEEcWRyBGgZR81gVlFtRGm4x+67VSRJoKtUB6lDifuAzrB94KkWqT/QkcGj1BfTMU9cVe3xqDGviIFVPV2MGYEruZEqqxoHD4LcBYK1ZafMiPk=',
+))
+2016-02-19 10:32:19  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax003608cygpa2bc39q001c',
+  )),
+   'sign' => 'EevtviaxwE692lXD6zqHDhnapsQxQCS2ZD/BAgvU506VDoMNYk07y/tLqzBjJwYw/bVySViASXGWyyl4SGxuF/FQD8QeodcnUB0QYp4W0hu+IKNbJaI2rMIiyINMLLA985qraUMif/iNFtd+WuzvItrFxWgkoOUYxRFE/cvuMzk=',
+))
+2016-02-19 10:37:12  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax098272rtbbc7xfu3c0000',
+  )),
+   'sign' => 'o5Y3UY8Wp+WDzXWXZrIk1dgGlAyTE5TsoZQZAMLuczLkvEFR8bi/sMtRoPTcRM8Yp/LwIigKoICeTgH9R9zHFzTfOp94meRFjA4LXdSmWQ7zjIWTdK4vLiQfIQWsytLGRdCT6VfphXEMXNKarBsTavCeNSMXW8kKOwPoyGsdw8c=',
+))
+2016-02-19 10:37:18  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax06833zdfobfpzbzaw0013',
+  )),
+   'sign' => 'LHVmaWe1oa2IP9pJp8bRar9w6EsKINHEZl9Ebqd43bPIfZHweVnojCLqMANHWDI15fqTGw0iFK7fp54AaZSiQDHLU77+6Ung2kWEfrrNV1lrLCp/YSI2AM0POV0wIatmZ06kS9jtkzn5VVUqfEV29rhsOjLRXp0aNcKVs1PhnuI=',
+))
+2016-02-19 10:37:32  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax09308qjhbuslcl3yw00fb',
+  )),
+   'sign' => 'nRELN+wvitSndMS98c1f6RnVxwgUqGc03F+JDfz/ewxZC7ch4WyXSgYvOtkF4hdTJQAQqvvuWMm6grFuVV6PNHLh1j5rutteqfR9tL5jnRiVYvqOTuItWs9vY/Qx63FmwnUIUV11r2g6cK3ObpOHNS6VGAN2oIWfPt6asSxbf6o=',
+))
+2016-02-19 10:37:36  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax04587ibq00l2fwxqd00be',
+  )),
+   'sign' => 'JxwpcpT/9422qQlolLIxzWIvBRQZcudnXRd7jocAvN0ZA0a6DwG89BtW/6KcmAx/ly5cA3rKpwWz6GEFCNUHUvEZWWFMKRuqec/tcIi0eAMVMnIAy9XFVI/MNi9alOxT617ev5rSwqlKQZqVSSJpwKiDdqyVm+hwjuldx3CWGV8=',
+))
+2016-02-19 10:37:40  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax09647meo8ii9dvv7e0005',
+  )),
+   'sign' => 'ghwVI7TGNFhbmBFD+ma5Re/8HH0YaSy1Q/gI8z022VdoJzXsiwEyRr+8O/nXMSfErSmmK1LKqLoUkESthhaBhvbUxwOEmkQz3a4P6j0+irgHkd0z9PapvCHr8adHlAqBzIVQZrRcgHPIJQPdOEAUeUdpdJhHoCorlT5xKTb4MLY=',
+))
+2016-02-19 10:49:55  response: false
+2016-02-19 10:50:48  response: false
+2016-02-19 10:57:38  response: false
+2016-02-19 10:58:06  response: false
+2016-02-19 11:00:04  response: false
+2016-02-19 11:00:24  response: false
+2016-02-19 11:00:54  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax09983vghh2n6ttaqp006a',
+  )),
+   'sign' => 'gWSUOd8ikmqa8admhN+Znggt0QauUFdnJf8X3wMSHxaidXYNz4mROvcpW5lyn8OsIZKacCxEm1WQnphJLA1Zd9NEu2axUNbQH1FmB3k/ZB94ojPWiZJSU3jVVQnLZmU+BaaB5UQE4oVHH4/ey1DXFDVoSi2oyTK2clM9NQX+hQE=',
+))
+2016-02-19 11:01:35  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax06061snnseyudspt90054',
+  )),
+   'sign' => 'hVZ1REvsf+vhf3EniIWSR9RLKaATpLO2TLKstyHTaH1z1wDhXjxIgAAZJ8RpJt8Hwk9l5UYhUqRBIa+f8AKn24oMXiyu23sP141v7UxfVCTbA/wiBQmbMEr6Qim9exnv655K/GsReJpCCa+JUgKwTOvSKPH7rcU3Lg9oXrSsMZk=',
+))
+2016-02-19 11:03:51  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax07674ljrlvhoxlrlg00f9',
+  )),
+   'sign' => 'PuCWbOryb32SkipuCBXTiKSG8Qi7ZDvnjtwtdCsnv5RBbOceOhytdScyT3Ib/1Owt4bRwN664glpJvELNLIEGMuiv9ooA/r+MclUieKmhDsG9xCvbSXnhUsb3SegAnv0gp6/01780o16nOkBwX9LoXNQsA8SrL3a3kPxJ1bvpek=',
+))
+2016-02-19 11:04:36  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax04717t0bw2ee3yfq10094',
+  )),
+   'sign' => 'U4yVGXWpEZjrUAk8yLMJL4aQRjaFqNFLZvqeAbAyInjcpT18IgG0QoT44MMRgTtfNK5TIWKc7ANQj3AEFIe1Ci64UWfmN2oSvkz7SVchC4K2noPgfAPpRMyjI3+jrtWy/9XIoa6Qka6U2R3ger4AnEr7eqgE4f83mfDQcXqNoC0=',
+))
+2016-02-19 11:05:06  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax07827ic7ixwblhlbd0022',
+  )),
+   'sign' => 'FlePT6fTsRxej+4M+nJK3mmvzdMEFstBPUvpSXTHcsdIQoA/q7c2puUo05nhhKBZ3alF70Zy35uYY69ZiTIH9Fwt3gFU0DjDX/nH+gxjISL7nJ19GAgGnNbN40oytWw6RttozeBFi94P8u335V6oWwhTPE1b54Lj3qn5ImNRxLM=',
+))
+2016-02-19 11:05:31  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax06939e6ofxuhpn1qb0003',
+  )),
+   'sign' => 'E2AgzWu0m8eVHFUpA33RY9IVA74bezDrH+Z/ZlTdpqVM5qMNRDlUxOqe3N3dnwn7k25cC77+QcCEx02EW0UP5ppd6aajz2L350mXGVDbi6W5prbtwgz+XRTiphbnNeJ8BEJZscaaJ39M1Y4jJA1Apdo2lbX/4qmeX2L96ucHYdU=',
+))
+2016-02-19 11:25:03  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax06490vlzsoakfrlry00d6',
+  )),
+   'sign' => 'Njhd1013Z6mM3GlxS2eBoEiUI32jzNZz4DcHb1uIYz70/93aMnIsXMgxeZwgJrKT4u1cRFQ+6xLR6z+AKawjiTluJLtOF0LgDqT8avOJc8rGwZWNO6zDaX5lI+GTk1hoYW4gSYeOgAqLtiQq4IuXryNPdUh39gJtuT2fJRxr6e0=',
+))
+2016-02-19 11:28:15  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '10000001',
+     'qr_code' => 'https://qr.alipay.com/bax06641pytqvkxnlezu00d7',
+  )),
+   'sign' => 'H9CJYmkfBxqiLCIviMy380aCaiFbOeNIyXVToo0QncTIjIis+QcNuCFZjpyduXiVgIk/rM5rwKv61Db/PGG6HUx9cChAw8vvMnr9oQet0gevB2bl+c8p/COvBOfGnKJmAhANV+CYlXg0xzz3sOhtyXLgoLWmWxjIv+SMRSenXXw=',
+))
+2016-02-19 16:36:04  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1000002016021914558709626759',
+     'qr_code' => 'https://qr.alipay.com/bax01662crrbtpsa81fl000d',
+  )),
+   'sign' => 'miBZ4zoOFj2YNfjyv26Ey/a3OQivrIa2JoRERxN67NLndfqVGup3cmJj8ZbyRpM3y65oiA4mUZn6gxzA5gQMOl3THg2tLlwLWhn+TEIs0Fryx8eIoH2yxPnFT8fClwV4TKUe2SwUMXg9hB59f+Ue7EIT98XuvIjcsxQd8ge+Uuw=',
+))
+2016-02-19 16:38:18  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1000002016021914558710971077',
+     'qr_code' => 'https://qr.alipay.com/bax094131e4ltw80lqdi006c',
+  )),
+   'sign' => 'mdCbsuuKh9OWCo2FzB0M4XUo2ZHSo+7KNiqB0l8wDYdDVAbAIooDd3hNMWB/+X62M6z4Myzak2nb1iA29X1HFVcX2Yli05l07Mp/YCNJy+XfjqkoD7bhJTlMC6A5NGmtKNX/2UcQ1p1Y8DVrL9OFLpu0LrIoQWE7KeBEnSa28vA=',
+))
+2016-02-19 16:41:00  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1000002016021914558712592352',
+     'qr_code' => 'https://qr.alipay.com/bax00562osxjihpes5py608b',
+  )),
+   'sign' => 'sXix6XIAKxp14f9nLxDIc7ec6M/+EmG9PCPGEWdZwl5YQayblup/aJC2sU4aogC53RVjMwYZxo/wqadOT/JXpXcpecDKZAgTaO4pzfaK6SwH65PgrRxZ5cgYs/RkeewOxHnUL1T+FbNzQGN+Ls8SYQ8i/47rE7eATe9AiDc25wY=',
+))
+2016-02-19 16:42:00  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1000002016021914558713205815',
+     'qr_code' => 'https://qr.alipay.com/bax08395faoz7cunvxic6041',
+  )),
+   'sign' => 'Y98cX168ztCKKN8Ag1XFLPB2MOExzQIBWRPJol4VIfrfrhUvq/hEO9hVI5Jz283rNq4hmeIanT/oqVq19CDHwnq9Vdw4L/D/qHKkVXwI7i48vwDKfMqOP6fEY19tn8biamp/wMroJpM4TzhaoeHAFqfMpZTf1x/OeAWy0xT2Go4=',
+))
+2016-02-19 16:42:54  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1000002016021914558713736638',
+     'qr_code' => 'https://qr.alipay.com/bax00709cqlloonzucan602e',
+  )),
+   'sign' => 'agMBYRsqG4+AnBFOgeGZe6f3r/MfXwSqgvd7vPYARgsNurQ51e7BQAWnH5Men5qaAaqQ3gXX2CEuFQFMbN2ok+E52T0KyPs81c3BWfKXVXFHY7JtPQDBoIMBxWSvDonfTUbe0YXfseg1fN6s29izPulVdJHB2/CuJPlgODfgJGA=',
+))
+2016-02-22 10:42:34  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1000002016022214561089539037',
+     'qr_code' => 'https://qr.alipay.com/bax03890qvyw2ghuymnl0075',
+  )),
+   'sign' => 'j0y6px7kSXkqBp7P0ifw/QxLVxJWoAs60KeMuLPH19x6UxIbAMUOCAyBszMaq08JILW7CxFzc4371o5XqtimgP61+0dRSfbH4wa0FknpMXsP83kjtoKEQHD15PQbWRR8ro6IF4GcuKk2aHXQYYSHk23yCwg0IdL7khm/sI69gtc=',
+))
+2016-02-25 14:28:06  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1000002016022514563816851250',
+     'qr_code' => 'https://qr.alipay.com/bax01882tomm5hvqghxz4037',
+  )),
+   'sign' => 'Q1sRjSdGssZeGqo5wyP8kg3C5a2Oxk8dm5mh5urk+2NONHKxVyQUGsDuCvc3N9EcZ6pwKwkomiGZR5klXEyK21UwtAXqex1fievFE+3nVFvqBZX2MMqo5CnM8QWuiLDtav6kwhy/+D05MXqNYOlS9rJU9JvcJbR0gAQBbvglugQ=',
+))
+2016-02-25 14:32:53  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1000002016022514563819724969',
+     'qr_code' => 'https://qr.alipay.com/bax02212ci1xuio2tovm20c8',
+  )),
+   'sign' => 'Y8f8aaDeHFta/GALd6wqVTmYMy0uNmSETpEl0I7BJUABycwYLKeoI4QrsX/R3k+bPKjNQFBXTpE/l/DnxzTyL1MmLSLNT8cK3eABJWKgwIyAX+6WA8c09Z12zqLrD1vkYrxJmwJIJolHVg+tpz7unLKFxAo2R3fzWVJjNqN7LNw=',
+))
+2016-02-25 14:35:53  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1000002016022514563821526284',
+     'qr_code' => 'https://qr.alipay.com/bax07911y1gjub2lvh2t805f',
+  )),
+   'sign' => 'g5jXWQTlGR1SfUXqUgAdHyXY9CL5LFAeBacCJTKLd3VCCxdo9vd7u1FP+avCtV/jbd2JqAeZQC4R6xYooiqpH4xQFpRf9SOIZBfnkQOgOdK91M8J44GtwFwa+rnCnitAA8436m4wLoU1OCZPh7x+cO+UTWmU5v13BiDmPN6v6XI=',
+))
+2016-02-25 14:39:18  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1000002016022514563823579064',
+     'qr_code' => 'https://qr.alipay.com/bax04183j67k8ubsnynv6063',
+  )),
+   'sign' => 'Z2FV/DlsQS8eMB2OJM1dQ38dlcLSImj3wJaE9BIXsfW8YqntpCof/+dj6oXtwn8ZlnrOjMODcytE2GkRynnGqdLyLiW1zVj1i8Zp5iZXdO9wL4oxGIIp5lyJl/1W7fIZS95ElGZzineOlxdI1PZVLy8dF4bSoKNjIHv4k7yxhgY=',
+))
+2016-02-25 14:40:23  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1000002016022514563824223115',
+     'qr_code' => 'https://qr.alipay.com/bax054348hdvr6vho7lj401d',
+  )),
+   'sign' => 'bJot/Bzma5KFjJ5cOtBQEg4pK7Vw721/ocNEMzF1/QrcP88qQBW9po6IWUOcabTsK7CaU38IBe1SaTyUpyu8JiyeuLPPBsQbUkyvxT0DL2emCF/NOMk/L7K04UdDbxG79MYGxaEJWoj+3Bu3ysbVJjzkvoUHPJrS9OuWLNC0dGU=',
+))
+2016-02-25 14:42:53  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1000002016022514563825721191',
+     'qr_code' => 'https://qr.alipay.com/bax04715yztxxnwuurwx4084',
+  )),
+   'sign' => 'hZ17YQzV7XY9OzBenr/F2sBjhvtRoZkgleX3m23ywtjMhsTJg9RllqBu1394OBh59fbz4j3gnXMmBZI+h20ZM+rUp5dHmK6Cl5fP7GDSZHes2Bn4X4lP3rH0WXebD7w6tJ9kLqFoMayGCgl90E5mHdkkWdQckmNf7VAYVhANThE=',
+))
+2016-03-04 14:29:28  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1000002016030414570729648335',
+     'qr_code' => 'https://qr.alipay.com/bax08090kjzge435guve80ad',
+  )),
+   'sign' => 'I6U0yUVbhoDIcsWz1MtKUqwycYqyYCSwEvW2RFJnCCddWcq3vPH9bAs1vAo0BpKLF7jofmniEbVCWoMVyD+ve0N47rydu9J2nETf/aypZ31my2TMAImYb5DBgDcsCdnYXAhMCowVjySlNw030Fx2IzT0rrrJUy4KAhQEs0g+Fgo=',
+))
+2016-05-24 16:49:27  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1000002016052414640797638480',
+     'qr_code' => 'https://qr.alipay.com/bax055660iithvqaj62g6015',
+  )),
+   'sign' => 'h6euKTD9VJZD8iC/kGmsspBGXjv/ZKZvL5Oy4dbgIBaCnE6y3bXOGopTNGWgEbHTXFHna2wtLCVGt+fK7s15Osf7FGNiI9WpPizKG6KNC/WOlWM5x7qRdIUSVL3d/5P9DWlWYTEIH0flkRD/NiwCkaS/K3O6Hiz2oC+QOiem9bU=',
+))
+2016-06-14 10:19:06  response: stdClass::__set_state(array(
+   'alipay_trade_precreate_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_trade_no' => '1000002016061414658707456622',
+     'qr_code' => 'https://qr.alipay.com/bax01449gtsmcha5vcvo2090',
+  )),
+   'sign' => 'EPeBT84o0Hz9eIChWIzO8fSzqIH4pSi5mc54/a+EBFGy2meimzvpVZztohumSt1/b141wQqy09Tu5m56tTS+SyC9/GWQGKyQQZ4RS16D/6uHbzZi/xpuid1w7PBfb8vjSUSNzA3+5HIFW1gyO6sYkaOukX3Lq3wrTezgjK4n3lc=',
+))
