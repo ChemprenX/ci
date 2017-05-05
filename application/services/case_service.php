@@ -683,7 +683,6 @@ class case_service extends MY_Service{
                 $result = $this->case_model->update($cid, $case);
                 $count++;
             }
-            
         }
         var_dump($count);
         exit();
@@ -805,6 +804,7 @@ class case_service extends MY_Service{
         if ($file['size'] > 0){
             switch ($type){
                 case image:
+                    exit();
                     $file_url = $this -> image_service->save_image($file,$filename);
                     break;
                 case video:

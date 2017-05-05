@@ -1,4 +1,4 @@
-<script src="../../../../../article/static/public/user/js/user-articles.js"></script><{include file="../common/header.html"}>
+<{include file="../common/header.html"}>
 <body>
 <{include file="../common/header_navigation.html"}>
 <div class="part twpart2 wrap twpart">
@@ -414,8 +414,33 @@
                 return true;
             }
         });
+
+        $(function() {
+            var file1 = $("#file1");
+            file1.uploadify({
+                swf:'/static/uploadify/uploadify.swf',
+                uploader:'/index.php/api/user/upload',
+                method: 'post',
+                fileTypeExts: '*.jpg',
+                multi: false,
+                post_params: {
+                    "type" :  'image',
+                    "filename" : 'advertiser'
+                },
+                removeTimeout: 5,
+                fileObjName: 'file',
+                removeCompleted: true,
+                'onUploadSuccess': function(file, data, response) {
+                    $("#file1").parent().find('.right-icon').show();
+                    $("#advertiser").val(file.name);
+                },
+                'onUploadError': function() {
+                    alert('上传失败，请重试');
+                }
+            });
+        });
         //文件上传,广告主
-        var file1 = $("#file1");
+       /* var file1 = $("#file1");
         file1.uploadify({
             swf:'/static/uploadify/uploadify.swf',
             uploader:'/index.php/api/user/upload',
@@ -596,7 +621,7 @@
             'onUploadError': function() {
                 alert('上传失败，请重试');
             }
-        });
+        });*/
 
     });
 
