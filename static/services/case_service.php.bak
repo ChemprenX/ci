@@ -1,0 +1,312 @@
+<?php
+require_once ('MY_Service.php');
+
+class case_service extends MY_Service{
+
+    function __construct(){
+        parent::__construct();
+        $this->load->model('case_model');
+        $this->load->model('old_case_model');
+        $this->load->service('image_service');
+    }
+    
+    
+    public function add_case(){
+        $files = $_FILES;
+        $uid = $this->input->post('uid');
+        $award = $this->input->post('award');
+        $advertiser = $this->input->post('advertiser');
+        $agency_company = $this->input->post('agency_company');
+        $title = $this->input->post('title');
+        $advertiser_logo = $files['advertiser_logo'];
+        $agency_company_logo = $files['agency_company_logo'];
+        $visual_url = $files['visual_url'];
+        $url = $files['url'];
+        //$pdf_surl = "file:///" . $url['tmp_name'];
+        $video_url = $files['video_url'];
+        
+        
+        $advertiser_logo = $this->image_service->save_image($advertiser_logo,'advertiser');
+        $agency_company_logo = $this->image_service->save_image($agency_company_logo,'agency_company');
+        $visual_url = $this->image_service->save_image($visual_url,'visual');
+        $video_url = $this->image_service->save_video($video_url,'video');
+        //var_dump($video_url);exit();
+        
+        $url = $this->image_service->save_ppt($url,'ppt');
+        
+        $swf_url = $this->image_service->save_swf($url,'pdf');
+        
+        $case = array();
+        $case['uid'] = $uid;
+        $case['aid'] = $award;
+        $case['advertiser'] = $advertiser;
+        $case['advertiser_logo'] = $advertiser_logo;
+        $case['agency_company'] = $agency_company;
+        $case['agency_company_logo'] = $agency_company_logo;
+        $case['title'] = $title;
+        $case['visual_url'] = $visual_url;
+        $case['url'] = $url;
+        $case['video_url'] = $video_url;
+        $case['swf_url'] = $swf_url;
+        $case['create_time'] = time();
+        $result = $this->case_model->add($case);
+        return $result;
+    }
+    
+    public function update_case(){
+        $files = $_FILES;
+        $cid = $this->input->post('cid');
+        $uid = $this->input->post('uid');
+        $award = $this->input->post('award');
+        $advertiser = $this->input->post('advertiser');
+        $agency_company = $this->input->post('agency_company');
+        $title = $this->input->post('title');
+        
+        $case = array();
+        $case['aid'] = $award;
+        $case['advertiser'] = $advertiser;
+        $case['agency_company'] = $agency_company;
+        $case['title'] = $title;
+        $case['update_time'] = time();
+        
+        $advertiser_logo = $files['advertiser_logo'];
+        $agency_company_logo = $files['agency_company_logo'];
+        $visual_url = $files['visual_url'];
+        $url = $files['url'];
+        $video_url = $files['video_url'];
+        if (!empty($advertiser_logo['tmp_name'])){
+            $advertiser_logo = $this->image_service->save_image($advertiser_logo,'advertiser');
+            $case['advertiser_logo'] = $advertiser_logo;
+        }
+        if (!empty($agency_company_logo['tmp_name'])){
+            $agency_company_logo = $this->image_service->save_image($agency_company_logo,'agency_company');
+            $case['agency_company_logo'] = $agency_company_logo;
+        }
+        if (!empty($visual_url['tmp_name'])){
+            $visual_url = $this->image_service->save_image($visual_url,'visual');
+            $case['visual_url'] = $visual_url;
+        }
+        if (!empty($url['tmp_name'])){
+            $url = $this->image_service->save_ppt($url,'ppt');
+            $case['url'] = $url;
+            $swf_url = $this->image_service->save_swf($url,'pdf');
+            $case['swf_url'] = $swf_url;
+        }
+        if (!empty($video_url['tmp_name'])){
+            $video_url = $this->image_service->save_video($video_url,'video');
+            $case['video_url'] = $video_url;
+        }
+        $result = $this->case_model->update($cid, $case);
+        return $result;
+    }
+    
+     
+    public function get_case_by_uid($uid, $status = null){
+        //$status = isset($this->input->get('status')) ? intval($this->input->get('status')) : '';
+        return $this->case_model->get_case_by_uid($uid,$status);
+    }
+    
+    public function get_case_by_cid(){
+        $cid = $this->input->get('cid');
+        return $this->case_model->get_case_by_cid($cid);
+    }
+    
+    public function get_status(){
+        return $this->case_model->get_status();
+    }
+    
+    public function change_status(){
+        $status = $this->input->get('status');
+        $cids = $this->input->get('cids');
+        return $this->case_model->change_status($cids, $status);
+    }
+    public function get_cases(){
+        $search = array();
+        $search['status'] = $this->input->get('status') ? intval($this->input->get('status')) : 0;
+        $search['title'] = $this->input->get('title') ? $this->input->get('title') : '';
+        $search['sort'] = $this->input->get('sort') ? intval($this->input->get('sort')) : 0;
+        $search['uid'] = $this->input->get('uid') ? intval($this->input->get('uid')) : 0;
+        $page = $this->input->get('page') ? $this->input->get('page') : 1;
+        
+        /* if (!empty($status)){
+            $search['status'] = $status;
+        }
+        if (!empty($title)){
+            $search['title'] = $title;
+        }
+        if (!empty($sort)){
+            $search['sort'] = $sort;
+        } */
+        $result = $this->case_model->get_cases($search,$page);
+        $res = $this->case_model->get_cases_num($search);
+        $sumpage = ceil($res['count']/case_model::PAGE_CASE_COUNT);
+        return array('case'=>$result,'search'=>$search,'page'=>$page,'sumpage'=>$sumpage);
+    }
+    
+    public function get_cases_num(){
+        $res = $this->case_model->get_cases_num_by_status();
+        $result = array();
+        $count = 0;
+        foreach ($res as $value){
+            $result[$value['status']] = $value['count'];
+            $count += $value['count'];
+        }
+        if (empty($result[1])){
+            $result[1] = 0;
+        }
+        if (empty($result[2])){
+            $result[2] = 0;
+        }
+        if (empty($result[3])){
+            $result[3] = 0;
+        }
+        return array('casesum'=>$result,'sums'=>$count);
+    }
+    
+    public function get_case_all(){
+        $search = array();
+        $search['aid'] = $this->input->get('aid') ? intval($this->input->get('aid')) : 0;
+        $search['title'] = $this->input->get('title') ? $this->input->get('title') : '';
+        $result = $this->case_model->get_case_all($search);
+        return array('cases'=>$result,'search'=>$search);
+    }
+    
+    public function get_old_cases(){
+        $search = array();
+        $search['title'] = $this->input->get('title') ? $this->input->get('title') : '';
+        $search['sort'] = $this->input->get('sort') ? intval($this->input->get('sort')) : 0;
+        $page = $this->input->get('page') ? $this->input->get('page') : 1;
+    
+        $result = $this->old_case_model->get_old_cases($search,$page);
+        $res = $this->old_case_model->get_old_cases_num($search);
+        $sumpage = ceil($res['count']/old_case_model::PAGE_CASE_COUNT);
+        return array('case'=>$result,'search'=>$search,'page'=>$page,'sumpage'=>$sumpage);
+    }
+    
+    public function get_cases_by_export(){
+        return $this->case_model->get_cases_by_export();
+    }
+    
+    public function update_case_pdf(){
+        $files = $this->ReadFolder('/pdf');
+        //var_dump($files);
+        $count = 1;
+        foreach ($files as $value){
+            $arr = explode('.', $value);
+            $result = $this->case_model->get_cid_by_url($arr[0]);
+            if (empty($result)){
+                var_dump($arr[0]);
+                var_dump($result);
+            }else {
+                //var_dump($result['cid']);
+                $cid = $result['cid'];
+                $swf_url = $this->image_service->save_swf('/pdf/'.$value,'pdf');
+                $case = array();
+                $case['swf_url'] = $swf_url;
+                $result = $this->case_model->update($cid, $case);
+                $count++;
+                
+                /* $cid = $this->input->post('cid');
+                
+                $case = array();
+                $case['aid'] = $award;
+                $case['advertiser'] = $advertiser;
+                $case['agency_company'] = $agency_company;
+                $case['title'] = $title;
+                $case['update_time'] = time();
+                
+                $result = $this->case_model->update($cid, $case);
+                return $result; */
+            }
+            
+        }
+        var_dump($count);
+        exit();
+    }
+    
+    function ReadFolder($dir, $mode = 0) {
+    
+        //如果打开目录句柄失败，则输出空数组
+    
+        if (!$handle = @opendir($dir)) return array();
+    
+        //定义文件列表数组
+    
+        $files = array();
+    
+        //遍历目录句柄中的条目
+    
+        while (false !== ($file = @readdir($handle))) {
+    
+            //跳过本目录以及上级目录
+    
+            if ('.' === $file || '..' === $file) continue;
+    
+            //是否仅读取目录
+    
+            if ($mode === 2) {
+    
+                if (isDir($dir . '/' . $file)) $files[] = $file;
+    
+                //是否仅读取文件
+    
+            } elseif ($mode === 1) {
+    
+                if (isFile($dir . '/' . $file)) $files[] = $file;
+    
+                //读取全部
+    
+            } else {
+    
+                $files[] = $file;
+    
+            }
+    
+        }
+    
+        //关闭打开的目录句柄
+    
+        @closedir($handle);
+    
+        //输出文件列表数组
+    
+        return $files;
+    
+    }
+    
+    /**
+    
+    * 判断输入是否为目录
+    
+    *
+    
+    * @param string $dir
+    
+    * @return boolean
+    
+    */
+    
+    function isDir($dir) {
+    
+        return $dir ? is_dir($dir) : false;
+    
+    }
+    
+    /**
+    
+    * 判断输入是否为文件
+    
+    *
+    
+    * @param string $file
+    
+    * @return boolean
+    
+    */
+    
+    function isFile($file) {
+    
+        return $file ? is_file($file) : false;
+    
+    }
+}

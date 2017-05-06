@@ -164,4 +164,10 @@ class user extends MY_Controller{
         $result = $this->case_service->upload();
         echo json_encode($result);
     }
+    //我的发票
+    public function myInvoice() {
+  
+        $this->display('api/common/header.html');
+        $this->display('api/user/myInvoice.html');
+    }
 }

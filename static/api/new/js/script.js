@@ -108,6 +108,41 @@ $(function () {
             $(".jiazai").show();
         }
     });
+    //填报发票信息校验
+    $('form[name="formInvoice"]').validator({
+        stopOnError: false,
+        timely: false,
+        rules: {
+            isNormal: function () {
+                return $('#normalInvoice').is(":visible");
+            },
+            isSpecial: function () {
+                return $('#specialInvoice').is(":visible");
+            }
+        },
+        fields: {
+            'pay_prove':'required',
+
+            'normal_company_name': 'required(isNormal);',
+
+            'hardcopy':'required(isSpecial); jpg',
+            'license':'required(isSpecial); jpg',
+            'company_name':'required(isSpecial);',
+            'company_address':'required(isSpecial);',
+            'telephone':'required(isSpecial);',
+            'bank_name':'required(isSpecial);',
+            'bank_account':'required(isSpecial);',
+            'addressee':'required(isSpecial);',
+            'direction':'required(isSpecial);'
+        },
+        callback: function (e) {
+            $(".jiazai").show();
+        }
+    });
+
+
+
+
     $('#peak_foucs').bxSlider({
         auto: true
     });

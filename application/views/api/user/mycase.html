@@ -6,6 +6,7 @@
         <li ><a href="/index.php/api/user/userinfo">个人信息</a></li>
         <li><a  href="/index.php/api/cases/casesubmit">案例提交</a></li>
         <li class="act"><a href="/index.php/api/user/mycase">作品查询</a></li>
+        <li><a href="/index.php/api/user/myInvoice">我的发票</a></li>
     </ul>
     <div class="tab-content col-md-10 mycase-list">
         <div class="clearfix">
@@ -125,8 +126,8 @@ $(function (){
         if (isExist){
             var checkStatus = tdArr.eq(7).html().trim();
             if (checkStatus != "审核通过"){
-                $(this).css("background","#eee");
-                tdArr.eq(0).find("input").attr("disabled","disabled");
+                //$(this).css("background","#eee");
+                //tdArr.eq(0).find("input").attr("disabled","disabled");
             }
         }
     });
@@ -140,8 +141,8 @@ $(function (){
         if (isExist){
             var checkStatus = tdArr.eq(5).html().trim();
             if (checkStatus != "审核通过"){
-                $(this).css("background","#eee");
-                tdArr.eq(0).find("input").attr("disabled","disabled");
+                //$(this).css("background","#eee");
+                //tdArr.eq(0).find("input").attr("disabled","disabled");
             }
         }
     });

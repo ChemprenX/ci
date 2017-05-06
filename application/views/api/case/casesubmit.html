@@ -1,4 +1,4 @@
-<{include file="../common/header.html"}>
+<script src="../../../../../article/static/public/user/js/user-articles.js"></script><{include file="../common/header.html"}>
 <body>
 <{include file="../common/header_navigation.html"}>
 <div class="part twpart2 wrap twpart">
@@ -356,6 +356,9 @@
      };
      });*/
     $(function () {
+        //清除隐藏赋值框
+        initHidden();
+
         var tagsLi = $(".twtag li");
         var awardLi = $(".awardLi");
         var index = 0;
@@ -367,18 +370,12 @@
             awardLi.removeClass("on");
             awardLi.eq(num).addClass("on");
         });
+
         var submitBtn = $("#submitBtn");
         var hideCompany = $("#hideCompany").val();
         var hideContact = $("#hideContact").val();
         var hideEmail = $("#hideEmail").val();
         var hideTelephone = $("#hideTelephone").val();
-
-        var advertiser = $("#advertiser");
-        var agency_company = $("#agency_company");
-        var visual = $("#visual");
-        var ppt = $("#ppt");
-
-        var noCaseWord = $("#no_case_word");
 
         var caseInfo = false;
         var noCaseInfo = false;
@@ -386,61 +383,52 @@
         if (hideCompany && hideContact && hideEmail && hideTelephone){
             info = true;
         }
-        if (index === 0) {
-            if (advertiser && agency_company && visual && ppt) {
-                caseInfo = true;
-            }
-        }
-        if (index ===1) {
-            if (noCaseWord) {
-                noCaseWord = true;
-            }
-        }
+
         submitBtn.on("click",function(){
+
+            var advertiser = $("#advertiser").val();
+            var agency_company = $("#agency_company").val();
+            var visual = $("#visual").val();
+            var ppt = $("#ppt").val();
+
+            var noCaseWord = $("#no_case_word").val();
+
+            if (index === 0) {
+                if (advertiser && agency_company && visual && ppt) {
+                    caseInfo = true;
+                }
+            }
+            if (index ===1) {
+                if (noCaseWord) {
+                    noCaseInfo = true;
+                }
+            }
+
             if (!info){
                 alert("因您的用户信息未能完善，为避免给您带来损失，请完善相关信息后提交案例");
                 window.open("/index.php/api/user/userinfo","_self");
                 return false;
             }else{
                 //案例提交
-                if (!caseInfo){
-                    alert("请完善案例相关必填文件资料");
-                    return false;
+                if(index === 0){
+                    if (!caseInfo){
+                        alert("请完善案例相关必填文件资料");
+                        return false;
+                    }
+                }else {
+                    //非案例提交
+                    if (!noCaseWord) {
+                        alert("请完善非案例必填文件资料");
+                        return false;
+                    }
+                    return true;
                 }
-                if (!noCaseWord) {
-                    alert("请完善非案例必填文件资料");
-                    return false;
-                }
-                return true;
+
+
             }
         });
-
-        $(function() {
-            var file1 = $("#file1");
-            file1.uploadify({
-                swf:'/static/uploadify/uploadify.swf',
-                uploader:'/index.php/api/user/upload',
-                method: 'post',
-                fileTypeExts: '*.jpg',
-                multi: false,
-                post_params: {
-                    "type" :  'image',
-                    "filename" : 'advertiser'
-                },
-                removeTimeout: 5,
-                fileObjName: 'file',
-                removeCompleted: true,
-                'onUploadSuccess': function(file, data, response) {
-                    $("#file1").parent().find('.right-icon').show();
-                    $("#advertiser").val(file.name);
-                },
-                'onUploadError': function() {
-                    alert('上传失败，请重试');
-                }
-            });
-        });
         //文件上传,广告主
-       /* var file1 = $("#file1");
+        var file1 = $("#file1");
         file1.uploadify({
             swf:'/static/uploadify/uploadify.swf',
             uploader:'/index.php/api/user/upload',
@@ -514,7 +502,7 @@
             swf:'/static/uploadify/uploadify.swf',
             uploader:'/index.php/api/user/upload',
             method: 'post',
-            fileTypeExts: '*.ppt;*.pptx',
+            fileTypeExts: '*.ppt; *.pptx',
             multi: false,
             post_params: {
                 "type" :  'ppt',
@@ -621,9 +609,18 @@
             'onUploadError': function() {
                 alert('上传失败，请重试');
             }
-        });*/
+        });
 
     });
+
+    function initHidden () {
+        var advertiser = $("#advertiser").val("");
+        var agency_company = $("#agency_company").val("");
+        var visual = $("#visual").val("");
+        var ppt = $("#ppt").val("");
+
+        var noCaseWord = $("#no_case_word").val("");
+    }
 
 </script>
 <{include file="../common/footer_navigation.html"}>
