@@ -12,6 +12,7 @@
             <li><a href="/index.php/api/user/userinfo">个人信息</a></li>
             <li class="act"><a href="/index.php/api/cases/casesubmit">案例提交</a></li>
             <li><a href="/index.php/api/user/mycase">作品查询</a></li>
+            <li><a href="/index.php/api/user/myInvoice">我的发票</a></li>
         </ul>
         <div class="awardWarpDiv col-xs-10">
             <ul class="twtag clearfix">
@@ -367,6 +368,7 @@
             awardLi.removeClass("on");
             awardLi.eq(num).addClass("on");
         });
+        $(':checkbox').prop('disabled', true);
     });
     //clicked checkbox
     //选择相应选项，显示对应填报内容

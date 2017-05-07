@@ -124,7 +124,11 @@ $(function () {
             'pay_prove':'required',
 
             'normal_company_name': 'required(isNormal);',
-
+            'normal_pay_num': 'required(isNormal);',
+            'normal_telephone': 'required(isNormal);',
+            'normal_person': 'required(isNormal);',
+            'normal_address': 'required(isNormal);',
+            
             'hardcopy':'required(isSpecial); jpg',
             'license':'required(isSpecial); jpg',
             'company_name':'required(isSpecial);',
