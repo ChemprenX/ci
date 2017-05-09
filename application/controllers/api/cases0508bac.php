@@ -7,32 +7,14 @@ class cases extends MY_Controller{
         $this->load->service('user_service');
         $this->load->service('case_service');
         $this->load->service('image_service');
-        $this->load->service('invoice_service');
     }
     /*** 录入发票数据*/
-    /* public function invoicesubmitact(){
+    public function invoicesubmitact(){
         $uid = get_cookie('uid');
-        $this->case_service->add_invoice($uid);
+        $this->case_service->add_invoice($uid);/*录入发票数据*/
+//        $this->case_service->add_logistics($uid);/*录入物流数据*/
         $this->display('api/handleSucc.html');
         $this->display('api/common/header.html');
-    } */
-    /*录入发票信息*/
-    public function addinvoice(){
-        $result = $this->invoice_service->add_invoice();
-        echo json_encode($result);
-        exit();
-    }
-    /*获取发票信息*/
-    public function getinvoices(){
-        $result = $this->invoice_service->get_invoices();
-        echo json_encode($result);
-        exit();
-    }
-    /*修改发票信息*/
-    public function updateinvoice(){
-        $result = $this->invoice_service->update_invoices();
-        echo json_encode($result);
-        exit();
     }
     public function casesubmit(){
         $uid = get_cookie('uid');
@@ -171,19 +153,6 @@ class cases extends MY_Controller{
     
     public function paymentresult(){
         $result = $this->case_service->payment_result();
-        echo json_encode($result);
-        exit();
-    }
-    
-    /*线上支付*/
-    public function paymenttest() {
-        $result = $this->case_service->paymenttest();
-        echo json_encode($result);
-        exit();
-    }
-    
-    public function paymentresulttest(){
-        $result = $this->case_service->payment_resulttest();
         echo json_encode($result);
         exit();
     }

@@ -663,35 +663,6 @@ class case_service extends MY_Service{
         return array('code' => pay_model::REQUEST_SUCCESS,'data'=>array('out_trade_no'=>$out_trade_no));
     }
     
-    public function paymenttest() {
-        require_once dirname(dirname(__FILE__)).'/alipaydemo/f2fpay/F2fpay.php';
-        $award = $this->input->post('award');
-        $total_amount = $this->_count_money($award);
-        $total_amount = $total_amount/10000;
-        $pay = new F2fpay();
-        $out_trade_no = $this->_make_out_trade_no();
-        $subject = case_model::SUBJECT;
-        $response = $pay->qrpay($out_trade_no, $total_amount, $subject);
-        if (!empty($response) && $response->alipay_trade_precreate_response->code == '10000'){
-            $pay = array();
-            $pay['out_trade_no'] = $out_trade_no;
-            $pay['total_amount'] = $total_amount;
-            $pay['subject'] = $subject;
-            $this->pay_model->add($pay);
-            $url = $response->alipay_trade_precreate_response->qr_code;
-            $img = $this->image_service->qrcode($url,'code');
-            return array('code' => pay_model::REQUEST_SUCCESS,'data'=>array('img'=>$img,'cost'=>$total_amount,'out_trade_no'=>$out_trade_no));
-        }
-        return array('code' => pay_model::PAYMENT_FAIL,'data'=>'');
-    }
-    
-    public function payment_resulttest(){
-        $out_trade_no = $this->input->post('out_trade_no');
-        $payinfo = $this->pay_model->get_pay_info_by_out_trade_no($out_trade_no);
-        return array('code' => pay_model::REQUEST_SUCCESS,'data'=>array('out_trade_no'=>$out_trade_no));
-    }
-    
-    
     public function update_case_pdf(){
         //$files = $this->ReadFolder('http://pingfen.imcc.org.cn/pdf2');
 		$files = $this->ReadFolder('/home/75/jinwangjiang/pdf2');
@@ -765,8 +736,6 @@ class case_service extends MY_Service{
         }
         return $money;
     }
-    
-    
     private function _make_out_trade_no(){
         $date = date('Ymd');
         $time = time();
