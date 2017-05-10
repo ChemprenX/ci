@@ -8,11 +8,12 @@ class invoice_service extends MY_Service{
     }
 
     public function add_invoice(){
+
         $uid = $this->input->post('uid');
         if (empty($uid)){
             return array('code'=>user_model::USER_ID_NOT_NULL,'data'=>'');
         }
-        $pay_money = $this->input->post('pay_money');
+        $pay_money = intval($this->input->post('pay_money'));
         if ($pay_money < 0){
             return array('code'=>invoice_model::MONEY_ERROR,'data'=>'');
         }
@@ -32,7 +33,7 @@ class invoice_service extends MY_Service{
         $bank_account = $this->input->post('bank_account');
         $addressee = $this->input->post('addressee');
         $direction = $this->input->post('direction');
-        
+
         $invoice = array();
         $invoice['uid'] = $uid;
         $invoice['pay_money'] = $pay_money;
@@ -47,7 +48,7 @@ class invoice_service extends MY_Service{
         $invoice['hardcopy'] = $hardcopy;
         $invoice['license'] = $license;
         $invoice['create_time'] = time();
-        
+
         $result = $this->invoice_model->add($invoice);
         if (empty($result)){
             return array('code'=>invoice_model::SYSTEM_ERROR,'data'=>'');
@@ -56,6 +57,7 @@ class invoice_service extends MY_Service{
     }
     
     public function get_invoices() {
+
         $search = array();
         $search['uid'] = $this->input->post('uid');
         $search['iid'] = $this->input->post('iid');
@@ -63,7 +65,7 @@ class invoice_service extends MY_Service{
         if (empty($result)){
             return array('code'=>invoice_model::INVOICE_IS_NULL,'data'=>'');
         }
-        return array('code' => case_model::REQUEST_SUCCESS,'data'=>$result);
+        return array('code' => invoice_model::REQUEST_SUCCESS,'data'=>$result);
     }
     
     public function update_invoice() {
@@ -83,7 +85,7 @@ class invoice_service extends MY_Service{
         }
         $company_name = $this->input->post('company_name');
         if (empty($company_name)){
-            return array('code'=>invoice_model::MONEY_ERROR,'data'=>'');
+            return array('code'=>invoice_model::COMPANY_NAME_NOT_NULL,'data'=>'');
         }
         $company_address = $this->input->post('company_address');
         $telephone = $this->input->post('telephone');

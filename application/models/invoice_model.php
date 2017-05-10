@@ -40,6 +40,7 @@ class invoice_model extends CI_Model{
             $sql .= $key . "='".$value."',";
         }
         $sql = trim($sql,',');
+
         return $this->db->query($sql);
     }
 
@@ -54,7 +55,9 @@ class invoice_model extends CI_Model{
     }
     
     public function get_invoices($search = array()){
+
         $sql = "SELECT * FROM " . $this->_table ;
+
         if (!empty($search)){
             $sql .= ' WHERE 1=1 ';
             if (!empty($search['uid'])){
@@ -64,6 +67,7 @@ class invoice_model extends CI_Model{
                 $sql .= ' AND iid = ' . $search['iid'] ;
             }
         }
+
         $res = $this->db->query($sql);
         return $res->result_array();
     }

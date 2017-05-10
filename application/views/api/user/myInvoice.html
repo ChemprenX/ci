@@ -18,40 +18,15 @@
             <thead>
             <tr>
                 <td class="w150">付款时间</td>
-                <td>对应案例</td>
+                <!--<td>对应案例</td>-->
                 <td class="w90">付款金额</td>
                 <td class="w150">发票类型</td>
                 <td class="w50">发票信息</td>
                 <td class="w50">发票状态</td>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <td style="display: none;">
-                    <input type="hidden" class="cid" value="1">
-                </td>
-                <td>
-                    2017-01-30 16:20
-                </td>
-                <td>
-                    xxxx <br>
-                    xxxx
-                </td>
-                <td>
-                    2000
-                </td>
-                <td>
-                    国税增值税普通发票
-                </td>
+            <tbody id="tbody">
 
-                <td>
-                    <a href="javascript:void (0)" class="show-invoice">查看</a>
-                </td>
-                <td>
-                    <a href="javascript:void (0)" class="show-invoice-status">查看</a>
-
-                </td>
-            </tr>
             </tbody>
         </table>
 
@@ -61,23 +36,29 @@
             <div class="mask" style="position: fixed; top: 0; left: 0;width: 100%; height: 100%; background: rgba(0,0,0,0.3); z-index: 99;">
 
             </div>
-            <div class="invoice-status" style="position: fixed; top: 10px; left: 50%; width: 400px; padding: 20px; margin-left: -200px; background: #FFFFFF; z-index: 100;">
+            <div class="invoice-status" style="position: fixed; top: 10px; left: 50%; width: 400px; padding: 20px; font-size: 18px;margin-left: -200px; background: #FFFFFF; z-index: 100; line-height: 27px;">
                 <p class="invoice-status-noSend">
                     您的发票正在准备中，如有问题请联系：<br>
                     郭霏 <br>
                     电话：13810892549 <br>
-                    邮箱：guofei@imcc.org.cn
+                    邮箱：guofei@imcc.org.cn <br>
                     Q Q：1326188297 <br>
                 </p>
-                <p class="invoice-status-send">
+                <p class="invoice-status-send" style="padding: 20px 10px; font-size: 20px; text-align: center;">
                     您的发票已经寄出，请注意查收 <br>
-                    快递公司： <span class="express-company">百世/顺丰</span> <br>
-                    快递单号： <span class="express-num">3423 3456 4567</span>
+                    <!--快递公司： <span class="express-company">百世/顺丰</span> <br>
+
+                    快递单号： <span class="express-num">3423 3456 4567</span>-->
                 </p>
+                <div id="invoice-info">
+
+
+                </div>
             </div>
-            <form name="formInvoice" method="post" action="/index.php/api/cases/invoicesubmitact?type=1"
+            <!--<form name="formInvoice" method="post" action="/index.php/api/cases/invoicesubmitact?type=1"
                   enctype="multipart/form-data" target="_self"
-                  style="position: absolute; top: -400px; left: 50%; width:500px; margin-left: -250px;z-index: 100; background: #FFFFFF;">
+                  style="position: absolute; top: -400px; left: 50%; width:500px; margin-left: -250px;z-index: 100; background: #FFFFFF;">-->
+            <form name="formInvoice" method="post"  style="position: absolute; top: -400px; left: 50%; width:500px; margin-left: -250px;z-index: 100; background: #FFFFFF;">
                 <div class="formTable fl" style="width: 100%; margin-left: 0; padding: 20px 20px;">
                     <h5 style="font-size: 18px; padding: 20px 0;">增值税发票信息</h5>
                     <label class="checkbox-inline">
@@ -113,13 +94,13 @@
                         <div class="formRow clearfix">
                             <label>1.&lt;一般纳税人的认定&gt; 或 &lt;税务登记证副本&gt;的复印件</label>
                             <a href="#" target="_blank" class="fr">样式模板</a>
-                            <input type="file" class="form-control" name="hardcopy">
+                            <input type="file" class="form-control" name="hardcopy" id="hardcopy">
                             <label>税务登记证上没有“增值税一般纳税人”税务章的要加盖公章（JPG文件，不大于5M）</label>
                         </div>
                         <div class="formRow clearfix">
                             <label>2.银行开户许可证或开户信息</label>
                             <a href="#" target="_blank" class="fr">样式模板</a>
-                            <input type="file" class="form-control" name="license">
+                            <input type="file" class="form-control" name="license" id="license">
                             <label>JPG文件，不大于5M</label>
                         </div>
                         <div class="formRow clearfix">
@@ -154,15 +135,20 @@
                             <!--<input type="checkbox"> 同单位地址-->
                             <input type="text" class="form-control" placeholder="请填写收件地址" name="direction">
                         </div>
+                        <div class="formRow clearfix">
+                            <label>10.金额</label>
+                            <input type="text" class="form-control" placeholder="请填写金额" name="pay_num">
+                        </div>
                     </div>
 
-                    <input type="submit" class="btn btn-info  mt30 col-xs-2 col-xs-offset-5" value="提交" style="margin-left: 150px;">
+                    <input type="submit" class="btn btn-info  mt30 col-xs-2 col-xs-offset-5" value="提交" id="submit" style="margin-left: 150px;">
                 </div>
             </form>
         </div>
     </div>
 
-
+    <input type="hidden" id="hardcopy_hide">
+    <input type="hidden" id="license_hide">
 </div>
 <script type="text/javascript" src="/static/api/new/js/script.js"></script>
 <script type="text/javascript">
@@ -180,7 +166,9 @@
         }
     });
 
+
     $("#newInvoice").on('click', function(e) {
+        init();
         $(".payTypeUl").show();
         $(".invoice-status").hide();
         $("form").show();
@@ -188,13 +176,339 @@
     $(".mask").on('click', function (e) {
         $(".payTypeUl").hide();
     });
-
-    $(".show-invoice-status").on('click', function(){
-        var uid = $(this).closest("tr").find('.cid').val();
+    //绑定状态事件
+    $(document).on('click','.show-invoice-status',function(){
+        var iid = $(this).closest("tr").find('.cid').val();
         $(".payTypeUl").show();
         $(".invoice-status").show();
+        getSingleInvoicesStatus(iid);
         $("form").hide();
     });
+    //绑定信息事件
+    var invoiceInfo = $("#invoice-info");
+    $(document).on('click','.show-invoice-info',function(){
+        var iid = $(this).closest("tr").find('.cid').val();
+        $(".payTypeUl").show();
+        $(".invoice-status").show();
+        getSingleInvoicesInfo(iid);
+
+        $("form").hide();
+    });
+
+
+
+    $("#submit").on('click', function() {
+
+        var invoice_type  = $(".invoice-choose[type=radio]:checked").val();
+        var uid = $.cookie('uid');
+        //普通发票字段
+        var normal_company_name = $("input[name=normal_company_name]").val();
+        var normal_pay_money = $("input[name=normal_pay_num]").val();
+        var normal_telephone = $("input[name=normal_telephone]").val();
+        var normal_person = $("input[name=normal_person]").val();
+        var normal_address = $("input[name=normal_address]").val();
+
+
+        //专用发票字段
+        var special_hardcopy = $("#hardcopy_hide").val();
+        var special_license = $("#license_hide").val();
+        var special_pay_money = $("input[name=pay_num]").val();
+        var special_company_name = $("input[name=company_name]").val();
+        var special_company_address = $("input[name=company_address]").val();
+        var special_telephone = $("input[name=telephone]").val();
+        var special_bank_name = $("input[name=bank_name]").val();
+        var special_bank_account = $("input[name=bank_account]").val();
+        var special_addressee = $("input[name=addressee]").val();
+        var special_direction = $("input[name=direction]").val();
+        //普通
+        if( invoice_type == 1){
+            var isComplete = normal_company_name && normal_pay_money && normal_telephone && normal_address && normal_person;
+            if (!isComplete) {
+                alert("请完善普通发票信息后提交");
+            }
+
+            if(!isNaN(normal_pay_money)){
+
+            }else{
+                alert("请输入数字或数字与小数点组合的数字！");
+                return;
+            }
+            $.post(
+                "/index.php/api/cases/addinvoice",
+                {
+                    'uid': parseInt(uid),
+                    'pay_money': normal_pay_money,
+                    'company_name':normal_company_name,
+                    'invoice_type': 1,
+                    'telephone': normal_telephone,
+                    'addressee':normal_company_name,
+                    'direction':normal_address
+                },
+                function (data) {
+                    var obj = $.parseJSON(data);
+                    if (obj.code == 1000) {
+                        getInvoices();
+                    }else {
+                        alert("提交失败，请重试");
+                    }
+                }
+            );
+        }
+        //专用
+        if(invoice_type == 2){
+
+            var special_complete =  special_hardcopy && special_license && special_company_name && special_company_address && special_telephone && special_bank_name && special_bank_account && special_addressee && special_direction && special_pay_money;
+            if(!special_complete) {
+                alert ("请完善专用发票信息后提交");
+            }
+            if(!isNaN(special_pay_money)){
+
+            }else{
+                alert("请输入数字或数字与小数点组合的数字！");
+                return;
+            }
+            $.post(
+                "/index.php/api/cases/addinvoice",
+                {
+                    'uid': parseInt(uid),
+                    'hardcopy': special_hardcopy,
+                    'license': special_license,
+                    'invoice_type': 2,
+                    'company_name': special_company_name,
+                    'telephone': special_telephone,
+                    'bank_name': special_bank_name,
+                    'bank_account': special_bank_account,
+                    'addressee' : special_addressee,
+                    'direction' : special_direction,
+                    'pay_money': special_pay_money
+                },
+                function (data) {
+                    var obj = $.parseJSON(data);
+                    console.log(obj);
+                    if (obj.code == 1000) {
+                        getInvoices();
+                    }else {
+                        alert("提交失败，请重试");
+                    }
+                }
+            );
+
+        }
+       return false;
+
+    });
+    //专用发票字段
+    //税务登记复印件
+    var hardcopy = $("#hardcopy");
+    hardcopy.uploadify({
+        swf:'/static/uploadify/uploadify.swf',
+        uploader:'/index.php/api/user/upload',
+        method: 'post',
+        fileTypeExts: '*.jpg',
+        multi: false,
+        post_params: {
+            "type" :  'image'
+        },
+        removeTimeout: 5,
+        fileObjName: 'file',
+        removeCompleted: true,
+        'onUploadSuccess': function(file, data, response) {
+            var obj = $.parseJSON(data);
+            if (obj.code == 1000){
+                $("#hardcopy_hide").val(obj.data);
+            }else {
+                alert('上传失败，请重试');
+            }
+        },
+        'onUploadError': function() {
+            alert('上传失败，请重试');
+        }
+    });
+    //银行开户许可证
+    var license = $("#license");
+    license.uploadify({
+        'buttonText' : '请选择文件',
+        swf:'/static/uploadify/uploadify.swf',
+        uploader:'/index.php/api/user/upload',
+        method: 'post',
+        fileTypeExts: '*.jpg',
+        multi: false,
+        post_params: {
+            "type" :  'image'
+        },
+        removeTimeout: 5,
+        fileObjName: 'file',
+        removeCompleted: true,
+        'onUploadSuccess': function(file, data, response) {
+            var obj = $.parseJSON(data);
+            if (obj.code == 1000) {
+                $("#license_hide").val(obj.data);
+            } else {
+                alert('上传失败，请重试');
+            }
+
+        },
+        'onUploadError': function() {
+            alert('上传失败，请重试');
+        }
+    });
+    //取单条发票状态
+    function getSingleInvoicesStatus(iid) {
+        console.log($("#invoice-info").length);
+        $("#invoice-info").hide();
+        var uid = $.cookie('uid');
+        $.post(
+            "/index.php/api/cases/getinvoices",
+            {
+                'uid': parseInt(uid),
+                'iid': parseInt(iid)
+            },
+            function (data) {
+                var dataObj = $.parseJSON(data);
+
+                var status = dataObj.data[0]['status'];
+
+                if (status == 1) {
+                    $(".invoice-status-noSend").show();
+                    $(".invoice-status-send").hide();
+                } else if(status == 2){
+                    $(".invoice-status-noSend").hide();
+                    $(".invoice-status-send").show();
+                }
+            }
+        )
+    }
+    //取单条发票信息
+    function getSingleInvoicesInfo(iid) {
+        var uid = $.cookie('uid');
+        $(".invoice-status-noSend").hide();
+        $(".invoice-status-send").hide();
+        $("#invoice-info").show();
+        $.post(
+            "/index.php/api/cases/getinvoices",
+            {
+                'uid': parseInt(uid),
+                'iid': parseInt(iid)
+            },
+            function (data) {
+                var dataObj = $.parseJSON(data);
+                var invoice = dataObj.data[0];
+                var str = "<table>"
+                if (invoice['addressee']) {
+                    str += "<tr><td>收件人：</td> <td>"+ invoice['addressee']+"</td></tr>";
+                }
+                if (invoice['direction']) {
+                    str += "<tr><td>收件地址：</td> <td>"+ invoice['direction']+"</td></tr>";
+                }
+                if (invoice['telephone']) {
+                    str += "<tr><td>电话：</td> <td>"+ invoice['telephone']+"</td></tr>";
+                }
+                if (invoice['company_name']) {
+                    str += "<tr><td>单位名称：</td> <td>"+ invoice['company_name']+"</td></tr>";
+                }
+                if (invoice['company_address']) {
+                    str += "<tr><td>单位名称：</td> <td>"+ invoice['company_address']+"</td></tr>";
+                }
+                if (invoice['bank_name']) {
+                    str += "<tr><td>开户行名称：</td> <td>"+ invoice['bank_name']+"</td></tr>";
+                }
+                if (invoice['bank_account']) {
+                    str += "<tr><td>帐号：</td> <td>"+ invoice['bank_account']+"</td></tr>";
+                }
+                str += "</table>";
+                invoiceInfo.html(str);
+            }
+        )
+    }
+
+    //取发票信息
+    function getInvoices() {
+        var uid = $.cookie('uid');
+        $.post(
+            "/index.php/api/cases/getinvoices",
+            {
+                'uid': parseInt(uid)
+            },
+            function (data) {
+                var obj = $.parseJSON(data);
+                var tbody = $("#tbody");
+                var tds = "";
+                if (obj.data.length >3) {
+                    $('#newInvoice').html("您申请的发票数已达限额");
+                    $('#newInvoice').css({'background':'#eee','border-color':'#eee','color': '#333'});
+                    $('#newInvoice').unbind();
+                }
+                for (var i=0; i<obj.data.length; i++) {
+
+                    tds += "<tr>";
+                    var item = obj.data[i];
+                    tds += "<td style='display: none;'> <input type='hidden' class='cid' value="+item.iid+"></td>";
+                    var newDate = transformTime(item.create_time);
+                    tds += "<td>"+newDate+"</td>";
+                    tds += "<td>"+item.pay_money+"</td>";
+                    var type = "";
+                    if (item.invoice_type == 1) {
+                        type = "增值税普通发票";
+                    }else {
+                        type = "增值税专用发票";
+                    }
+                    tds += "<td>"+type+"</td>";
+                    tds += "<td><a href='javascript:void (0)' class='show-invoice-info'>查看</a></td>";
+                    tds += "<td><a href='javascript:void (0)' class='show-invoice-status'>查看</a></td>";
+                    tds += "</tr>";
+                }
+                tbody.html(tds);
+            }
+        )
+    }
+
+    function init () {
+        //普通发票字段
+        var normal_company_name = $("input[name=normal_company_name]").val('');
+        var normal_pay_money = $("input[name=normal_pay_num]").val('');
+        var normal_telephone = $("input[name=normal_telephone]").val('');
+        var normal_person = $("input[name=normal_person]").val('');
+        var normal_address = $("input[name=normal_address]").val('');
+
+
+        //专用发票字段
+        var special_hardcopy = $("#hardcopy_hide").val('');
+        var special_license = $("#license_hide").val('');
+        var special_pay_money = $("input[name=pay_num]").val('');
+        var special_company_name = $("input[name=company_name]").val('');
+        var special_company_address = $("input[name=company_address]").val('');
+        var special_telephone = $("input[name=telephone]").val('');
+        var special_bank_name = $("input[name=bank_name]").val('');
+        var special_bank_account = $("input[name=bank_account]").val('');
+        var special_addressee = $("input[name=addressee]").val('');
+        var special_direction = $("input[name=direction]").val('');
+    }
+
+    function transformTime ( timestamp ) {
+        var date = new Date(parseInt(timestamp) * 1000);
+        return date.Format("yyyy-MM-dd HH:mm:ss");
+    }
+
+
+
+    Date.prototype.Format = function (fmt) { //author: meizz
+        var o = {
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate(), //日
+            "H+": this.getHours(), //小时
+            "m+": this.getMinutes(), //分
+            "s+": this.getSeconds(), //秒
+            "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+            "S": this.getMilliseconds() //毫秒
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    };
+
+    getInvoices();
+
 </script>
 </body>
 </html>

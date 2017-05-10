@@ -9,6 +9,7 @@ class case_service extends MY_Service{
         $this->load->model('pay_model');
         $this->load->model('old_case_model');
         $this->load->model('award_model');
+        $this->load->model('invoice_model');
         $this->load->service('image_service');
         //禁用notice和waring的错误日志,如需要请删除
         error_reporting(E_ALL^E_NOTICE^E_WARNING);
@@ -831,31 +832,33 @@ class case_service extends MY_Service{
     function isFile($file) {
         return $file ? is_file($file) : false;
     }
-    public function upload($type,$filename){
+    public function upload(){
+        $type = $this->input->post('type');
         $file = $_FILES['file'];
-        if ($file['size'] > 0){
-            switch ($type){
-                case image:
-                    $file_url = $this -> image_service->save_image($file,$filename);
-                    break;
-                case video:
-                    $file_url = $this -> image_service->save_video($file,$filename);
-                    break;
-                case ppt:
-                    $file_url = $this -> image_service->save_ppt($file,$filename);
-                    break;
-                case word:
-                    $file_url = $this -> image_service->save_word($file,$filename);
-                    break;
-                default:
-                    break;
-            }
-            if (!empty($file_url)){
-                return array('file_url'=>$file_url);
-            }
-            return false;
+        if ($file['size'] <= 0){
+            return array('code' => invoice_model::FILE_ERROR,'data'=>'');
         }
-        return false;
+        switch ($type){
+            case 'image':
+                $file_url = $this -> image_service->save_image($file,'image');
+                break;
+            case 'video':
+                $file_url = $this -> image_service->save_video($file,'video');
+                break;
+            case 'ppt':
+                $file_url = $this -> image_service->save_ppt($file,'ppt');
+                break;
+            case 'word':
+                $file_url = $this -> image_service->save_word($file,'word');
+                break;
+            default:
+                return array('code' => invoice_model::TYPE_ERROR,'data'=>'');
+                break;
+        }
+        if (empty($file_url)){
+            return array('code' => invoice_model::FILE_UPLOAD_FAIL,'data'=>'');
+        }
+        return array('code' => invoice_model::REQUEST_SUCCESS,'data'=>$file_url);
     }
 	public function test(){
 		require_once dirname(dirname(__FILE__)).'/alipaydemo/f2fpay/F2fpay.php';
