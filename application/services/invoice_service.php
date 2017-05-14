@@ -48,7 +48,7 @@ class invoice_service extends MY_Service{
         $invoice['hardcopy'] = $hardcopy;
         $invoice['license'] = $license;
         $invoice['create_time'] = time();
-
+        
         $result = $this->invoice_model->add($invoice);
         if (empty($result)){
             return array('code'=>invoice_model::SYSTEM_ERROR,'data'=>'');

@@ -4,6 +4,7 @@ class pay_model extends CI_Model{
     
     const REQUEST_SUCCESS = 1000;//请求成功
     const PAYMENT_FAIL = 5001;//支付二维码生成失败
+    const COUNTER_FEE = 0.002; //手续费
     private $_table = 'jwj_pay_info';
     
     function __construct(){
@@ -50,6 +51,6 @@ class pay_model extends CI_Model{
     public function get_pay_info_by_out_trade_no($out_trade_no){
         $sql = "SELECT * FROM " . $this->_table . " WHERE out_trade_no = '$out_trade_no'";
         $res = $this->db->query($sql);
-        return $res->result_array();
+        return $res->row_array();
     }
 }

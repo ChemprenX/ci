@@ -160,6 +160,7 @@ class case_service extends MY_Service{
             $case['advertiser_logo'] = $advertiser_logo;
             $case['agency_company_logo'] = $agency_company_logo;
             $case['visual_url'] = $visual_url;
+            $case['video_url'] = $video_url;
             $case['url'] = $url;
             //$case['swf_url'] = $swf_url;
         }
@@ -484,6 +485,7 @@ class case_service extends MY_Service{
             $case['title'] = $results[$i]['title'];
             $case['status'] = $results[$i]['status'];
             $case['aid'] = $results[$i]['aid'];
+            $case['pay_info'] = $results[$i]['pay_info'];
             $case['no_case_advertiser'] = $results[$i]['no_case_advertiser'];
             $case['total_amount'] =$this->_count_money($arr);//费用
             $case['remark'] = $results[$i]['remark'];
@@ -603,7 +605,7 @@ class case_service extends MY_Service{
     public function get_cases_by_export(){
         return $this->case_model->get_cases_by_export();
     }
-    public function callback(){
+    /* public function callback(){
         file_put_contents('/home/tmg/callback.log','=====',FILE_APPEND);
         $subject = $this->input->post('subject');
         $out_trade_no = $this->input->post('out_trade_no');
@@ -635,12 +637,23 @@ class case_service extends MY_Service{
         $res = $this->pay_model->update_by_out_trade_no($out_trade_no,$payinfo);
         $case = array('pay_info'=>2);
         $this->case_model->update_by_no($out_trade_no,$case);
-    }
+    } */
     
     public function payment() {
         require_once dirname(dirname(__FILE__)).'/alipaydemo/f2fpay/F2fpay.php';
-        $award = $this->input->post('award');
-        $total_amount = $this->_count_money($award);
+        $cids = $this->input->post('cids');
+        if (empty($cids)){
+            return array('code' => invoice_model::CASE_ID_NOT_NULL,'data'=>'');
+        }
+        $cids = implode(',', $cids);
+        $cases = $this->case_model->get_cases_by_cids($cids);
+        
+        $total_amount = 0;
+        foreach ($cases as $value){
+            $award = explode(',', $value['aid']);
+            $total_amount += $this->_count_money($award);
+        }
+        //$total_amount += $total_amount * pay_model::COUNTER_FEE;
         $pay = new F2fpay();
         $out_trade_no = $this->_make_out_trade_no();
         $subject = case_model::SUBJECT;
@@ -650,6 +663,7 @@ class case_service extends MY_Service{
             $pay['out_trade_no'] = $out_trade_no;
             $pay['total_amount'] = $total_amount;
             $pay['subject'] = $subject;
+            $pay['cid'] = $cids;
             $this->pay_model->add($pay);
             $url = $response->alipay_trade_precreate_response->qr_code;
             $img = $this->image_service->qrcode($url,'code');
@@ -658,16 +672,68 @@ class case_service extends MY_Service{
         return array('code' => pay_model::PAYMENT_FAIL,'data'=>'');
     }
     
+    public function callback(){
+        file_put_contents('/home/tmg/callback.log','=====',FILE_APPEND);
+        $subject = $this->input->post('subject');
+        $out_trade_no = $this->input->post('out_trade_no');
+    
+        $payinfo = array();
+        $payinfo['gmt_create'] = $this->input->post('gmt_create');
+        $payinfo['notify_type'] = $this->input->post('notify_type');
+        $payinfo['total_amount'] = $this->input->post('total_amount');
+        $payinfo['trade_no'] = $this->input->post('trade_no');
+        //$payinfo['invoice_amount'] = $this->input->post('invoice_amount');
+        //$payinfo['open_id'] = $this->input->post('open_id');
+        $payinfo['seller_id'] = $this->input->post('seller_id');
+        $payinfo['notify_time'] = $this->input->post('notify_time');
+        //$payinfo['body'] = $this->input->post('body');
+        $payinfo['trade_status'] = $this->input->post('trade_status');
+        $payinfo['gmt_payment'] = $this->input->post('gmt_payment');
+        $payinfo['seller_email'] = $this->input->post('seller_email');
+        $payinfo['receipt_amount'] = $this->input->post('receipt_amount');
+        $payinfo['buyer_id'] = $this->input->post('buyer_id');
+        $payinfo['app_id'] = $this->input->post('app_id');
+        $payinfo['notify_id'] = $this->input->post('notify_id');
+        $payinfo['buyer_logon_id'] = $this->input->post('buyer_logon_id');
+        $payinfo['sign_type'] = $this->input->post('sign_type');
+        //$payinfo['buyer_pay_amount'] = $this->input->post('buyer_pay_amount');
+        $payinfo['sign'] = $this->input->post('sign');
+        //$payinfo['point_amount'] = $this->input->post('point_amount');
+        $payinfo['fund_bill_list'] = $this->input->post('fund_bill_list');
+        //out_trade_no
+        $res = $this->pay_model->update_by_out_trade_no($out_trade_no,$payinfo);
+        $pay = $this->pay_model->get_pay_info_by_out_trade_no($out_trade_no);
+        $case = array('pay_info'=>2,'out_trade_no'=>$out_trade_no);
+        $this->case_model->update_by_cids($pay['cid'],$case);
+    }
+    
     public function payment_result(){
         $out_trade_no = $this->input->post('out_trade_no');
+        if (empty($out_trade_no)){
+            return array('code' => invoice_model::OUT_TRADE_NO_NOT_NULL,'data'=>'');
+        }
         $payinfo = $this->pay_model->get_pay_info_by_out_trade_no($out_trade_no);
-        return array('code' => pay_model::REQUEST_SUCCESS,'data'=>array('out_trade_no'=>$out_trade_no));
+        if (empty($payinfo)){
+            return array('code' => invoice_model::ORDER_IS_NULL,'data'=>'');
+        }
+        return array('code' => pay_model::REQUEST_SUCCESS,'data'=>$payinfo);
     }
     
     public function paymenttest() {
         require_once dirname(dirname(__FILE__)).'/alipaydemo/f2fpay/F2fpay.php';
-        $award = $this->input->post('award');
-        $total_amount = $this->_count_money($award);
+        $cids = $this->input->post('cids');
+        if (empty($cids)){
+            return array('code' => invoice_model::CASE_ID_NOT_NULL,'data'=>'');
+        }
+        $cids = implode(',', $cids);
+        $cases = $this->case_model->get_cases_by_cids($cids);
+        
+        $total_amount = 0;
+        foreach ($cases as $value){
+            $award = explode(',', $value['aid']);
+            $total_amount += $this->_count_money($award);
+        }
+        //$total_amount += $total_amount * pay_model::COUNTER_FEE;
         $total_amount = $total_amount/10000;
         $pay = new F2fpay();
         $out_trade_no = $this->_make_out_trade_no();
@@ -678,6 +744,7 @@ class case_service extends MY_Service{
             $pay['out_trade_no'] = $out_trade_no;
             $pay['total_amount'] = $total_amount;
             $pay['subject'] = $subject;
+            $pay['cid'] = $cids;
             $this->pay_model->add($pay);
             $url = $response->alipay_trade_precreate_response->qr_code;
             $img = $this->image_service->qrcode($url,'code');
@@ -688,8 +755,14 @@ class case_service extends MY_Service{
     
     public function payment_resulttest(){
         $out_trade_no = $this->input->post('out_trade_no');
+        if (empty($out_trade_no)){
+            return array('code' => invoice_model::OUT_TRADE_NO_NOT_NULL,'data'=>'');
+        }
         $payinfo = $this->pay_model->get_pay_info_by_out_trade_no($out_trade_no);
-        return array('code' => pay_model::REQUEST_SUCCESS,'data'=>array('out_trade_no'=>$out_trade_no));
+        if (empty($payinfo)){
+            return array('code' => invoice_model::ORDER_IS_NULL,'data'=>'');
+        }
+        return array('code' => pay_model::REQUEST_SUCCESS,'data'=>$payinfo);
     }
     
     

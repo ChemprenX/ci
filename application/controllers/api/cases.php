@@ -47,6 +47,13 @@ class cases extends MY_Controller{
     public function casepay(){
         $this->display('api/case/casepay.html');
     }
+
+    /**跳转到支付测试界面*/
+    public function casepaytest(){
+        $this->display('api/case/casepaytest.html');
+    }
+
+
     public function casesubmitact(){
         $rs = $this->case_service->add_case();
         $this->display('api/common/header.html');
@@ -189,6 +196,6 @@ class cases extends MY_Controller{
     }
     
 	public function test(){
-		$this->case_service->test();
+		$this->case_service->callbacktest();
 	}
 }

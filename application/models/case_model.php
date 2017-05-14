@@ -460,4 +460,18 @@ class case_model extends CI_Model{
 //        $sql = trim($sql,',');
         return $this->db->query($sql);
     }
+    public function get_cases_by_cids($cids){
+        $sql = "SELECT * FROM " . $this->_table."  WHERE cid IN ('$cids')";
+        $res = $this->db->query($sql);
+        return $res->result_array();
+    }
+    public function update_by_cids($cids,$case){
+        $sql = "UPDATE " . $this->_table . " SET ";
+        foreach ($case as $key => $value){
+            $sql .= "`".$key."`" . "='".$value."',";
+        }
+        $sql = trim($sql,',');
+        $sql .= " WHERE cid IN ('$cids')";
+        return $this->db->query($sql);
+    }
 }

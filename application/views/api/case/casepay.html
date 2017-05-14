@@ -11,7 +11,7 @@
     </ul>
     <div class="col-md-10">
         <h3>
-            付款奖项总额：（￥<span id="paymentNum" class="paymentNum">1100</span>）
+            付款奖项总额：（￥<span id="paymentNum" class="paymentNum"></span>）
         </h3>
         <table class="table">
             <thead>
@@ -33,7 +33,13 @@
                 <li class="on">
                     <div class="clearfix">
                         <div class="qcode fl">
-                            <img src="/static/api/images/2017/qc.jpg" id="qcodeImg">
+                            <img src="/static/api/images/2017/qc.jpg" id="qcodeImg" style="display:none">
+                            <div id="attention">
+                                <p style="font-size: 20px; padding: 10px; line-height: 31px; text-align: center;">
+                                    欢迎使用支付宝扫码线上支付，<br>
+                                    正在生成二维码，请稍后！
+                                </p>
+                            </div>
                             <div id="nocase-info" style="display: none;">
                                 <h4>付款信息</h4>
                                 <table class="table">
@@ -62,12 +68,20 @@
                         </div>
                         <form name="formInvoice" method="post" action="/index.php/api/cases/invoicesubmitact?type=1"
                               enctype="multipart/form-data" target="_self">
-                            <div class="formTable fl">
-                                <h3><span id="online">线上付款需加收0.2%提现手续费，</span>你需要支付￥ <span class="paymentNum" id="tax">XXXX</span>元。
+                            <div id="payAttention">
+                                <h3 style="font-size: 20px; text-align: center; padding-top: 35px;">
+                                    请扫码付款，扫码后请耐心等待，继续填写发票信息
                                 </h3>
-                                <h4>付款成功后请截图付款成功页面，需要增值税的用户请提供相关信息以方便我们为您准备发票。</h4>
-                                <h5> 付款凭证</h5>
-                                <input type="file" class="form-control" id="" name="pay_prove">
+                            </div>
+                            <div class="formTable fl" style="padding-top: 20px;">
+
+                                <h3>你需要支付￥ <span class="paymentNum" id="tax"></span>元。
+                                </h3>
+                                <div class="payment_certificate">
+                                    <h4>付款成功后请截图付款成功页面，需要增值税的用户请提供相关信息以方便我们为您准备发票。</h4>
+                                    <h5> 付款凭证</h5>
+                                    <input type="file" class="form-control" id="" name="pay_prove">
+                                </div>
                                 <h5 style="font-size: 18px; padding: 20px 0;">增值税发票信息</h5>
                                 <label class="checkbox-inline">
                                     <input type="radio" id="inlineCheckbox1" value="1" name="ticketType" class="invoice-choose" checked="checked">国税增值税普通发票
@@ -75,7 +89,7 @@
                                 <label class="checkbox-inline">
                                     <input type="radio" id="inlineCheckbox2" value="2" name="ticketType" class="invoice-choose">国税增值税专用发票
                                 </label>
-                                <div class="normal-invoice" id="normalInvoice">
+                                <div class="normal-invoice" id="normalInvoice" style="display: none;">
                                     <div class="formRow clearfix">
                                         <label>1.单位名称</label>
                                         <input type="text" class="form-control" placeholder="请填写单位名称" name="normal_company_name">
@@ -142,6 +156,7 @@
         var tagsLi = $(".twtag li");
         var qcodeImg = $("#qcodeImg");
         var nocase_info = $("#nocase-info");
+        $(".payment_certificate").hide();
         tagsLi.on("click", function () {
             var amount = $("#paymentNum").html();
             var num = $(".twtag li").index(this);
@@ -151,22 +166,29 @@
                 $("#online").show();
                 amount = amount * 1.002;
                 amount = parseInt(amount);
-                $("#tax").html(amount);
+                $("#payAttention").show();
+                $(".payment_certificate").hide();
+                //$("#tax").html(amount);
                 qcodeImg.show();
                 nocase_info.hide();
             } else {
                 amount = amount;
-                $("#tax").html(amount);
+                //$("#tax").html(amount);
+                $("#payAttention").hide();
                 $("#online").hide();
+                $(".payment_certificate").show();
                 qcodeImg.hide();
                 nocase_info.show();
             }
         });
+
+        var cids = $.getUrlParam('cids');
         var total_amount = $.getUrlParam('total_amount');
         var count = $.getUrlParam('count');
-        $("#paymentNum").html(total_amount);
-        $("#tax").html(total_amount * 1.002);
+        //$("#paymentNum").html(total_amount);
+        //$("#tax").html(total_amount * 1.002);
         var domStr = "";
+        var cidsArr = new Array();
         for (var i = 0; i < count; i++) {
             var casenum = "casenameArr" + i + "";
             var casename = $.getUrlParam(casenum);
@@ -178,7 +200,56 @@
             var amount = $.getUrlParam(amountNum);
             /*domStr += "<tr><td><input type='checkbox' checked='checked' class='checkedInput'></td><td>" + casename + "</td><td>" + awardname + "</td><td class='hideAmount' style='display: none;'>" + amount + "</td></tr>"*/
             domStr += "<tr><td></td><td>" + casename + "</td><td>" + awardname + "</td><td class='hideAmount' style='display: none;'>" + amount + "</td></tr>";
+
+            var cid = "cids"+i+"";
+            var currentCid = $.getUrlParam(cid);
+
+            cidsArr.push(currentCid);
+
         }
+        $.post(
+            "/index.php/api/cases/payment",
+            {
+                'cids': cidsArr
+            },
+            function (data) {
+                var obj = $.parseJSON(data);
+                var img = obj['data']['img'];
+                var cost = obj['data']['cost'];
+                var out_trade_no = obj['data']['out_trade_no'];
+                //二维码提示
+                $("#attention").hide();
+                $("#tax").html(cost);
+                $("#paymentNum").html(cost);
+                qcodeImg.show();
+                qcodeImg.attr('src', img);
+
+                var beat = setInterval(function (e) {
+
+                    $.post(
+                        "/index.php/api/cases/paymentresult",
+                        {
+                            out_trade_no: out_trade_no
+                        },
+                        function (sdata) {
+                            var sobj = $.parseJSON(sdata);
+
+                            var code = sobj['code'];
+                            var dataObj = sobj['data'][0];
+                            if (dataObj.trade_status == 'TRADE_SUCCESS') {
+                                alert("支付成功，请继续提交");
+                                $('#normalInvoice').show();
+                                clearTimeout(beat);
+                            }
+
+                        }
+                    );
+                }, 500);
+
+
+
+            }
+        );
         $("#caseList").html(domStr);
         var totalAmount = $("#paymentNum");
         $(".checkedInput").on('change', function () {
@@ -215,6 +286,7 @@
             return null;
         }
     })(jQuery);
+
 </script>
 <script type="text/javascript" src="/static/api/new/js/script.js"></script>
 </body>

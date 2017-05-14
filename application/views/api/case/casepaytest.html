@@ -1,0 +1,293 @@
+<{include file="../common/header.html"}>
+<body>
+<{include file="../common/header_navigation.html"}>
+
+<div class="payment col-md-12">
+    <ul class=" nav-stacked col-md-2 userNav" id="myTab">
+        <li><a href="/index.php/api/user/userinfo">个人信息</a></li>
+        <li><a href="/index.php/api/cases/casesubmit">案例提交</a></li>
+        <li class="act"><a href="/index.php/api/user/mycase">作品查询</a></li>
+        <li><a href="/index.php/api/user/myInvoice">我的发票</a></li>
+    </ul>
+    <div class="col-md-10">
+        <h3>
+            付款奖项总额：（￥<span id="paymentNum" class="paymentNum"></span>）
+        </h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th></th>
+                <th>案例</th>
+                <th>参评奖项</th>
+            </tr>
+            </thead>
+            <tbody id="caseList">
+            </tbody>
+        </table>
+        <div class="paymentChose">
+            <ul class="twtag clearfix">
+                <li class="on">线上支付</li>
+                <li>线下支付</li>
+            </ul>
+            <ul class="payTypeUl">
+                <li class="on">
+                    <div class="clearfix">
+                        <div class="qcode fl">
+                            <img src="/static/api/images/2017/qc.jpg" id="qcodeImg" style="display:none">
+                            <div id="attention">
+                                <p style="font-size: 20px; padding: 10px; line-height: 31px; text-align: center;">
+                                    欢迎使用支付宝扫码线上支付，<br>
+                                    正在生成二维码，请稍后！
+                                </p>
+                            </div>
+                            <div id="nocase-info" style="display: none;">
+                                <h4>付款信息</h4>
+                                <table class="table">
+                                    <tr>
+                                        <td>收款单位：</td>
+                                        <td>重庆天极网络有限公司</td>
+                                    </tr>
+                                    <tr>
+                                        <td>开 户 行：</td>
+                                        <td>重庆三峡银行股份有限公司北部新区支行</td>
+                                    </tr>
+                                    <tr>
+                                        <td>开户行地址：</td>
+                                        <td>重庆市北部新区青枫南路81号</td>
+                                    </tr>
+                                    <tr>
+                                        <td>帐 号：</td>
+                                        <td>0109 0142 1000 2082</td>
+                                    </tr>
+                                    <tr>
+                                        <td>纳税人识别码 <br>（税号）：</td>
+                                        <td>5009 0520 3938 090</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <form name="formInvoice" method="post" action="/index.php/api/cases/invoicesubmitact?type=1"
+                              enctype="multipart/form-data" target="_self">
+                            <div id="payAttention">
+                                <h3 style="font-size: 20px; text-align: center; padding-top: 35px;">
+                                    请扫码付款，扫码后请耐心等待，继续填写发票信息
+                                </h3>
+                            </div>
+                            <div class="formTable fl" style="padding-top: 20px;">
+
+                                <h3>你需要支付￥ <span class="paymentNum" id="tax"></span>元。
+                                </h3>
+                                <div class="payment_certificate">
+                                    <h4>付款成功后请截图付款成功页面，需要增值税的用户请提供相关信息以方便我们为您准备发票。</h4>
+                                    <h5> 付款凭证</h5>
+                                    <input type="file" class="form-control" id="" name="pay_prove">
+                                </div>
+                                <h5 style="font-size: 18px; padding: 20px 0;">增值税发票信息</h5>
+                                <label class="checkbox-inline">
+                                    <input type="radio" id="inlineCheckbox1" value="1" name="ticketType" class="invoice-choose" checked="checked">国税增值税普通发票
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="radio" id="inlineCheckbox2" value="2" name="ticketType" class="invoice-choose">国税增值税专用发票
+                                </label>
+                                <div class="normal-invoice" id="normalInvoice" style="display: none;">
+                                    <div class="formRow clearfix">
+                                        <label>1.单位名称</label>
+                                        <input type="text" class="form-control" placeholder="请填写单位名称" name="normal_company_name">
+                                    </div>
+                                </div>
+                                <div class="special-invoice" style="display: none;" id="specialInvoice">
+                                    <div class="formRow clearfix">
+                                        <label>1.&lt;一般纳税人的认定&gt; 或 &lt;税务登记证副本&gt;的复印件</label>
+                                        <a href="#" target="_blank" class="fr">样式模板</a>
+                                        <input type="file" class="form-control" name="hardcopy">
+                                        <label>税务登记证上没有“增值税一般纳税人”税务章的要加盖公章（JPG文件，不大于5M）</label>
+                                    </div>
+                                    <div class="formRow clearfix">
+                                        <label>2.银行开户许可证或开户信息</label>
+                                        <a href="#" target="_blank" class="fr">样式模板</a>
+                                        <input type="file" class="form-control" name="license">
+                                        <label>JPG文件，不大于5M</label>
+                                    </div>
+                                    <div class="formRow clearfix">
+                                        <label>3.单位名称</label>
+                                        <input type="text" class="form-control" placeholder="请填写单位名称" name="company_name">
+                                    </div>
+                                    <div class="formRow clearfix">
+                                        <label>4.单位地址</label>
+                                        <input type="text" class="form-control" placeholder="请填写单位地址"
+                                               name="company_address">
+                                    </div>
+                                    <div class="formRow clearfix">
+                                        <label>5.联系电话</label>
+                                        <input type="text" class="form-control" placeholder="请填写联系电话" name="telephone">
+                                    </div>
+                                    <div class="formRow clearfix">
+                                        <label>6.开户行名称</label>
+                                        <input type="text" class="form-control" placeholder="请填写开户行名称" name="bank_name">
+                                    </div>
+                                    <div class="formRow clearfix">
+                                        <label>7.帐号
+                                        </label>
+                                        <input type="text" class="form-control" placeholder="请填写帐号" name="bank_account">
+                                    </div>
+                                    <div class="formRow clearfix">
+                                        <label>8.收件人</label>
+                                        <!--<input type="checkbox"> 同注册人-->
+                                        <input type="text" class="form-control" placeholder="请填写收件人" name="addressee">
+                                    </div>
+                                    <div class="formRow clearfix">
+                                        <label>9.收件地址</label>
+                                        <!--<input type="checkbox"> 同单位地址-->
+                                        <input type="text" class="form-control" placeholder="请填写收件地址" name="direction">
+                                    </div>
+                                </div>
+
+                                <input type="submit" class="btn btn-info  mt30 col-xs-2 col-xs-offset-5" value="提交">
+                            </div>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var tagsLi = $(".twtag li");
+        var qcodeImg = $("#qcodeImg");
+        var nocase_info = $("#nocase-info");
+        $(".payment_certificate").hide();
+        tagsLi.on("click", function () {
+            var amount = $("#paymentNum").html();
+            var num = $(".twtag li").index(this);
+            tagsLi.removeClass("on");
+            $(this).addClass("on");
+            if (num == 0) {
+                $("#online").show();
+                amount = amount * 1.002;
+                amount = parseInt(amount);
+                $("#payAttention").show();
+                $(".payment_certificate").hide();
+                //$("#tax").html(amount);
+                qcodeImg.show();
+                nocase_info.hide();
+            } else {
+                amount = amount;
+                //$("#tax").html(amount);
+                $("#payAttention").hide();
+                $("#online").hide();
+                $(".payment_certificate").show();
+                qcodeImg.hide();
+                nocase_info.show();
+            }
+        });
+
+        var cids = $.getUrlParam('cids');
+        var total_amount = $.getUrlParam('total_amount');
+        var count = $.getUrlParam('count');
+        //$("#paymentNum").html(total_amount);
+        //$("#tax").html(total_amount * 1.002);
+        var domStr = "";
+        var cidsArr = new Array();
+        for (var i = 0; i < count; i++) {
+            var casenum = "casenameArr" + i + "";
+            var casename = $.getUrlParam(casenum);
+            casename = decodeURIComponent(casename);
+            var awardnum = "awardnameArr" + i + "";
+            var awardname = $.getUrlParam(awardnum);
+            awardname = decodeURIComponent(awardname);
+            var amountNum = "amountArr" + i + "";
+            var amount = $.getUrlParam(amountNum);
+            /*domStr += "<tr><td><input type='checkbox' checked='checked' class='checkedInput'></td><td>" + casename + "</td><td>" + awardname + "</td><td class='hideAmount' style='display: none;'>" + amount + "</td></tr>"*/
+            domStr += "<tr><td></td><td>" + casename + "</td><td>" + awardname + "</td><td class='hideAmount' style='display: none;'>" + amount + "</td></tr>";
+
+            var cid = "cids"+i+"";
+            var currentCid = $.getUrlParam(cid);
+
+            cidsArr.push(currentCid);
+
+        }
+        $.post(
+            "/index.php/api/cases/paymenttest",
+            {
+                'cids': cidsArr
+            },
+            function (data) {
+                var obj = $.parseJSON(data);
+                var img = obj['data']['img'];
+                var cost = obj['data']['cost'];
+                var out_trade_no = obj['data']['out_trade_no'];
+                //二维码提示
+                $("#attention").hide();
+                $("#tax").html(cost);
+                $("#paymentNum").html(cost);
+                qcodeImg.show();
+                qcodeImg.attr('src', img);
+
+                var beat = setInterval(function (e) {
+
+                    $.post(
+                        "/index.php/api/cases/paymentresulttest",
+                        {
+                            out_trade_no: out_trade_no
+                        },
+                        function (sdata) {
+                            var sobj = $.parseJSON(sdata);
+
+                            var code = sobj['code'];
+                            var dataObj = sobj['data'][0];
+                            if (dataObj.trade_status == 'TRADE_SUCCESS') {
+                                alert("支付成功，请继续提交");
+                                $('#normalInvoice').show();
+                                clearTimeout(beat);
+                            }
+
+                        }
+                    );
+                }, 500);
+
+
+
+            }
+        );
+        $("#caseList").html(domStr);
+        var totalAmount = $("#paymentNum");
+        $(".checkedInput").on('change', function () {
+            var amount = $(this).closest("tr").find(".hideAmount").html();
+            if (this.checked) {
+                var currentAmount = totalAmount.html();
+                var next = parseInt(currentAmount) + parseInt(amount);
+                totalAmount.html(next);
+            } else {
+                var currentAmount = totalAmount.html();
+                var next = currentAmount - amount;
+                totalAmount.html(next);
+            }
+        });
+        $(".invoice-choose").on('change', function (e) {
+            var num = $(this).val();
+
+            //发票选择 1普通 2专用
+            if (num == 1) {
+                $(".normal-invoice").show();
+                $(".special-invoice").hide();
+            }
+            if (num == 2){
+                $(".normal-invoice").hide();
+                $(".special-invoice").show();
+            }
+        });
+    });
+    (function ($) {
+        $.getUrlParam = function (name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+    })(jQuery);
+
+</script>
+<script type="text/javascript" src="/static/api/new/js/script.js"></script>
+</body>
+</html>

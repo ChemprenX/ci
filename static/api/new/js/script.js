@@ -81,14 +81,14 @@ $(function () {
             },
             isNoCase: function () {
                 return $('#nocase_detail').is(":visible");
-            },
-            pptSize: function() {
+            }
+            /*pptSize: function() {
                 var ppt = document.getElementById('file4').files;
                 var size = ppt[0].size;
                 if (size >= 10485760){
                     return {"error":  "ppt过大，请小于10M"};
                 }
-            }
+            }*/
         },
         fields: {
             'advertiser': 'required(isCase);',

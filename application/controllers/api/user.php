@@ -1,8 +1,8 @@
 <?php
-header('content-type:application:json;charset=utf8');
-header('Access-Control-Allow-Origin:*');
-header('Access-Control-Allow-Methods:POST');
-header('Access-Control-Allow-Headers:x-requested-with,content-type');
+//header('content-type:application:json;charset=utf8');
+//header('Access-Control-Allow-Origin:*');
+//header('Access-Control-Allow-Methods:POST');
+//header('Access-Control-Allow-Headers:x-requested-with,content-type');
 class user extends MY_Controller{
     function __construct(){
         parent::__construct();
@@ -104,6 +104,19 @@ class user extends MY_Controller{
         $this->assign('status', $status);
         $this->display('api/common/header.html');
         $this->display('api/user/mycase.html');
+    }
+
+    public function mycasetest(){
+        $uid = get_cookie('uid');
+        if (empty($uid)){
+            redirect('api/user/login');
+        }
+        $status = $this->input->get('status');
+        $cases = $this->case_service->get_case_by_uid_test($uid,$status);
+        $this->assign('cases', $cases);
+        $this->assign('status', $status);
+        $this->display('api/common/header.html');
+        $this->display('api/user/mycasetest.html');
     }
 
     public function checkemail(){

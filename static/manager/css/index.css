@@ -807,7 +807,7 @@ body, html {
 /** 新案例提交 **/
 .container{
     width: 1200px;
-    margin-top: 190px;
+    margin-top: 50px;
 }
 
 #caseListPage table{

@@ -300,7 +300,7 @@
     //专用发票字段
     //税务登记复印件
     var hardcopy = $("#hardcopy");
-    hardcopy.uploadify({
+    hardcopy.Huploadify({
         swf:'/static/uploadify/uploadify.swf',
         uploader:'/index.php/api/user/upload',
         method: 'post',
@@ -326,7 +326,7 @@
     });
     //银行开户许可证
     var license = $("#license");
-    license.uploadify({
+    license.Huploadify({
         'buttonText' : '请选择文件',
         swf:'/static/uploadify/uploadify.swf',
         uploader:'/index.php/api/user/upload',
@@ -423,6 +423,7 @@
 
     //取发票信息
     function getInvoices() {
+        $(".payTypeUl").hide();
         var uid = $.cookie('uid');
         $.post(
             "/index.php/api/cases/getinvoices",
@@ -433,7 +434,7 @@
                 var obj = $.parseJSON(data);
                 var tbody = $("#tbody");
                 var tds = "";
-                if (obj.data.length >3) {
+                if (obj.data.length >= 3) {
                     $('#newInvoice').html("您申请的发票数已达限额");
                     $('#newInvoice').css({'background':'#eee','border-color':'#eee','color': '#333'});
                     $('#newInvoice').unbind();
