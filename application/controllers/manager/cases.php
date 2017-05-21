@@ -18,18 +18,15 @@ class cases extends MY_Controller{
     }
     /*old list*/
     public function caselist(){
-        $result = $this->case_service->get_cases();
-        $awards = $this->award_service->get_award_all();
-        $status = $this->case_service->get_status();
-        $this->assign('cases', $result['case']);
-        $this->assign('cidArray',$result['cidArray']);
-        $this->assign('status', $status);
-        $this->assign('awards', $awards);
-        $this->assign('page', $result['page']);
-        $this->assign('sumpage', $result['sumpage']);
-        $this->assign('search', $result['search']);
-        $this->display('manager/common/header.html');
-        $this->display('manager/case/caselist.html');
+        $result = $this->case_service->get_case_list();
+        echo json_encode($result);
+        exit();
+    }
+    
+    public function statistics(){
+        $result = $this->case_service->get_cases_num();
+        echo json_encode($result);
+        exit();
     }
     /*查看今年的案例---旧方法*/
     public function caselist2017_old(){
@@ -80,18 +77,6 @@ class cases extends MY_Controller{
         $this->assign('awardgroup', $award_group);
         $this->display('manager/common/header.html');
         $this->display('manager/case/caseopen.html');
-    }
-    public function oldcaselist(){
-        $result = $this->case_service->get_old_cases();
-        //var_dump($result);exit();
-        //$status = $this->case_service->get_status();
-        $this->assign('cases', $result['case']);
-        //$this->assign('status', $status);
-        $this->assign('page', $result['page']);
-        $this->assign('sumpage', $result['sumpage']);
-        $this->assign('search', $result['search']);
-        $this->display('manager/common/header.html');
-        $this->display('manager/case/oldcaselist.html');
     }
     public function changestatus(){
         $result = $this->case_service->change_status();

@@ -12,7 +12,6 @@
             <li><a href="/index.php/api/user/userinfo">个人信息</a></li>
             <li class="act"><a href="/index.php/api/cases/casesubmit">案例提交</a></li>
             <li><a href="/index.php/api/user/mycase">作品查询</a></li>
-            <li><a href="/index.php/api/user/myInvoice">我的发票</a></li>
         </ul>
         <div class="awardWarpDiv col-xs-10">
             <ul class="twtag clearfix">
@@ -46,12 +45,13 @@
                                             <li class="clearfix">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><em class="red"> * </em>广告主LOGO：</span>
-                                                    <div id="advertiser_logo"></div>
-                                                    <input type="hidden" id="file1" name="advertiser_logo">
-                                                    <img src="/static/api/images/img_28-28.png" style="position: absolute; left: 300px; top: 0;" class="right-icon">
+                                                    <input type="file" class="form-control"
+                                                           id="file1" name="advertiser_logo">
                                                 </div>
                                                 <p class="col-xs-12">图片格式为jpg　尺寸(120*60)</p>
                                             </li>
+
+
                                             <li class="clearfix">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><em class="red"> * </em>代理公司名称：</span>
@@ -61,9 +61,9 @@
                                             <li class="clearfix">
                                                 <div class="input-group">
                                                     <span class="input-group-addon "><em class="red"> * </em>代理公司LOGO：</span>
-                                                    <div id="agency_company_logo"></div>
-                                                    <input type="hidden" id="file2" name="agency_company_logo" width="653">
-                                                    <img src="/static/api/images/img_28-28.png" style="position: absolute; left: 300px; top: 0;" class="right-icon">
+                                                    <input type="file" class="form-control"
+                                                           id="file2" name="agency_company_logo">
+
                                                 </div>
                                                 <p class="col-xs-12">图片格式为jpg　尺寸(120*60)</p>
                                             </li>
@@ -76,9 +76,8 @@
                                             <li class="clearfix">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><em class="red"> * </em>作品主视觉：</span>
-                                                    <div id="visual_url"></div>
-                                                    <input type="hidden" id="file3" name="visual_url">
-                                                    <img src="/static/api/images/img_28-28.png" style="position: absolute; left: 300px; top: 0;" class="right-icon">
+                                                    <input type="file" class="form-control"
+                                                           id="file3" name="visual_url">
 
                                                 </div>
                                                 <p class="col-xs-12">图片格式为jpg　尺寸(500*355px)</p>
@@ -87,9 +86,7 @@
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><em class="red"> * </em>上传参赛作品：</span>
                                                     <!--<input type="file"  class="inputtext inputtext1 form-control" id="file4" name="url">-->
-                                                    <div id="url"></div>
-                                                    <input type="hidden"  id="file4" name="url">
-                                                    <img src="/static/api/images/img_28-28.png" style="position: absolute; left: 300px; top: 0;" class="right-icon">
+                                                    <input type="file" class="form-control" id="file4" name="url">
                                                 </div>
                                                 <p class="col-xs-12">
                                                     请将案例PPT保存成为微软97-2003版本的兼容格式文件 <br>
@@ -99,9 +96,8 @@
                                             <li class="clearfix">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><em class="holderBlock"></em>上传视频：</span>
-                                                    <div id="video_url"></div>
-                                                    <input type="hidden" id="file5" name="video_url" class="form-control">
-                                                    <img src="/static/api/images/img_28-28.png" style="position: absolute; left: 300px; top: 0;" class="right-icon">
+                                                    <input type="file" class="form-control"
+                                                           id="file5" name="video_url">
                                                 </div>
                                                 <p class="col-xs-12">
                                                     视频格式为MP4,容量限制：50M；
@@ -187,6 +183,7 @@
                                                            value="24"/><span>健康营销类 </span></label>
                                             </dd>
                                         </dl>
+
                                         <dl class="dllist cf on last">
                                             <dt>
                                             <div class="csjx_title">泛娱乐类</div>
@@ -218,16 +215,14 @@
                                         <li class="clearfix">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><em class="red"> * </em>报送公司：</span>
-                                                <input type="text"  name="no_case_advertiser" class="form-control">
+                                                <input type="text" id="" name="no_case_advertiser" class="form-control">
                                             </div>
                                         </li>
                                         <li class="clearfix">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><em class="holderBlock"></em>广告主LOGO：</span>
-                                                <div id="no_case_advertiser_logo"></div>
-                                                <input type="hidden" class="form-control"
+                                                <input type="file" class="form-control"
                                                        id="no_case_file1" name="no_case_advertiser_logo">
-                                                <img src="/static/api/images/img_28-28.png" style="position: absolute; left: 300px; top: 0;" class="right-icon">
 
                                             </div>
                                             <p class="col-xs-12">图片格式为jpg　尺寸(120*60)</p>
@@ -235,22 +230,16 @@
                                         <li class="clearfix">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><em class="holderBlock"></em>人物照片：</span>
-                                                <div id="no_case_visual_url"></div>
-                                                <input type="hidden" class="form-control"
+                                                <input type="file" class="form-control"
                                                        id="no_case_file3" name="no_case_visual_url">
-                                                <img src="/static/api/images/img_28-28.png" style="position: absolute; left: 300px; top: 0;" class="right-icon">
                                             </div>
                                             <p class="col-xs-12">图片格式为jpg　尺寸(大小不超过2M)</p>
                                         </li>
                                         <li class="clearfix">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><em class="red"> * </em>上传申报资料：</span>
-                                                <div id="no_case_url">
-
-                                                </div>
-                                                <input type="hidden" class="form-control"
+                                                <input type="file" class="form-control"
                                                        id="no_case_file4" name="no_case_url">
-                                                <img src="/static/api/images/img_28-28.png" style="position: absolute; left: 300px; top: 0;" class="right-icon">
                                             </div>
                                             <p class="col-xs-12">请将word保存成为微软97-2003版本的兼容格式文件</p>
                                         </li>
@@ -323,6 +312,7 @@
                         <div class="zw_a none zw_a4"><img src="/static/api/images/erb.jpg" width="430" height="430"/></div>
                         <div class="zw_a none zw_a5"><img src="/static/api/images/erb.jpg" width="430" height="430"/></div>
                     </div>
+
                     <div class="twentySubmitWrap">
                         <input type="submit" value="提交" class="submitBtn twentySubmit" id="submitBtn">
                     </div>
@@ -332,14 +322,6 @@
                     <input type="hidden" value="<{$userinfo.contact}>" id="hideContact">
                     <input type="hidden" value="<{$userinfo.email}>" id="hideEmail">
                     <input type="hidden" value="<{$userinfo.mobile}>" id="hideTelephone">
-
-                    <input type="hidden" value="" id="advertiser">
-                    <input type="hidden" value="" id="agency_company">
-                    <input type="hidden" value="" id="visual">
-                    <input type="hidden" value="" id="ppt">
-
-                    <input type="hidden" value="" id="no_case_word">
-
                 </div>
             </ul>
         </div>
@@ -367,279 +349,34 @@
      };
      });*/
     $(function () {
-        //清除隐藏赋值框
-        initHidden();
-
         var tagsLi = $(".twtag li");
         var awardLi = $(".awardLi");
-        var index = 0;
         tagsLi.on("click", function () {
             var num = $(".twtag li").index(this);
-            index = num;
             tagsLi.removeClass("on");
             $(this).addClass("on");
             awardLi.removeClass("on");
             awardLi.eq(num).addClass("on");
         });
-
         var submitBtn = $("#submitBtn");
         var hideCompany = $("#hideCompany").val();
         var hideContact = $("#hideContact").val();
         var hideEmail = $("#hideEmail").val();
         var hideTelephone = $("#hideTelephone").val();
-
-        var caseInfo = false;
-        var noCaseInfo = false;
         var info = false;
         if (hideCompany && hideContact && hideEmail && hideTelephone){
             info = true;
         }
-
-        /*submitBtn.on("click",function(){
-
-            var advertiser = $("#advertiser").val();
-            var agency_company = $("#agency_company").val();
-            var visual = $("#visual").val();
-            var ppt = $("#ppt").val();
-
-            var noCaseWord = $("#no_case_word").val();
-
-            if (index === 0) {
-                if (advertiser && agency_company && visual && ppt) {
-                    caseInfo = true;
-                }
-            }
-            if (index ===1) {
-                if (noCaseWord) {
-                    noCaseInfo = true;
-                }
-            }
-
+        submitBtn.on("click",function(){
             if (!info){
                 alert("因您的用户信息未能完善，为避免给您带来损失，请完善相关信息后提交案例");
                 window.open("/index.php/api/user/userinfo","_self");
                 return false;
             }else{
-                //案例提交
-                if(index === 0){
-                    if (!caseInfo){
-                        alert("请完善案例相关必填文件资料");
-                        return false;
-                    }
-                }else {
-                    //非案例提交
-                    if (!noCaseWord) {
-                        alert("请完善非案例必填文件资料");
-                        return false;
-                    }
-                    return true;
-                }
-
-
-            }
-        });*/
-        //文件上传,广告主
-        $("#advertiser_logo").Huploadify({
-            auto:true,
-            fileTypeExts:'*.jpg;*.png',
-            multi:true,
-            formData:{
-                type:'image'
-            },
-            fileSizeLimit:9999,
-            showUploadedPercent:false,//是否实时显示上传的百分比，如20%
-            showUploadedSize:false,
-            removeTimeout:9000,
-            uploader:'/index.php/api/user/upload',
-            onUploadComplete:function(){
-                $("#file1").parent().find('.right-icon').show();
-                $(".uploadify-progress").hide();
-            },
-            onUploadSuccess:function(file, data, respones) {
-                var obj = $.parseJSON(data);
-                var path = obj.data;
-                $("#file1").val(path);
-
+                return true;
             }
         });
-        //代理公司logo
-        $("#agency_company_logo").Huploadify({
-            auto:true,
-            fileTypeExts:'*.jpg;*.png',
-            multi:true,
-            formData:{
-                type:'image'
-            },
-            fileSizeLimit:9999,
-            showUploadedPercent:false,//是否实时显示上传的百分比，如20%
-            showUploadedSize:false,
-            removeTimeout:9000,
-            uploader:'/index.php/api/user/upload',
-            onUploadComplete:function(){
-                $("#file2").parent().find('.right-icon').show();
-                $(".uploadify-progress").hide();
-            },
-            onUploadSuccess:function(file, data, respones) {
-                var obj = $.parseJSON(data);
-                var path = obj.data;
-                $("#file2").val(path);
-
-            }
-        });
-        //作品主视觉
-        $("#visual_url").Huploadify({
-            auto:true,
-            fileTypeExts:'*.jpg;*.png',
-            multi:true,
-            formData:{
-                type:'image'
-            },
-            fileSizeLimit:9999,
-            showUploadedPercent:false,//是否实时显示上传的百分比，如20%
-            showUploadedSize:false,
-            removeTimeout:9000,
-            uploader:'/index.php/api/user/upload',
-            onUploadComplete:function(){
-                $("#file3").parent().find('.right-icon').show();
-                $(".uploadify-progress").hide();
-            },
-            onUploadSuccess:function(file, data, respones) {
-                var obj = $.parseJSON(data);
-                var path = obj.data;
-                $("#file3").val(path);
-            }
-        });
-        //参赛作品
-        $("#url").Huploadify({
-            auto:true,
-            fileTypeExts:'*.ppt;*.pptx',
-            multi:true,
-            formData:{
-                type:'ppt'
-            },
-            fileSizeLimit:9999999,
-            showUploadedPercent:false,//是否实时显示上传的百分比，如20%
-            showUploadedSize:false,
-            removeTimeout:9000,
-            uploader:'/index.php/api/user/upload',
-            onUploadComplete:function(){
-                $("#file4").parent().find('.right-icon').show();
-                $(".uploadify-progress").hide();
-            },
-            onUploadSuccess:function(file, data, respones) {
-
-                var obj = $.parseJSON(data);
-                var path = obj.data;
-                $("#file4").val(path);
-            }
-        });
-        //视频
-        $("#video_url").Huploadify({
-            auto:true,
-            fileTypeExts:'*.mp4',
-            multi:true,
-            formData:{
-                type:'video'
-            },
-            fileSizeLimit:9999999,
-            showUploadedPercent:false,//是否实时显示上传的百分比，如20%
-            showUploadedSize:false,
-            removeTimeout:9000,
-            uploader:'/index.php/api/user/upload',
-            onUploadComplete:function(){
-                $("#file5").parent().find('.right-icon').show();
-                $(".uploadify-progress").hide();
-            },
-            onUploadSuccess:function(file, data, respones) {
-                console.log(data);
-                var obj = $.parseJSON(data);
-                var path = obj.data;
-                $("#file5").val(path);
-            }
-        });
-
-        //nocase广告主
-        $("#no_case_advertiser_logo").Huploadify({
-            auto:true,
-            fileTypeExts:'*.jpg',
-            multi:true,
-            formData:{
-                type:'image'
-            },
-            fileSizeLimit:9999999,
-            showUploadedPercent:false,//是否实时显示上传的百分比，如20%
-            showUploadedSize:false,
-            removeTimeout:9000,
-            uploader:'/index.php/api/user/upload',
-            onUploadComplete:function(){
-                $("#no_case_file1").parent().find('.right-icon').show();
-                $(".uploadify-progress").hide();
-            },
-            onUploadSuccess:function(file, data, respones) {
-                var obj = $.parseJSON(data);
-                var path = obj.data;
-                $("#no_case_file1").val(path);
-            }
-        });
-
-        //nocase人物照片
-        $("#no_case_visual_url").Huploadify({
-            auto:true,
-            fileTypeExts:'*.jpg',
-            multi:true,
-            formData:{
-                type:'image'
-            },
-            fileSizeLimit:9999999,
-            showUploadedPercent:false,//是否实时显示上传的百分比，如20%
-            showUploadedSize:false,
-            removeTimeout:9000,
-            uploader:'/index.php/api/user/upload',
-            onUploadComplete:function(){
-                $("#no_case_file3").parent().find('.right-icon').show();
-                $(".uploadify-progress").hide();
-            },
-            onUploadSuccess:function(file, data, respones) {
-                var obj = $.parseJSON(data);
-                var path = obj.data;
-                $("#no_case_file3").val(path);
-            }
-        });
-        //noca申报材料
-        $("#no_case_url").Huploadify({
-            auto:true,
-            fileTypeExts:'*.doc;*.docx',
-            multi:true,
-            formData:{
-                type:'word'
-            },
-            fileSizeLimit:9999999,
-            showUploadedPercent:false,//是否实时显示上传的百分比，如20%
-            showUploadedSize:false,
-            removeTimeout:9000,
-            uploader:'/index.php/api/user/upload',
-            onUploadComplete:function(){
-                $("#no_case_file4").parent().find('.right-icon').show();
-                $(".uploadify-progress").hide();
-            },
-            onUploadSuccess:function(file, data, respones) {
-                var obj = $.parseJSON(data);
-                var path = obj.data;
-                $("#no_case_file4").val(path);
-            }
-        });
-
-    });
-
-    function initHidden () {
-        var advertiser = $("#advertiser").val("");
-        var agency_company = $("#agency_company").val("");
-        var visual = $("#visual").val("");
-        var ppt = $("#ppt").val("");
-
-        var noCaseWord = $("#no_case_word").val("");
-    }
-
+    })
 </script>
 <{include file="../common/footer_navigation.html"}>
 </body>

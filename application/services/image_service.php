@@ -1,57 +1,41 @@
 <?php
-require_once ('MY_Service.php');
-class image_service extends MY_Service
-{
-    //const SAVE_SWF_HOST = 'http://219.239.91.224:7080/interface/changetoswf.jsp?fileUrl=http://pingfen.imcc.org.cn';
+class image_service extends MY_Service{
     const SAVE_SWF_HOST = 'http://219.239.88.229:7080/interface/changetoswf.jsp?fileUrl=http://pingfen.imcc.org.cn';
-	const SWF_URL = 'http://docs1.solution.chinabyte.com';
-	public function __construct(){
+    const SWF_URL = 'http://docs1.solution.chinabyte.com';
+    public function __construct(){
         parent::__construct();
         $this->load->model('image_model');
-    } 
-    
+    }
     public function save_image($image,$path){
         $fp = fopen($image['tmp_name'], "rb");
-	    $bin = fread($fp, 2); //只读2字节
-	    fclose($fp);
-	    $str_info  = @unpack("C2chars", $bin);
-	    $type_code = intval($str_info['chars1'].$str_info['chars2']);
-	    $ftype = '';
-	    $ftype = $this->image_model->get_type_by_code($type_code);
-	    $filename=$image['tmp_name'];
-	    $furl = $this->make_image_dir($path);
-	    if (empty($furl)){
-	        return array('result'=>false,'msg'=>"创建路径出错！");
-	    }
-	    if($ftype!=='unknown'){
-	        $destination=$furl.time().rand(1000, 9999)."s.".$ftype;
-	        $aimUrl=$furl.time().rand(1000, 9999).".".$ftype;
-	    }else{
-	        $destination=$furl.time().rand(1000, 9999)."s.png";
-	        $aimUrl=$furl.time().rand(1000, 9999).".png";
-	    }
-	    if(!move_uploaded_file ($filename, $destination))
-	    {
-	        return array('result'=>false,'msg'=>"移动出错!");
-	    }
-	    /* if($ftype=='jpg'||$ftype=='jpeg'){
-	        $exif = exif_read_data($destination, 0, true);
-	        if (isset($exif['IFD0'])) {
-	            if (isset($exif['IFD0']['Orientation'])) {
-	                $ori = $exif['IFD0']['Orientation'];
-	                if ($ori == 6) {
-	                    $this->image_model->flip($destination, $destination, $degrees = 270);
-	                }
-	            }
-	        }
-	    } */
-	    $this->image_model->createFile($aimUrl);
-	    $this->image_model->img2thumb($destination, $aimUrl, $width = 128, $height = 130, $cut = 1, $proportion = 0);
-	    $length = strlen($aimUrl);
-	    $aimUrl = substr($aimUrl,1,$length-1);
-	    return $aimUrl;
+        $bin = fread($fp, 2); //只读2字节
+        fclose($fp);
+        $str_info  = @unpack("C2chars", $bin);
+        $type_code = intval($str_info['chars1'].$str_info['chars2']);
+        $ftype = '';
+        $ftype = $this->image_model->get_type_by_code($type_code);
+        $filename=$image['tmp_name'];
+        $furl = $this->make_image_dir($path);
+        if (empty($furl)){
+            return array('result'=>false,'msg'=>"创建路径出错！");
+        }
+        if($ftype!=='unknown'){
+            $destination=$furl.time().rand(1000, 9999)."s.".$ftype;
+            $aimUrl=$furl.time().rand(1000, 9999).".".$ftype;
+        }else{
+            $destination=$furl.time().rand(1000, 9999)."s.png";
+            $aimUrl=$furl.time().rand(1000, 9999).".png";
+        }
+        if(!move_uploaded_file ($filename, $destination)) {
+            return array('result'=>false,'msg'=>"移动出错!");
+        }
+        $this->image_model->createFile($aimUrl);
+        $this->image_model->img2thumb($destination, $aimUrl, $width = 128, $height = 130, $cut = 1, $proportion = 0);
+        $length = strlen($aimUrl);
+        $aimUrl = substr($aimUrl,1,$length-1);
+        return $aimUrl;
     }
-    
+
     public function qrcode($url,$path){
         require_once dirname(dirname(__FILE__)).'/alipaydemo/phpqrcode/phpqrcode.php';
         $furl = $this->make_image_dir($path);
@@ -72,7 +56,7 @@ class image_service extends MY_Service
         $destination = substr($destination,1,$length-1);
         return $destination;
     }
-    
+
     public function save_video($video, $path){
         $filename=$video['tmp_name'];
         $furl = $this->make_image_dir($path);
@@ -89,7 +73,7 @@ class image_service extends MY_Service
         $destination = substr($destination,1,$length-1);
         return $destination;
     }
-    
+
     public function save_ppt($ppt, $path){
         $filename=$ppt['tmp_name'];
         $furl = $this->make_image_dir($path);
@@ -106,7 +90,7 @@ class image_service extends MY_Service
         $destination = substr($destination,1,$length-1);
         return $destination;
     }
-    
+
     public function save_word($word, $path){
         $filename=$word['tmp_name'];
         $furl = $this->make_image_dir($path);
@@ -123,7 +107,7 @@ class image_service extends MY_Service
         $destination = substr($destination,1,$length-1);
         return $destination;
     }
-    
+
     public function save_pdf($ppt, $path){
         $src_url = "file:///" . $ppt['tmp_name'];
         $furl = $this->make_image_dir($path);
@@ -143,7 +127,7 @@ class image_service extends MY_Service
         $oWriterDoc->close(true);
         return $save_url;
     }
-    
+
     public function save_swf($purl){
         $url = self::SAVE_SWF_HOST . $purl;
         $result = $this->curl_get($url);
@@ -154,9 +138,8 @@ class image_service extends MY_Service
         }
         return $swf_url;
     }
-    
-    function curl_get($url)
-    {
+
+    function curl_get($url){
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
@@ -166,9 +149,8 @@ class image_service extends MY_Service
         curl_close($ch);
         return $tmp;
     }
-    
-    private function make_image_dir ($path)
-    {
+
+    private function make_image_dir ($path){
         $dir = sprintf("%u",crc32(time().rand(1000, 9999)));
         $d[0] = substr($dir,0,2) % 32;
         $d[1] = substr($dir,2,2) % 32;
@@ -178,22 +160,21 @@ class image_service extends MY_Service
             if (! file_exists($folder)) {
                 if (! @mkdir($folder,0777,true))
                     return false;
-            }  
+            }
         }
         return $folder;
     }
-    
+
     public function getimgwh(){
         $image = $_FILES['image'];
         $arr = getimagesize($image['tmp_name']);
         return array('width' => $arr[0], 'height' => $arr[1]);
     }
-    
-    public function get_extension($file)
-    {
+
+    public function get_extension($file){
         return substr($file, strrpos($file, '.'));
     }
-    
+
     private function MakePropertyValue($name,$value,$osm){
         $oStruct = $osm->Bridge_GetStruct
         ("com.sun.star.beans.PropertyValue");

@@ -1,11 +1,11 @@
 
 <{include file="../common/header_navigation.html"}>
 <div class="main_zh clearfix">
+
     <ul class=" nav-stacked col-md-2 userNav" id="myTab">
         <li ><a href="/index.php/api/user/userinfo">个人信息</a></li>
         <li><a  href="/index.php/api/cases/casesubmit">案例提交</a></li>
         <li class="act"><a href="/index.php/api/user/mycase">作品查询</a></li>
-        <li><a href="/index.php/api/user/myInvoice">我的发票</a></li>
     </ul>
     <div class="tab-content col-md-10 mycase-list">
         <div class="clearfix">
@@ -32,19 +32,13 @@
             <{foreach from=$cases item=case}>
             <{if $case.title}>
             <tr>
-                <td>
-                    <{if $case.pay_info ==1}><input type="checkbox" name="case" data-cid="<{$case.cid}>"><{/if}>
-                    <{if $case.pay_info ==2}><input type="checkbox" name="case" data-cid="<{$case.cid}>" disabled="disabled"><{/if}>
-                </td>
-                <td class="casename">
-                    <{$case.title}>
-                </td>
+                <td><input type="checkbox" name="case"></td>
+                <td class="casename"><{$case.title}></td>
                 <td><{$case.advertiser}></td>
                 <td><{$case.agency_company}></td>
                 <td><a href="<{$case.url}>">点击下载</a></td>
                 <td><{$case.aid}></td>
-                <{if $case.pay_info =='1'}><td>未付款</td><{/if}>
-                <{if $case.pay_info =='2'}><td>已付款</td><{/if}>
+                <td>待付款</td>
                 <{if $case.status =='1'}><td>等待审核</td><td><a href="/index.php/api/cases/updatecase?cid=<{$case.cid}>&uid=<{$case.uid}>" target="_blank">修改</a></td><{/if}>
                 <{if $case.status =='2'}><td>审核通过</td><td><a>完成</a></td><{/if}>
                 <{if $case.status =='3'}><td class="pr no-pass">审核未通过 <span class="cause pa"><{$case.remark}></span></td><td><a href="/index.php/api/cases/updatecase?cid=<{$case.cid}>&uid=<{$case.uid}>" target="_blank">修改</a></td><{/if}>
@@ -77,15 +71,11 @@
             <{if !$case.title}>
             <tr>
 
-                <td>
-                    <{if $case.pay_info ==1}><input type="checkbox" name="nocase" data-cid='<{$case.cid}>'><{/if}>
-                    <{if $case.pay_info ==2}><input type="checkbox" name="nocase" data-cid='<{$case.cid}>' disabled="disabled"><{/if}>
-                </td>
+                <td><input type="checkbox" name="nocase"></td>
                 <td class="casename"><{$case.no_case_advertiser}></td>
                 <td><a href="<{$case.no_case_url}>">点击下载</a></td>
                 <td><{$case.aid}></td>
-                <{if $case.pay_info ==1}><td>未付款</td><{/if}>
-                <{if $case.pay_info ==2}><td>已付款</td><{/if}>
+                <td>待付款</td>
                 <{if $case.status ==1}><td>等待审核</td><td><a href="/index.php/api/cases/updatecase?cid=<{$case.cid}>" target="_blank">修改</a></td><{/if}>
                 <{if $case.status ==2}><td>审核通过</td><td><a>完成</a></td><{/if}>
                 <{if $case.status ==3}><td class="pr no-pass">审核未通过 <span class="cause pa"><{$case.remark}></span></td><td><a href="/index.php/api/cases/updatecase?cid=<{$case.cid}>" target="_blank">修改</a><{/if}>
@@ -101,218 +91,206 @@
 </div>
 <script>
 
-    $(function (){
-        var awardArr = {
-            '2':'场景营销类',
-            '3':'移动营销类',
-            '22':'大屏营销类',
-            '4':'电商O2O类',
-            '6':'大数据营销类',
-            '23':'VR-AR营销类',
-            '9':'情感营销类',
-            '11':'社会化营销类',
-            '13':'体育营销类',
-            '12':'公益营销类',
-            '24':'健康营销类',
-            '25':'直播营销类',
-            '10':'娱乐营销类',
-            '26':'短视频营销类',
-            '14':'年度网络营销领军人物',
-            '15':'年度网络营销新锐人物',
-            '16':'年度网络营销最佳数字代理机构排行榜',
-            '17':'年度网络营销最佳品牌主',
-            '18':'年度网络营销优秀产品及工具',
-            '27':'智能营销类'
+$(function (){
+    var awardArr = {
+        '2':'场景营销类',
+        '3':'移动营销类',
+        '22':'大屏营销类',
+        '4':'电商O2O类',
+        '6':'大数据营销类',
+        '23':'VR-AR营销类',
+        '9':'情感营销类',
+        '11':'社会化营销类',
+        '13':'体育营销类',
+        '12':'公益营销类',
+        '24':'健康营销类',
+        '25':'直播营销类',
+        '10':'娱乐营销类',
+        '26':'短视频营销类',
+        '14':'年度网络营销领军人物',
+        '15':'年度网络营销新锐人物',
+        '16':'年度网络营销最佳数字代理机构排行榜',
+        '17':'年度网络营销最佳品牌主',
+        '18':'年度网络营销优秀产品及工具',
+        '27':'智能营销类'
+    }
+    $(".caseTable tbody").find("tr").each(function(){
+        var tdArr = $(this).children();
+        var isExist = tdArr.eq(7).html();
+        var str = tdArr.eq(5).html();
+        var strinput = " <input class='strinput' type='hidden' value='"+str+"'>";
+        var domstr = replaceStr(awardArr,str);
+        tdArr.eq(5).html(domstr + " <input class='strinput' type='hidden' value='"+domstr+"'>");
+
+        if (isExist){
+            var checkStatus = tdArr.eq(7).html().trim();
+            if (checkStatus != "审核通过"){
+                $(this).css("background","#eee");
+                tdArr.eq(0).find("input").attr("disabled","disabled");
+            }
         }
-        $(".caseTable tbody").find("tr").each(function(){
-            var tdArr = $(this).children();
-            var isExist = tdArr.eq(7).html();
-            var str = tdArr.eq(5).html();
-            var strinput = " <input class='strinput' type='hidden' value='"+str+"'>";
-            var domstr = replaceStr(awardArr,str);
-            tdArr.eq(5).html(domstr + " <input class='strinput' type='hidden' value='"+domstr+"'>");
-
-            if (isExist){
-                var checkStatus = tdArr.eq(7).html().trim();
-                if (checkStatus != "审核通过"){
-                    //$(this).css("background","#eee");
-                    //tdArr.eq(0).find("input").attr("disabled","disabled");
-                }
-            }
-        });
-        $(".noCaseTable tbody").find("tr").each(function(){
-            var tdArr = $(this).children();
-            var isExist = tdArr.eq(5).html();
-            var str = tdArr.eq(3).html();
-            var strinput = " <input class='strinput' type='hidden' value='"+str+"'>";
-            var domstr = replaceStr(awardArr,str);
-            tdArr.eq(3).html(domstr+ " <input class='strinput' type='hidden' value='"+domstr+"'>");
-            if (isExist){
-                var checkStatus = tdArr.eq(5).html().trim();
-                if (checkStatus != "审核通过"){
-                    //$(this).css("background","#eee");
-                    //tdArr.eq(0).find("input").attr("disabled","disabled");
-                }
-            }
-        });
-        var total_amount = 0;
-        var casename = "";
-        var casenameArr = new Array();
-        var awardnameArr = new Array();
-        var amountArr = new Array();
-        var awardname = "";
-
-        var cids = new Array();
-        var count = 0;
-        var obj = {};
-        var isAll = false;
-        $("table").find("input[type=checkbox]").attr("checked",false);
-        $("table").find("input[type=checkbox]"&&"input[name!='all']").on("click", function(){
-            if (isAll){
-                isAll = false;
-                /* clean();*/
-            }
-            // $(this).closest('table').find('input[type="checkbox"]').attr('checked',false);
-            if (this.checked){
-                var amount = $(this).closest("tr").find(".amount").html();
-                amount = parseInt(amount);
-                total_amount += amount;
-                var caseInnerName = $(this).closest("tr").find(".casename").html();
-                //casename += caseInnerName+"|";
-                casename = caseInnerName;
-                casename = encodeURIComponent(casename);
-                casenameArr.push(casename);
-                var awardInnerName = $(this).closest("tr").find(".strinput").val();
-                var amountNum = $(this).closest("tr").find(".amount").html();
-                awardname = awardInnerName;
-                awardname = encodeURIComponent(awardname);
-                awardnameArr.push(awardname);
-                amountArr.push(amount);
-                count += 1;
-                obj.count = count;
-                obj.total_amount = total_amount;
-                obj.casenameArr = casenameArr;
-                obj.awardnameArr = awardnameArr;
-                obj.amountArr = amountArr;
-
-                //push cids
-                var cid = $(this).attr('data-cid');
-                cids.push(cid);
-                obj.cids = cids;
-            }else {
-                $('input[name="all"]').attr('checked',false);
-                var amount = $(this).closest("tr").find(".amount").html();
-                amount = parseInt(amount);
-                total_amount -= amount;
-                var caseInnerName = $(this).closest("tr").find(".casename").html();
-                //casename += caseInnerName+"|";
-                casename = caseInnerName;
-                casename = encodeURIComponent(casename);
-                casenameArr.pop(casename);
-                var awardInnerName = $(this).closest("tr").find(".strinput").val();
-                var amountNum = $(this).closest("tr").find(".amount").html();
-                awardname = awardInnerName;
-                awardname = encodeURIComponent(awardname);
-                awardnameArr.pop(awardname);
-                amountArr.pop(amount);
-                count -= 1;
-                obj.count = count;
-                obj.total_amount = total_amount;
-                obj.casenameArr = casenameArr;
-                obj.awardnameArr = awardnameArr;
-                obj.amountArr = amountArr;
-                //pop cids
-                var cid = $(this).attr('data-cid');
-                cids.pop(cid);
-                obj.cids = cids;
-            }
-        });
-        function clean(){
-            total_amount = 0;
-            casename = "";
-            casenameArr = [];
-            awardnameArr = [];
-            amountArr = [];
-            awardname = "";
-            count = 0;
-            obj = {};
-            cids = [];
-        }
-
-        $('table input[name="all"]').on("click", function () {
-            //反选
-            if (isAll){
-                clean();
-                $("table tbody").find("tr").each(function () {
-                    var tdArr = $(this).children();
-                    var checkInput = tdArr.eq(0).find("input");
-                    var status =checkInput.attr("disabled");
-                    if (status !== "disabled"){
-                        if(checkInput[0].checked != false){
-                            checkInput[0].click();
-                        };
-                        isAll = false;
-                    }
-                });
-
-            }//正选
-            else {
-                clean();
-                $("table tbody").find("tr").each(function () {
-                    var tdArr = $(this).children();
-                    var checkInput = tdArr.eq(0).find("input");
-                    var status =checkInput.attr("disabled");
-                    if (status !== "disabled"){
-                        if(checkInput[0].checked != true){
-                            checkInput[0].click();
-                        };
-                        isAll = true;
-                    }
-                });
-            }
-        });
-
-
-        $("#merge").on('click',function(){
-            if (total_amount == 0){
-                alert("请勾选需要付款项目");
-            }else {
-                obj = urlEncode(obj);
-                var href = "/index.php/api/cases/casepay?obj="+obj;
-                window.open(href,'_self');
-            }
-        });
     });
-    /*替换中文*/
-    function replaceStr(awardArr,str){
-        if (str){
-            var domStr = "";
-            var strArr = str.split(",");
-            for (var i =0; i<strArr.length; i++){
-                var awardStr = awardArr[strArr[i]];
-                domStr += awardStr;
-                if ( i < strArr.length -1){
-                    domStr += "\n";
-                }
+    $(".noCaseTable tbody").find("tr").each(function(){
+        var tdArr = $(this).children();
+        var isExist = tdArr.eq(5).html();
+        var str = tdArr.eq(3).html();
+        var strinput = " <input class='strinput' type='hidden' value='"+str+"'>";
+        var domstr = replaceStr(awardArr,str);
+        tdArr.eq(3).html(domstr+ " <input class='strinput' type='hidden' value='"+domstr+"'>");
+        if (isExist){
+            var checkStatus = tdArr.eq(5).html().trim();
+            if (checkStatus != "审核通过"){
+                $(this).css("background","#eee");
+                tdArr.eq(0).find("input").attr("disabled","disabled");
             }
-            return domStr;
+        }
+    });
+    var total_amount = 0;
+    var casename = "";
+    var casenameArr = new Array();
+    var awardnameArr = new Array();
+    var amountArr = new Array();
+    var awardname = "";
+    var count = 0;
+    var obj = {};
+    var isAll = false;
+    $("table").find("input[type=checkbox]").attr("checked",false);
+    $("table").find("input[type=checkbox]"&&"input[name!='all']").on("click", function(){
+        if (isAll){
+            isAll = false;
+           /* clean();*/
+        }
+       // $(this).closest('table').find('input[type="checkbox"]').attr('checked',false);
+        if (this.checked){
+            var amount = $(this).closest("tr").find(".amount").html();
+            amount = parseInt(amount);
+            total_amount += amount;
+            var caseInnerName = $(this).closest("tr").find(".casename").html();
+            //casename += caseInnerName+"|";
+            casename = caseInnerName;
+            casename = encodeURIComponent(casename);
+            casenameArr.push(casename);
+            var awardInnerName = $(this).closest("tr").find(".strinput").val();
+            var amountNum = $(this).closest("tr").find(".amount").html();
+            awardname = awardInnerName;
+            awardname = encodeURIComponent(awardname);
+            awardnameArr.push(awardname);
+            amountArr.push(amount);
+            count += 1;
+            obj.count = count;
+            obj.total_amount = total_amount;
+            obj.casenameArr = casenameArr;
+            obj.awardnameArr = awardnameArr;
+            obj.amountArr = amountArr;
+        }else {
+            $('input[name="all"]').attr('checked',false);
+            var amount = $(this).closest("tr").find(".amount").html();
+            amount = parseInt(amount);
+            total_amount -= amount;
+            var caseInnerName = $(this).closest("tr").find(".casename").html();
+            //casename += caseInnerName+"|";
+            casename = caseInnerName;
+            casename = encodeURIComponent(casename);
+            casenameArr.pop(casename);
+            var awardInnerName = $(this).closest("tr").find(".strinput").val();
+            var amountNum = $(this).closest("tr").find(".amount").html();
+            awardname = awardInnerName;
+            awardname = encodeURIComponent(awardname);
+            awardnameArr.pop(awardname);
+            amountArr.pop(amount);
+            count -= 1;
+            obj.count = count;
+            obj.total_amount = total_amount;
+            obj.casenameArr = casenameArr;
+            obj.awardnameArr = awardnameArr;
+            obj.amountArr = amountArr;
+        }
+    });
+    function clean(){
+        total_amount = 0;
+        casename = "";
+        casenameArr = [];
+        awardnameArr = [];
+        amountArr = [];
+        awardname = "";
+        count = 0;
+        obj = {};
+    }
+
+    $('table input[name="all"]').on("click", function () {
+        //反选
+        if (isAll){
+            clean();
+            $("table tbody").find("tr").each(function () {
+                var tdArr = $(this).children();
+                var checkInput = tdArr.eq(0).find("input");
+                var status =checkInput.attr("disabled");
+                if (status !== "disabled"){
+                    if(checkInput[0].checked != false){
+                        checkInput[0].click();
+                    };
+                    isAll = false;
+                }
+            });
+
+        }//正选
+        else {
+            clean();
+            $("table tbody").find("tr").each(function () {
+                var tdArr = $(this).children();
+                var checkInput = tdArr.eq(0).find("input");
+                var status =checkInput.attr("disabled");
+                if (status !== "disabled"){
+                    if(checkInput[0].checked != true){
+                        checkInput[0].click();
+                    };
+                    isAll = true;
+                }
+            });
+        }
+    });
+
+
+    $("#merge").on('click',function(){
+        if (total_amount == 0){
+            alert("请勾选需要付款项目");
+        }else {
+            obj = urlEncode(obj);
+            var href = "/index.php/api/cases/casepay?obj="+obj;
+            window.open(href,'_self');
+        }
+    });
+});
+/*替换中文*/
+function replaceStr(awardArr,str){
+    if (str){
+        var domStr = "";
+        var strArr = str.split(",");
+        for (var i =0; i<strArr.length; i++){
+            var awardStr = awardArr[strArr[i]];
+            domStr += awardStr;
+            if ( i < strArr.length -1){
+                domStr += "\n";
+            }
+        }
+        return domStr;
+    }
+}
+/*编码*/
+var urlEncode = function (param, key, encode) {
+    if(param==null) return '';
+    var paramStr = '';
+    var t = typeof (param);
+    if (t == 'string' || t == 'number' || t == 'boolean') {
+        paramStr += '&' + key + '=' + ((encode==null||encode) ? encodeURIComponent(param) : param);
+    } else {
+        for (var i in param) {
+            var k = key == null ? i : key + (param instanceof Array ? '[' + i + ']' : '.' + i);
+            paramStr += urlEncode(param[i], k, encode);
         }
     }
-    /*编码*/
-    var urlEncode = function (param, key, encode) {
-        if(param==null) return '';
-        var paramStr = '';
-        var t = typeof (param);
-        if (t == 'string' || t == 'number' || t == 'boolean') {
-            paramStr += '&' + key + '=' + ((encode==null||encode) ? encodeURIComponent(param) : param);
-        } else {
-            for (var i in param) {
-                var k = key == null ? i : key + (param instanceof Array ? '[' + i + ']' : '.' + i);
-                paramStr += urlEncode(param[i], k, encode);
-            }
-        }
-        paramStr = paramStr.replace("[","");
-        paramStr = paramStr.replace("]","");
-        return paramStr;
-    };
+    paramStr = paramStr.replace("[","");
+    paramStr = paramStr.replace("]","");
+    return paramStr;
+};
 </script>

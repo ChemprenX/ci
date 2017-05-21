@@ -29,6 +29,7 @@
  * @link		http://codeigniter.com/user_guide/database/
  */
 class CI_DB_driver {
+
 	var $username;
 	var $password;
 	var $hostname;
@@ -59,13 +60,17 @@ class CI_DB_driver {
 	var $cachedir		= '';
 	var $cache_autodel	= FALSE;
 	var $CACHE; // The cache class object
+
 	// Private variables
 	var $_protect_identifiers	= TRUE;
 	var $_reserved_identifiers	= array('*'); // Identifiers that should NOT be escaped
+
 	// These are use with Oracle
 	var $stmt_id;
 	var $curs_id;
 	var $limit_used;
+
+
 
 	/**
 	 * Constructor.  Accepts one parameter containing the database

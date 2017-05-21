@@ -1,33 +1,21 @@
 <?php
 
-class pay_model extends CI_Model{
+class pay_model extends MY_Model{
     
-    const REQUEST_SUCCESS = 1000;//请求成功
-    const PAYMENT_FAIL = 5001;//支付二维码生成失败
     const COUNTER_FEE = 0.002; //手续费
-    private $_table = 'jwj_pay_info';
+    private $_table = 'jwj_pay_info_';
     
     function __construct(){
         parent::__construct();
     }
     
     
-    public function add($payinfo){
-        $sql = "INSERT INTO ".$this->_table." set ";
+    public function add($payinfo,$year = self::YEAR){
+        $sql = "INSERT INTO ".$this->_table."$year set ";
         foreach ($payinfo as $key => $value){
             $sql .= $key . "='".$value."',";
         }
         $sql = trim($sql,',');
-        return $this->db->query($sql);
-    }
-    
-    public function update($id, $payinfo){
-        $sql = "UPDATE " . $this->_table . " SET ";
-        foreach ($payinfo as $key => $value){
-            $sql .= "`".$key."`". "='".$value."',";
-        }
-        $sql = trim($sql,',');
-        $sql .= " WHERE id = '$id'";
         return $this->db->query($sql);
     }
     
@@ -38,19 +26,13 @@ class pay_model extends CI_Model{
         }
         $sql = trim($sql,',');
         $sql .= " WHERE out_trade_no = '$out_trade_no'";
-        file_put_contents('/home/tmg/callback.log',$sql,FILE_APPEND);
         return $this->db->query($sql);
     }
     
-    public function get_pay_info_by_id($id){
-        $sql = "SELECT * FROM " . $this->_table . " WHERE id = '$id'";
+    public function get_pay_info_by_out_trade_no($out_trade_no,$year = self::YEAR){
+        $sql = "SELECT * FROM " . $this->_table . "$year WHERE out_trade_no = '$out_trade_no'";
         $res = $this->db->query($sql);
         return $res->row_array();
     }
     
-    public function get_pay_info_by_out_trade_no($out_trade_no){
-        $sql = "SELECT * FROM " . $this->_table . " WHERE out_trade_no = '$out_trade_no'";
-        $res = $this->db->query($sql);
-        return $res->row_array();
-    }
 }

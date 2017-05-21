@@ -48,11 +48,14 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-
+//$db['default']['hostname'] = '10.10.10.75';
+//$db['default']['username'] = 'tmg75';
+//$db['default']['password'] = 'tmgzcb';
+//$db['default']['database'] = 'jinwangjiang';
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = 'root';
-$db['default']['database'] = 'jinwangjiang2017';
+$db['default']['database'] = 'jwj2017';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
@@ -65,22 +68,6 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
-
-$db['old']['hostname'] = 'localhost';
-$db['old']['username'] = 'root';
-$db['old']['password'] = 'root';
-$db['old']['database'] = 'jinwangjiang';
-$db['old']['dbdriver'] = 'mysql';
-$db['old']['dbprefix'] = '';
-$db['old']['pconnect'] = TRUE;
-$db['old']['db_debug'] = TRUE;
-$db['old']['cache_on'] = FALSE;
-$db['old']['cachedir'] = '';
-$db['old']['char_set'] = 'utf8';
-$db['old']['dbcollat'] = 'utf8_general_ci';
-$db['old']['swap_pre'] = '';
-$db['old']['autoinit'] = TRUE;
-$db['old']['stricton'] = FALSE;
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */

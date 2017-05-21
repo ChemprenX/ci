@@ -1,12 +1,11 @@
 <?php
 
-class admin_user_model extends CI_Model{
+class admin_user_model extends MY_Model{
     
     const USE_STATUS = 1;
     const DELETE_STATUS = 2;
     const SUPER_TYPE = 1;   //超级管理员
     const EXAMINE_TYPE = 2;  //审核员
-    const PAGE_ADMIN_COUNT = 20; //每页显示数量
     private $_table = 'jwj_admin_user';
     private $_type = array(
             self::SUPER_TYPE => '超级管理员',
@@ -61,10 +60,8 @@ class admin_user_model extends CI_Model{
         return $res->row_array();
     }
     
-    public function get_admin_list($page = 1, $num = self::PAGE_ADMIN_COUNT, $status = self::USE_STATUS){
-        $sql = "SELECT * FROM " . $this->_table ." WHERE `status` = '$status'";;
-        $limit = ($page-1) * $num . ','.$num;
-        $sql .= ' limit '.$limit;
+    public function get_admin_list($status = self::USE_STATUS){
+        $sql = "SELECT * FROM " . $this->_table ." WHERE `status` = '$status'";
         $res = $this->db->query($sql);
         return $res->result_array();
     }

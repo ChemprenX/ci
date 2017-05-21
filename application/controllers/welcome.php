@@ -19,9 +19,10 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->helper('url');
-		redirect('api/user/login');
-		//$this->load->view('welcome_message');
+	    //echo 123;exit;
+		//$this->load->helper('url');
+		//redirect('api/user/login');
+        header('Location:/index.html');
 	}
 }
 
