@@ -222,7 +222,7 @@
 
         },
         mounted () {
-            this.$http.post('/index.php/manager/cases/caselist')
+            this.$http.post('/index.php/api/cases/getcases')
                 .then((response) => {
                     console.log(response.data.data);
                     this.tableData = response.data.data;

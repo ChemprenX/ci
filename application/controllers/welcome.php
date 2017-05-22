@@ -22,7 +22,8 @@ class Welcome extends CI_Controller {
 	    //echo 123;exit;
 		//$this->load->helper('url');
 		//redirect('api/user/login');
-        header('Location:/index.html');
+        //header('Location:/index.php');
+		$this->load->view('welcome_message');
 	}
 }
 

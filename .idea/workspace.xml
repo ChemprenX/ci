@@ -2,605 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab9d8fa5-18fc-41de-9d98-6470b1422db6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/AlipaySign.php" afterPath="$PROJECT_DIR$/application/alipaydemo/AlipaySign.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/Gateway.php" afterPath="$PROJECT_DIR$/application/alipaydemo/Gateway.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/HttpRequst.php" afterPath="$PROJECT_DIR$/application/alipaydemo/HttpRequst.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/Message.php" afterPath="$PROJECT_DIR$/application/alipaydemo/Message.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/PushMsg.php" afterPath="$PROJECT_DIR$/application/alipaydemo/PushMsg.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/UserInfo.php" afterPath="$PROJECT_DIR$/application/alipaydemo/UserInfo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/AlipayMobilePublicMultiMediaClient.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/AlipayMobilePublicMultiMediaClient.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/AlipayMobilePublicMultiMediaExecute.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/AlipayMobilePublicMultiMediaExecute.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/AopClient.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/AopClient.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AirCardConfirmWithPolicyTestTestRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AirCardConfirmWithPolicyTestTestRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAccountExrateRatequeryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAccountExrateRatequeryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAcquireCancelRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAcquireCancelRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAcquireCloseRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAcquireCloseRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAcquireCreateandpayRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAcquireCreateandpayRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAcquirePrecreateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAcquirePrecreateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAcquireQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAcquireQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAcquireRefundRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAcquireRefundRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAppTokenGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAppTokenGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAssetAccountBindRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAssetAccountBindRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAssetAccountGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAssetAccountGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAssetAccountUnbindRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAssetAccountUnbindRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAssetPointBalanceQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAssetPointBalanceQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAssetPointBudgetQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAssetPointBudgetQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAssetPointOrderCreateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAssetPointOrderCreateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAssetPointOrderQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayAssetPointOrderQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayBossProdArrangementOfflineQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayBossProdArrangementOfflineQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorCityQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorCityQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorDepositCancelRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorDepositCancelRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorDepositConfirmRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorDepositConfirmRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorDepositQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorDepositQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorFunctionQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorFunctionQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorScriptQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorScriptQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorVoucherCancelRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorVoucherCancelRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorVoucherConfirmRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorVoucherConfirmRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorVoucherQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorVoucherQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorVoucherUploadRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayCommerceCityfacilitatorVoucherUploadRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayDataBillDownloadurlGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayDataBillDownloadurlGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayDataServiceOpenAnalyzeRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayDataServiceOpenAnalyzeRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayDatabizCorePaymentAbilityGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayDatabizCorePaymentAbilityGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayDatabizCorePaymentAbilityUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayDatabizCorePaymentAbilityUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayDatabizCoreUserLevelGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayDatabizCoreUserLevelGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayDiscoveryTaxiOrderConfirmRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayDiscoveryTaxiOrderConfirmRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayDonateitemsGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayDonateitemsGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppBillAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppBillAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppBillBatchPayurlGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppBillBatchPayurlGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppBillGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppBillGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppBillKeySearchRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppBillKeySearchRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppBillPayRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppBillPayRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppBillPayurlGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppBillPayurlGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppBillSearchRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppBillSearchRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppConfigChargeinstSearchRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppConfigChargeinstSearchRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppConfigCitySearchRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppConfigCitySearchRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppConfigProductSearchRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppConfigProductSearchRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppConfigProvinceSearchRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppConfigProvinceSearchRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppMerchantConfigGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppMerchantConfigGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppNbillKeySearchRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppNbillKeySearchRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppOweBillGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppOweBillGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppOweBillUploadRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppOweBillUploadRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppPdeductBillPayStatusRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppPdeductBillPayStatusRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppPdeductPayRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppPdeductPayRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppPdeductSignAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppPdeductSignAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppPdeductSignCancelRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppPdeductSignCancelRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppProductSearchRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppProductSearchRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppRechargeItemGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppRechargeItemGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppRechargeItemUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppRechargeItemUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppRechargeSaleproductGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppRechargeSaleproductGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppSubscribeCheckcodeImportRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppSubscribeCheckcodeImportRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppSubscribeUploadRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEbppSubscribeUploadRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcapiprodCreditGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcapiprodCreditGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcapiprodDataPutRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcapiprodDataPutRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcapiprodDrawndnContractGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcapiprodDrawndnContractGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcapiprodDrawndnDrawndnlistQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcapiprodDrawndnDrawndnlistQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcapiprodDrawndnFeerecordQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcapiprodDrawndnFeerecordQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcapiprodDrawndnLendingrecordQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcapiprodDrawndnLendingrecordQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcapiprodDrawndnPaymentscheduleGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcapiprodDrawndnPaymentscheduleGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcapiprodDrawndnRepaymentrecordQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcapiprodDrawndnRepaymentrecordQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcardEduBalanceGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcardEduBalanceGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcardEduCardGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcardEduCardGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcardEduDepositOrderAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcardEduDepositOrderAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcardEduPublicBindRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEcardEduPublicBindRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEvercallAlertAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEvercallAlertAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEvercallContractCancelRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEvercallContractCancelRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEvercallContractSignRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEvercallContractSignRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEvercallContractSignUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEvercallContractSignUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEvercallRechargeResultUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayEvercallRechargeResultUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayExscUserCurrentsignGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayExscUserCurrentsignGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayExscUserFirstfundinpourGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayExscUserFirstfundinpourGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayExscUserFirstsignGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayExscUserFirstsignGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayFlashsalesStockSyncUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayFlashsalesStockSyncUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayGotoneAckcodeSendRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayGotoneAckcodeSendRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayGotoneAckcodeVerifyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayGotoneAckcodeVerifyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayGotoneMessageCourierSendRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayGotoneMessageCourierSendRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayGotoneMessageMailSendRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayGotoneMessageMailSendRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayGotoneMessageSmsSendRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayGotoneMessageSmsSendRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayGotoneTodoSearchRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayGotoneTodoSearchRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayLifeassistantProdBillGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayLifeassistantProdBillGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMappprodAccountBindingSyncRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMappprodAccountBindingSyncRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMarketingCampaignActivityOfflineCreateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMarketingCampaignActivityOfflineCreateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMarketingCampaignActivityOfflineTriggerRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMarketingCampaignActivityOfflineTriggerRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMarketingCdpAdvertiseCreateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMarketingCdpAdvertiseCreateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMarketingCdpAdvertiseModifyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMarketingCdpAdvertiseModifyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMarketingCdpAdvertiseOperateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMarketingCdpAdvertiseOperateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMarketingCdpAdvertiseQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMarketingCdpAdvertiseQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMarketingCdpRecommendQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMarketingCdpRecommendQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMdataTagGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMdataTagGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMemberCardDeletecardRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMemberCardDeletecardRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMemberCardOpenRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMemberCardOpenRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMemberCardQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMemberCardQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMemberConsumeNotifyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMemberConsumeNotifyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMemberCouponQuerydetailRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMemberCouponQuerydetailRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMemberCouponQuerylistRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMemberCouponQuerylistRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMerchantTicketApplyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMerchantTicketApplyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMerchantTicketQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMerchantTicketQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMerchantTicketUseRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMerchantTicketUseRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMicropayOrderConfirmpayurlGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMicropayOrderConfirmpayurlGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMicropayOrderDirectPayRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMicropayOrderDirectPayRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMicropayOrderFreezeRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMicropayOrderFreezeRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMicropayOrderFreezepayurlGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMicropayOrderFreezepayurlGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMicropayOrderGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMicropayOrderGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMicropayOrderUnfreezeRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMicropayOrderUnfreezeRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileBeaconDeviceAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileBeaconDeviceAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileBeaconDeviceDeleteRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileBeaconDeviceDeleteRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileBeaconDeviceModifyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileBeaconDeviceModifyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileBeaconDeviceQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileBeaconDeviceQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileBeaconMessageSendRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileBeaconMessageSendRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileBksigntokenVerifyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileBksigntokenVerifyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileCodeCreateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileCodeCreateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileCodeQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileCodeQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileDeviceinfoDynamicinfoAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileDeviceinfoDynamicinfoAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileMovieActivityNotifyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileMovieActivityNotifyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicAccountAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicAccountAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicAccountDeleteRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicAccountDeleteRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicAccountQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicAccountQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicAccountResetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicAccountResetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicAccountlistGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicAccountlistGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicAppinfoUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicAppinfoUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicAuthGettokenRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicAuthGettokenRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicContactFollowListRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicContactFollowListRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicFollowAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicFollowAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicFollowListRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicFollowListRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicGisGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicGisGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicInfoModifyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicInfoModifyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicInfoQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicInfoQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicLabelAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicLabelAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicLabelDeleteRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicLabelDeleteRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicLabelQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicLabelQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicLabelUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicLabelUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicLabelUserAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicLabelUserAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicLabelUserDeleteRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicLabelUserDeleteRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicLabelUserQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicLabelUserQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMenuAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMenuAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMenuDeleteRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMenuDeleteRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMenuGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMenuGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMenuQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMenuQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMenuUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMenuUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMenuUserQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMenuUserQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMenuUserUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMenuUserUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessageCustomSendRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessageCustomSendRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessageGroupRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessageGroupRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessageLabelSendRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessageLabelSendRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessageMatcherSendRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessageMatcherSendRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessagePushRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessagePushRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessageSingleSendRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessageSingleSendRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessageTotalSendRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessageTotalSendRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessagebatchPushRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessagebatchPushRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessagespecifyPushRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMessagespecifyPushRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMockListsmlistApiRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicMockListsmlistApiRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicQrcodeCreateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicQrcodeCreateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicShortlinkCreateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicShortlinkCreateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicStdMockListsmlistApiRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicStdMockListsmlistApiRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicTemplateMessageDeleteRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicTemplateMessageDeleteRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicTemplateMessageGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicTemplateMessageGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicTemplateMessageModifyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicTemplateMessageModifyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicTemplateMessageQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobilePublicTemplateMessageQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileRecommendGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileRecommendGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileSecuinfosInformationReceiveRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileSecuinfosInformationReceiveRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileShakeUserQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileShakeUserQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileStdPublicAccountQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileStdPublicAccountQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileStdPublicExpressUserQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileStdPublicExpressUserQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileStdPublicFollowListRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileStdPublicFollowListRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileStdPublicMenuQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileStdPublicMenuQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileStdPublicMessageCustomSendRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileStdPublicMessageCustomSendRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileUrlAutologinGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileUrlAutologinGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileUrlDeviceverifyAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMobileUrlDeviceverifyAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMpointprodBenefitDetailGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayMpointprodBenefitDetailGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketItemCreateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketItemCreateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketItemModifyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketItemModifyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketItemStateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketItemStateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketProductBatchqueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketProductBatchqueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketProductQuerydetailRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketProductQuerydetailRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketProductUsedetailRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketProductUsedetailRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketReportGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketReportGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopAlbumBindRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopAlbumBindRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopAlbumCreateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopAlbumCreateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopAlbumDeleteRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopAlbumDeleteRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopAlbumModifyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopAlbumModifyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopAlbumQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopAlbumQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopAlbumUnbindRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopAlbumUnbindRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopAssignstaffRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopAssignstaffRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopBatchqueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopBatchqueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopCreateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopCreateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopDiscountQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopDiscountQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopModifyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopModifyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopPublicBindRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopPublicBindRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopPublicUnbindRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopPublicUnbindRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopQuerydetailRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMarketShopQuerydetailRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMaterialImageDownloadRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMaterialImageDownloadRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMaterialImageModifyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMaterialImageModifyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMaterialImageQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMaterialImageQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMaterialImageUploadRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineMaterialImageUploadRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineProviderEquipmentAuthQuerybypageRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineProviderEquipmentAuthQuerybypageRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineProviderEquipmentAuthRemoveRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineProviderEquipmentAuthRemoveRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineProviderQuerystaffRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineProviderQuerystaffRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineProviderStaffUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineProviderStaffUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineSaleleadsClaimstatusRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineSaleleadsClaimstatusRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineSaleleadsContractconfirmRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineSaleleadsContractconfirmRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineSaleleadsInfoAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineSaleleadsInfoAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineSaleleadsInfoQuerybypageRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineSaleleadsInfoQuerybypageRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineSaleleadsMerchantEquipmentQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineSaleleadsMerchantEquipmentQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineSaleleadsModifyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineSaleleadsModifyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineSaleleadsQuerybyidsRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOfflineSaleleadsQuerybyidsRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOpenAuthTokenAppRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOpenAuthTokenAppRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOpenPublicMultimediaDownloadProxyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOpenPublicMultimediaDownloadProxyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOpenPublicPartnerMenuOperateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOpenPublicPartnerMenuOperateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOpenPublicPartnerMenuQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOpenPublicPartnerMenuQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOpenPublicPartnerSubscribeSyncRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOpenPublicPartnerSubscribeSyncRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOpenPublicTemplateMessageIndustryModifyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOpenPublicTemplateMessageIndustryModifyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOpenPublicThirdCustomerServiceRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOpenPublicThirdCustomerServiceRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOperatorMobileBindRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayOperatorMobileBindRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPaiPartnerResultGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPaiPartnerResultGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPaiProxyRedirectRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPaiProxyRedirectRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassCodeAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassCodeAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassCodeVerifyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassCodeVerifyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassFileAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassFileAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassInstanceAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassInstanceAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassInstanceUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassInstanceUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassSyncAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassSyncAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassSyncUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassSyncUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassTemplateAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassTemplateAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassTemplateUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassTemplateUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassTplAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassTplAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassTplContentAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassTplContentAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassTplContentUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassTplContentUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassTplUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassTplUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassVerifyQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPassVerifyQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPcreditHuabeiPromoQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPcreditHuabeiPromoQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPcreditUserLevelGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPcreditUserLevelGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPlatformAppAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPlatformAppAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPlatformAppGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPlatformAppGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPlatformDeveloperGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPlatformDeveloperGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPlatformOpenidGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPlatformOpenidGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPlatformUseridGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPlatformUseridGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPointBalanceGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPointBalanceGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPointBudgetGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPointBudgetGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPointOrderAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPointOrderAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPointOrderGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPointOrderGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPromorulecenterRuleAnalyzeRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayPromorulecenterRuleAnalyzeRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySamsungEbppRechargeRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySamsungEbppRechargeRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySamsungPucChargeRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySamsungPucChargeRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySecurityInfoAnalysisRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySecurityInfoAnalysisRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySecurityRiskDetectRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySecurityRiskDetectRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeDeviceInfoAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeDeviceInfoAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeDeviceInfoDeleteRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeDeviceInfoDeleteRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeDeviceInfoGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeDeviceInfoGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeDeviceInfoSearchRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeDeviceInfoSearchRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeDeviceInfoUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeDeviceInfoUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeInstoreUserRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeInstoreUserRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeShopInfoAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeShopInfoAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeShopInfoDeleteRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeShopInfoDeleteRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeShopInfoGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeShopInfoGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeShopInfoUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeShopInfoUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeShopPublicBindRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeShopPublicBindRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeShopPublicUnbindRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeShopPublicUnbindRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeUserInfoGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeUserInfoGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeWifiConnectRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeWifiConnectRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeWifiUnconnectRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySiteprobeWifiUnconnectRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayStockPortfolioAllGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayStockPortfolioAllGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayStockPortfolioSingleAddRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayStockPortfolioSingleAddRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySystemOauthTokenRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipaySystemOauthTokenRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayToolsFileUploadRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayToolsFileUploadRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTradeCancelRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTradeCancelRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTradePayRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTradePayRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTradePrecreateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTradePrecreateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTradeQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTradeQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTradeRefundRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTradeRefundRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTransferBankPayApplyRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTransferBankPayApplyRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTransferThirdpartyBillCreateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTransferThirdpartyBillCreateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustAruserRiskSearchRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustAruserRiskSearchRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustGsdataGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustGsdataGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustLldataGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustLldataGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserAdmissionGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserAdmissionGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserAlipaycertGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserAlipaycertGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserAuthSendRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserAuthSendRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserBasicinfoGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserBasicinfoGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserBasicinfoVerifyGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserBasicinfoVerifyGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserBlacklistSearchRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserBlacklistSearchRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserCertGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserCertGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserDatareceivedSendRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserDatareceivedSendRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserFileUploadRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserFileUploadRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserNontokenAdmissionGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserNontokenAdmissionGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserNontokenRiskidentifyGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserNontokenRiskidentifyGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserRealnameregisteredGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserRealnameregisteredGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserReportGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserReportGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserRiskSearchRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserRiskSearchRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserRiskSummaryGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserRiskSummaryGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserRiskidentifyGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserRiskidentifyGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserScoreGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserScoreGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserScoreGfGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserScoreGfGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserStandardVerifyGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserStandardVerifyGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserStatusGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserStatusGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserTokenGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserTokenGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserTokenUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserTokenUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserZminfoPairGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayTrustUserZminfoPairGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserAccountFreezeGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserAccountFreezeGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserAccountGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserAccountGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserAccountSearchRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserAccountSearchRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserAccountUseridBatchqueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserAccountUseridBatchqueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserBindingGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserBindingGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserContractGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserContractGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserLoginInfoRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserLoginInfoRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserMemberCardUpdateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserMemberCardUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserMobilessoTokenGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserMobilessoTokenGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserPartnerMobilessoRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserPartnerMobilessoRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserTestRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserTestRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserTradeSearchRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserTradeSearchRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserUserinfoShareRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserUserinfoShareRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserValidateRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayUserValidateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayWapUserAlipayinsideAuthapiRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayWapUserAlipayinsideAuthapiRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayWeiboEbppRechargeRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayWeiboEbppRechargeRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayWeiboPucChargeRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayWeiboPucChargeRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayWeiboTokenGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayWeiboTokenGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayZdataassetsEasyserviceRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayZdataassetsEasyserviceRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayZdataassetsFcdatalabZdatamergetaskRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayZdataassetsFcdatalabZdatamergetaskRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayZdataassetsMetadataRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayZdataassetsMetadataRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayZdatafrontCommonQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayZdatafrontCommonQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayZdatafrontDatatransferedFileuploadRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayZdatafrontDatatransferedFileuploadRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayZdatafrontDatatransferedSendRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayZdatafrontDatatransferedSendRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayZdataserviceUnidataQueryRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayZdataserviceUnidataQueryRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayZmscoreZrankGetRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/AlipayZmscoreZrankGetRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/request/MonitorHeartbeatSynRequest.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/request/MonitorHeartbeatSynRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/aop/test/TestImage.php" afterPath="$PROJECT_DIR$/application/alipaydemo/aop/test/TestImage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/callback.php" afterPath="$PROJECT_DIR$/application/alipaydemo/callback.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/config.php" afterPath="$PROJECT_DIR$/application/alipaydemo/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/f2fpay/F2fpay.php" afterPath="$PROJECT_DIR$/application/alipaydemo/f2fpay/F2fpay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/f2fpay/barpay.php" afterPath="$PROJECT_DIR$/application/alipaydemo/f2fpay/barpay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/f2fpay/cancel.php" afterPath="$PROJECT_DIR$/application/alipaydemo/f2fpay/cancel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/f2fpay/qrpay.php" afterPath="$PROJECT_DIR$/application/alipaydemo/f2fpay/qrpay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/f2fpay/query.php" afterPath="$PROJECT_DIR$/application/alipaydemo/f2fpay/query.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/f2fpay/refund.php" afterPath="$PROJECT_DIR$/application/alipaydemo/f2fpay/refund.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/function.inc.php" afterPath="$PROJECT_DIR$/application/alipaydemo/function.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/index.php" afterPath="$PROJECT_DIR$/application/alipaydemo/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/log/log.txt" afterPath="$PROJECT_DIR$/application/alipaydemo/log/log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/lotusphp_runtime/DB/Adapter/SqlAdapter/DbSqlAdapterMysql.php" afterPath="$PROJECT_DIR$/application/alipaydemo/lotusphp_runtime/DB/Adapter/SqlAdapter/DbSqlAdapterMysql.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/lotusphp_runtime/DB/Adapter/SqlAdapter/DbSqlAdapterPgsql.php" afterPath="$PROJECT_DIR$/application/alipaydemo/lotusphp_runtime/DB/Adapter/SqlAdapter/DbSqlAdapterPgsql.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/lotusphp_runtime/DB/Db.php" afterPath="$PROJECT_DIR$/application/alipaydemo/lotusphp_runtime/DB/Db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/CHANGELOG" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/CHANGELOG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/INSTALL" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/INSTALL" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/LICENSE" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/README" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/VERSION" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/VERSION" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/index.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/phpqrcode.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/phpqrcode.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrbitstream.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrbitstream.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrconfig.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrconfig.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrconst.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrconst.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrencode.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrencode.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrimage.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrimage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrinput.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrinput.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrlib.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrlib.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrmask.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrmask.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrrscode.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrrscode.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrspec.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrspec.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrsplit.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrsplit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrtools.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/qrtools.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/tools/merge.bat" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/tools/merge.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/tools/merge.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/tools/merge.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/tools/merge.sh" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/tools/merge.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/tools/merged_config.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/tools/merged_config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/tools/merged_header.php" afterPath="$PROJECT_DIR$/application/alipaydemo/phpqrcode/tools/merged_header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/alipaydemo/test.php" afterPath="$PROJECT_DIR$/application/alipaydemo/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/cache/index.html" afterPath="$PROJECT_DIR$/application/cache/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/autoload.php" afterPath="$PROJECT_DIR$/application/config/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/constants.php" afterPath="$PROJECT_DIR$/application/config/constants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/doctypes.php" afterPath="$PROJECT_DIR$/application/config/doctypes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/email.php" afterPath="$PROJECT_DIR$/application/config/email.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/foreign_chars.php" afterPath="$PROJECT_DIR$/application/config/foreign_chars.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/hooks.php" afterPath="$PROJECT_DIR$/application/config/hooks.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/index.html" afterPath="$PROJECT_DIR$/application/config/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/migration.php" afterPath="$PROJECT_DIR$/application/config/migration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/mimes.php" afterPath="$PROJECT_DIR$/application/config/mimes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/profiler.php" afterPath="$PROJECT_DIR$/application/config/profiler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/smarty.php" afterPath="$PROJECT_DIR$/application/config/smarty.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/smileys.php" afterPath="$PROJECT_DIR$/application/config/smileys.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/user_agents.php" afterPath="$PROJECT_DIR$/application/config/user_agents.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/cases.php" afterPath="$PROJECT_DIR$/application/controllers/api/cases.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/user.php" afterPath="$PROJECT_DIR$/application/controllers/api/user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/index.html" afterPath="$PROJECT_DIR$/application/controllers/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/manager/cases.php" afterPath="$PROJECT_DIR$/application/controllers/manager/cases.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/manager/judges.php" afterPath="$PROJECT_DIR$/application/controllers/manager/judges.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/manager/record.php" afterPath="$PROJECT_DIR$/application/controllers/manager/record.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/manager/user.php" afterPath="$PROJECT_DIR$/application/controllers/manager/user.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/welcome.php" afterPath="$PROJECT_DIR$/application/controllers/welcome.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/core/MY_Controller.php" afterPath="$PROJECT_DIR$/application/core/MY_Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/core/MY_Loader.php" afterPath="$PROJECT_DIR$/application/core/MY_Loader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/core/index.html" afterPath="$PROJECT_DIR$/application/core/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/errors/error_404.php" afterPath="$PROJECT_DIR$/application/errors/error_404.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/errors/error_db.php" afterPath="$PROJECT_DIR$/application/errors/error_db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/errors/error_general.php" afterPath="$PROJECT_DIR$/application/errors/error_general.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/errors/error_php.php" afterPath="$PROJECT_DIR$/application/errors/error_php.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/errors/index.html" afterPath="$PROJECT_DIR$/application/errors/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/helpers/index.html" afterPath="$PROJECT_DIR$/application/helpers/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/hooks/index.html" afterPath="$PROJECT_DIR$/application/hooks/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/language/english/index.html" afterPath="$PROJECT_DIR$/application/language/english/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/language/index.html" afterPath="$PROJECT_DIR$/application/language/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/ci_smarty.php" afterPath="$PROJECT_DIR$/application/libraries/ci_smarty.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/index.html" afterPath="$PROJECT_DIR$/application/libraries/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/Smarty.class.php" afterPath="$PROJECT_DIR$/application/libraries/libs/Smarty.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/SmartyBC.class.php" afterPath="$PROJECT_DIR$/application/libraries/libs/SmartyBC.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/block.textformat.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/block.textformat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/function.counter.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/function.counter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/function.cycle.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/function.cycle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/function.fetch.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/function.fetch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/function.html_checkboxes.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/function.html_checkboxes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/function.html_image.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/function.html_image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/function.html_options.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/function.html_options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/function.html_radios.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/function.html_radios.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/function.html_select_date.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/function.html_select_date.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/function.html_select_time.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/function.html_select_time.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/function.html_table.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/function.html_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/function.mailto.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/function.mailto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/function.math.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/function.math.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifier.capitalize.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifier.capitalize.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifier.date_format.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifier.date_format.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifier.debug_print_var.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifier.debug_print_var.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifier.escape.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifier.escape.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifier.regex_replace.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifier.regex_replace.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifier.replace.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifier.replace.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifier.spacify.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifier.spacify.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifier.truncate.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifier.truncate.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.cat.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.cat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.count_characters.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.count_characters.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.count_paragraphs.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.count_paragraphs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.count_sentences.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.count_sentences.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.count_words.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.count_words.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.default.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.default.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.escape.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.escape.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.from_charset.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.from_charset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.indent.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.indent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.lower.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.lower.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.noprint.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.noprint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.string_format.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.string_format.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.strip.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.strip.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.strip_tags.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.strip_tags.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.to_charset.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.to_charset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.unescape.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.unescape.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.upper.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.upper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.wordwrap.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/modifiercompiler.wordwrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/outputfilter.trimwhitespace.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/outputfilter.trimwhitespace.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/shared.escape_special_chars.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/shared.escape_special_chars.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/shared.literal_compiler_param.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/shared.literal_compiler_param.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/shared.make_timestamp.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/shared.make_timestamp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/shared.mb_str_replace.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/shared.mb_str_replace.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/shared.mb_unicode.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/shared.mb_unicode.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/shared.mb_wordwrap.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/shared.mb_wordwrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/plugins/variablefilter.htmlspecialchars.php" afterPath="$PROJECT_DIR$/application/libraries/libs/plugins/variablefilter.htmlspecialchars.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_cacheresource.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_cacheresource.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_cacheresource_custom.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_cacheresource_custom.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_cacheresource_keyvaluestore.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_cacheresource_keyvaluestore.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_config_source.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_config_source.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_cacheresource_file.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_cacheresource_file.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_append.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_append.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_assign.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_assign.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_block.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_block.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_break.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_break.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_call.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_call.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_capture.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_capture.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_config_load.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_config_load.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_continue.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_continue.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_debug.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_debug.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_eval.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_eval.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_extends.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_extends.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_for.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_for.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_foreach.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_foreach.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_function.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_if.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_if.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_include.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_include.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_include_php.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_include_php.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_insert.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_insert.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_ldelim.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_ldelim.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_nocache.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_nocache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_block_plugin.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_block_plugin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_function_plugin.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_function_plugin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_modifier.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_modifier.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_object_block_function.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_object_block_function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_object_function.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_object_function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_print_expression.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_print_expression.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_registered_block.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_registered_block.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_registered_function.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_registered_function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_special_variable.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_private_special_variable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_rdelim.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_rdelim.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_section.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_section.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_setfilter.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_setfilter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_while.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compile_while.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compilebase.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_compilebase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_config.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_config_file_compiler.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_config_file_compiler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_configfilelexer.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_configfilelexer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_configfileparser.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_configfileparser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_data.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_data.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_debug.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_debug.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_filter_handler.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_filter_handler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_function_call_handler.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_function_call_handler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_get_include_path.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_get_include_path.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_nocache_insert.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_nocache_insert.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_parsetree.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_parsetree.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_resource_eval.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_resource_eval.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_resource_extends.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_resource_extends.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_resource_file.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_resource_file.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_resource_php.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_resource_php.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_resource_registered.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_resource_registered.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_resource_stream.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_resource_stream.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_resource_string.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_resource_string.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_smartytemplatecompiler.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_smartytemplatecompiler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_template.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_templatebase.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_templatebase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_templatecompilerbase.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_templatecompilerbase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_templatelexer.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_templatelexer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_templateparser.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_templateparser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_utility.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_utility.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_write_file.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_internal_write_file.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_resource.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_resource.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_resource_custom.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_resource_custom.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_resource_recompiled.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_resource_recompiled.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_resource_uncompiled.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_resource_uncompiled.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_security.php" afterPath="$PROJECT_DIR$/application/libraries/libs/sysplugins/smarty_security.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/logs/index.html" afterPath="$PROJECT_DIR$/application/logs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/admin_user_model.php" afterPath="$PROJECT_DIR$/application/models/admin_user_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/award_model.php" afterPath="$PROJECT_DIR$/application/models/award_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/case_model.php" afterPath="$PROJECT_DIR$/application/models/case_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/image_model.php" afterPath="$PROJECT_DIR$/application/models/image_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/invoice_model.php" afterPath="$PROJECT_DIR$/application/models/invoice_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/pay_model.php" afterPath="$PROJECT_DIR$/application/models/pay_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/user_model.php" afterPath="$PROJECT_DIR$/application/models/user_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/services/case_service.php" afterPath="$PROJECT_DIR$/application/services/case_service.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/services/image_service.php" afterPath="$PROJECT_DIR$/application/services/image_service.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/services/invoice_service.php" afterPath="$PROJECT_DIR$/application/services/invoice_service.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/services/user_service.php" afterPath="$PROJECT_DIR$/application/services/user_service.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/third_party/index.html" afterPath="$PROJECT_DIR$/application/third_party/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/404.html" afterPath="$PROJECT_DIR$/application/views/api/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/case/caselist.html" afterPath="$PROJECT_DIR$/application/views/api/case/caselist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/case/caseopen.html" afterPath="$PROJECT_DIR$/application/views/api/case/caseopen.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/case/casepay.html" afterPath="$PROJECT_DIR$/application/views/api/case/casepay.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/case/casesubmit.html" afterPath="$PROJECT_DIR$/application/views/api/case/casesubmit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/case/updatecase.html" afterPath="$PROJECT_DIR$/application/views/api/case/updatecase.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/common/footer_navigation_bak0710.html" afterPath="$PROJECT_DIR$/application/views/api/common/footer_navigation_bak0710.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/common/header.html" afterPath="$PROJECT_DIR$/application/views/api/common/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/common/header_bak0710.html" afterPath="$PROJECT_DIR$/application/views/api/common/header_bak0710.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/common/header_navigation.html" afterPath="$PROJECT_DIR$/application/views/api/common/header_navigation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/common/header_navigation_bak0710.html" afterPath="$PROJECT_DIR$/application/views/api/common/header_navigation_bak0710.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/common/header_user.html" afterPath="$PROJECT_DIR$/application/views/api/common/header_user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/common/vip.html" afterPath="$PROJECT_DIR$/application/views/api/common/vip.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/handleSucc.html" afterPath="$PROJECT_DIR$/application/views/api/handleSucc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/result.html" afterPath="$PROJECT_DIR$/application/views/api/result.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/static/caseCollection.html" afterPath="$PROJECT_DIR$/application/views/api/static/caseCollection.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/static/index.html" afterPath="$PROJECT_DIR$/application/views/api/static/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/static/partner.html" afterPath="$PROJECT_DIR$/application/views/api/static/partner.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/static/peak.html" afterPath="$PROJECT_DIR$/application/views/api/static/peak.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/static/time.html" afterPath="$PROJECT_DIR$/application/views/api/static/time.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/succ.html" afterPath="$PROJECT_DIR$/application/views/api/succ.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/user/edit.html" afterPath="$PROJECT_DIR$/application/views/api/user/edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/user/findpwd.html" afterPath="$PROJECT_DIR$/application/views/api/user/findpwd.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/user/mycase.html" afterPath="$PROJECT_DIR$/application/views/api/user/mycase.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/user/register.html" afterPath="$PROJECT_DIR$/application/views/api/user/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/api/user/userinfo.html" afterPath="$PROJECT_DIR$/application/views/api/user/userinfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/case/caseopen.html" afterPath="$PROJECT_DIR$/application/views/manager/case/caseopen.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/case/caseopen2017bak.html" afterPath="$PROJECT_DIR$/application/views/manager/case/caseopen2017bak.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/case/nocaseopen.html" afterPath="$PROJECT_DIR$/application/views/manager/case/nocaseopen.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/case/oldcaselist.html" afterPath="$PROJECT_DIR$/application/views/manager/case/oldcaselist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/case/usercase2017.html" afterPath="$PROJECT_DIR$/application/views/manager/case/usercase2017.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/common/header.html" afterPath="$PROJECT_DIR$/application/views/manager/common/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/common/header_navigation.html" afterPath="$PROJECT_DIR$/application/views/manager/common/header_navigation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/judges/index.html" afterPath="$PROJECT_DIR$/application/views/manager/judges/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/judges/judgeslist.html" afterPath="$PROJECT_DIR$/application/views/manager/judges/judgeslist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/judges/scored.html" afterPath="$PROJECT_DIR$/application/views/manager/judges/scored.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/result.html" afterPath="$PROJECT_DIR$/application/views/manager/result.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/user/addadmin.html" afterPath="$PROJECT_DIR$/application/views/manager/user/addadmin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/user/adminlist.html" afterPath="$PROJECT_DIR$/application/views/manager/user/adminlist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/user/editadmin.html" afterPath="$PROJECT_DIR$/application/views/manager/user/editadmin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/user/index.html" afterPath="$PROJECT_DIR$/application/views/manager/user/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/user/login.html" afterPath="$PROJECT_DIR$/application/views/manager/user/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/user/useradmin2017.html" afterPath="$PROJECT_DIR$/application/views/manager/user/useradmin2017.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/manager/user/userlist.html" afterPath="$PROJECT_DIR$/application/views/manager/user/userlist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/welcome_message.php" afterPath="$PROJECT_DIR$/application/views/welcome_message.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/DB_driver.php" afterPath="$PROJECT_DIR$/system/database/DB_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue-source/config/index.js" afterPath="$PROJECT_DIR$/vue-source/config/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue-source/src/components/manager/case/Case.vue" afterPath="$PROJECT_DIR$/vue-source/src/components/manager/case/Case.vue" />
     </list>
     <ignored path="CI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -622,8 +33,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="caseopen.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/manager/case/caseopen.html">
+      <file leaf-file-name="Manager.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue-source/src/components/manager/Manager.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -632,11 +43,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <file leaf-file-name="Case.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue-source/src/components/manager/case/Case.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="72" column="49" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="49" />
+            <state relative-caret-position="150">
+              <caret line="224" column="42" selection-start-line="224" selection-start-column="42" selection-end-line="224" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vue-source/config/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cases.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/manager/cases.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+              <folding>
+                <marker date="1495378203000" expanded="true" signature="4634:4715" ph="INSERT INTO jwj_group_case... " />
+                <marker date="1495378203000" expanded="true" signature="8566:8590" ph="INSERT INTO jwj_case... " />
+                <marker date="1495378203000" expanded="true" signature="9244:9268" ph="select * fro... jwj_case" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cases.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/api/cases.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/manager/user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="case_service.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/services/case_service.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -664,8 +129,6 @@
         <option value="$PROJECT_DIR$/application/views/user/index.php" />
         <option value="$PROJECT_DIR$/application/controllers/User.php" />
         <option value="$PROJECT_DIR$/application/models/User_model.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/application/services/case_service.php" />
         <option value="$PROJECT_DIR$/application/views/api/common/header.html" />
         <option value="$PROJECT_DIR$/application/views/api/user/mycase.html" />
         <option value="$PROJECT_DIR$/static/api/new/js/script.js" />
@@ -682,6 +145,13 @@
         <option value="$PROJECT_DIR$/static/manager/css/index.css" />
         <option value="$PROJECT_DIR$/application/views/api/case/casepay.html" />
         <option value="$PROJECT_DIR$/application/views/manager/user/useradmin2017.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/application/controllers/welcome.php" />
+        <option value="$PROJECT_DIR$/application/controllers/manager/cases.php" />
+        <option value="$PROJECT_DIR$/application/services/case_service.php" />
+        <option value="$PROJECT_DIR$/application/controllers/api/cases.php" />
+        <option value="$PROJECT_DIR$/vue-source/src/components/manager/case/Case.vue" />
+        <option value="$PROJECT_DIR$/vue-source/config/index.js" />
       </list>
     </option>
   </component>
@@ -754,6 +224,78 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vue-source" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-source" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-source" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="router" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-source" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -772,7 +314,87 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manager" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CI" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -782,11 +404,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../civue" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -860,24 +484,25 @@
       <workItem from="1494642519257" duration="7189000" />
       <workItem from="1494820418097" duration="658000" />
       <workItem from="1494902111541" duration="51000" />
-      <workItem from="1495375467724" duration="25000" />
+      <workItem from="1495375467724" duration="3751000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52085000" />
+    <option name="totallyTimeSpent" value="55811000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="752" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="752" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2358643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4257576" sideWeight="0.509693" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287879" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37575758" sideWeight="0.49030694" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37575758" sideWeight="0.49030694" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -885,7 +510,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287879" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -906,96 +530,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/controllers/User_show.php" />
-    <entry file="file://$PROJECT_DIR$/application/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/home.php" />
-    <entry file="file://$PROJECT_DIR$/application/views/common/footer.php" />
-    <entry file="file://$PROJECT_DIR$/application/views/user/about.php" />
-    <entry file="file://$PROJECT_DIR$/application/controllers/User_show.php" />
-    <entry file="file://$PROJECT_DIR$/application/views/user/view.php" />
-    <entry file="file://$PROJECT_DIR$/system/core/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/common/header.php" />
-    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/index.php" />
-    <entry file="file://$PROJECT_DIR$/application/controllers/User.php" />
-    <entry file="file://$PROJECT_DIR$/application/models/user_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2820">
-          <caret line="206" column="12" selection-start-line="206" selection-start-column="12" selection-end-line="206" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/uploadify/Change Log.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/services/user_service.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="52" column="19" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/services/image_service.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2460">
           <caret line="164" column="34" selection-start-line="164" selection-start-column="34" selection-end-line="164" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/services/case_service.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11970">
-          <caret line="798" column="27" selection-start-line="798" selection-start-column="27" selection-end-line="798" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1138,13 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/cases.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/api/common/header_navigation.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1187,7 +718,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/manager/case/caseopen.html">
+    <entry file="file://$PROJECT_DIR$/vue-source/build/webpack.dev.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-source/build/webpack.prod.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1158">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-source/config/dev.env.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-source/config/prod.env.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1199,6 +754,156 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="72" column="49" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/manager/case/caseopen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-source/build/dev-server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-source/build/build.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1495374444000" expanded="true" signature="439:948" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-source/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-source/src/components/manager/Manager.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/welcome_message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1672">
+          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/manager/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/services/case_service.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/cases.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-source/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-source/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/manager/cases.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <marker date="1495378203000" expanded="true" signature="4634:4715" ph="INSERT INTO jwj_group_case... " />
+            <marker date="1495378203000" expanded="true" signature="8566:8590" ph="INSERT INTO jwj_case... " />
+            <marker date="1495378203000" expanded="true" signature="9244:9268" ph="select * fro... jwj_case" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-source/src/components/manager/case/Case.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="224" column="42" selection-start-line="224" selection-start-column="42" selection-end-line="224" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-source/config/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
           <folding />
         </state>
       </provider>

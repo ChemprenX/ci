@@ -11,6 +11,7 @@ class cases extends MY_Controller{
         $this->load->service('beyond_service');
         $this->check();
     }
+
     public function invoicesubmitact(){
         $this->case_service->add_invoice();
         $this->display('api/handleSucc.html');

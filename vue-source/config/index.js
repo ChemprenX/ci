@@ -29,7 +29,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/index.php': {
-        target: 'http://www.jwjre.com',
+        target: 'http://ci:8888/index.php',
           changeOrigin:true
       }
 

@@ -36,6 +36,10 @@ class cases extends MY_Controller{
     /*作品查询*/
     public function caselist(){
         $result = $this->case_service->get_case_by_cid();
+        header('content-type:application:json;charset=utf8');
+        header('Access-Control-Allow-Origin:*');
+        header('Access-Control-Allow-Methods:POST');
+        header('Access-Control-Allow-Headers:x-requested-with,content-type');
         echo json_encode($result);
         exit();
     }
